@@ -1,0 +1,761 @@
+"Date","team","opp","gf","ga","venue","FT","points","gd","cumpts","cumgd","gameno","rank","result","finalrank"
+2014-08-18,"Chelsea","Burnley",3,1,"A","1-3",3,2,3,2,1,1,"W",1
+2014-08-17,"Manchester City","Newcastle United",2,0,"A","0-2",3,2,3,2,1,2,"W",2
+2014-08-16,"Arsenal","Crystal Palace",2,1,"H","2-1",3,1,3,1,1,3,"W",3
+2014-08-16,"Manchester United","Swansea City",1,2,"H","1-2",0,-1,0,-1,1,14,"L",4
+2014-08-16,"Tottenham Hotspur","West Ham United",1,0,"A","0-1",3,1,3,1,1,8,"W",5
+2014-08-17,"Liverpool","Southampton",2,1,"H","2-1",3,1,3,1,1,4,"W",6
+2014-08-17,"Southampton","Liverpool",1,2,"A","2-1",0,-1,0,-1,1,15,"L",7
+2014-08-16,"Swansea City","Manchester United",2,1,"A","1-2",3,1,3,1,1,5,"W",8
+2014-08-16,"Stoke City","Aston Villa",0,1,"H","0-1",0,-1,0,-1,1,17,"L",9
+2014-08-16,"Crystal Palace","Arsenal",1,2,"A","2-1",0,-1,0,-1,1,13,"L",10
+2014-08-16,"Everton","Leicester City",2,2,"A","2-2",1,0,1,0,1,9,"D",11
+2014-08-16,"West Ham United","Tottenham Hotspur",0,1,"H","0-1",0,-1,0,-1,1,18,"L",12
+2014-08-16,"West Bromwich Albion","Sunderland",2,2,"H","2-2",1,0,1,0,1,12,"D",13
+2014-08-16,"Leicester City","Everton",2,2,"H","2-2",1,0,1,0,1,10,"D",14
+2014-08-17,"Newcastle United","Manchester City",0,2,"H","0-2",0,-2,0,-2,1,20,"L",15
+2014-08-16,"Sunderland","West Bromwich Albion",2,2,"A","2-2",1,0,1,0,1,11,"D",16
+2014-08-16,"Aston Villa","Stoke City",1,0,"A","0-1",3,1,3,1,1,6,"W",17
+2014-08-16,"Hull City","Queens Park Rangers",1,0,"A","0-1",3,1,3,1,1,7,"W",18
+2014-08-18,"Burnley","Chelsea",1,3,"H","1-3",0,-2,0,-2,1,19,"L",19
+2014-08-16,"Queens Park Rangers","Hull City",0,1,"H","0-1",0,-1,0,-1,1,16,"L",20
+2014-08-23,"Chelsea","Leicester City",2,0,"H","2-0",3,2,6,4,2,3,"W",1
+2014-08-25,"Manchester City","Liverpool",3,1,"H","3-1",3,2,6,4,2,2,"W",2
+2014-08-23,"Arsenal","Everton",2,2,"A","2-2",1,0,4,1,2,5,"D",3
+2014-08-24,"Manchester United","Sunderland",1,1,"A","1-1",1,0,1,-1,2,13,"D",4
+2014-08-24,"Tottenham Hotspur","Queens Park Rangers",4,0,"H","4-0",3,4,6,5,2,1,"W",5
+2014-08-25,"Liverpool","Manchester City",1,3,"A","3-1",0,-2,3,-1,2,9,"L",6
+2014-08-23,"Southampton","West Bromwich Albion",0,0,"H","0-0",1,0,1,-1,2,15,"D",7
+2014-08-23,"Swansea City","Burnley",1,0,"H","1-0",3,1,6,2,2,4,"W",8
+2014-08-24,"Stoke City","Hull City",1,1,"A","1-1",1,0,1,-1,2,14,"D",9
+2014-08-23,"Crystal Palace","West Ham United",1,3,"H","1-3",0,-2,0,-3,2,18,"L",10
+2014-08-23,"Everton","Arsenal",2,2,"H","2-2",1,0,2,0,2,10,"D",11
+2014-08-23,"West Ham United","Crystal Palace",3,1,"A","1-3",3,2,3,1,2,8,"W",12
+2014-08-23,"West Bromwich Albion","Southampton",0,0,"A","0-0",1,0,2,0,2,12,"D",13
+2014-08-23,"Leicester City","Chelsea",0,2,"A","2-0",0,-2,1,-2,2,16,"L",14
+2014-08-23,"Newcastle United","Aston Villa",0,0,"A","0-0",1,0,1,-2,2,17,"D",15
+2014-08-24,"Sunderland","Manchester United",1,1,"H","1-1",1,0,2,0,2,11,"D",16
+2014-08-23,"Aston Villa","Newcastle United",0,0,"H","0-0",1,0,4,1,2,7,"D",17
+2014-08-24,"Hull City","Stoke City",1,1,"H","1-1",1,0,4,1,2,6,"D",18
+2014-08-23,"Burnley","Swansea City",0,1,"A","1-0",0,-1,0,-3,2,19,"L",19
+2014-08-24,"Queens Park Rangers","Tottenham Hotspur",0,4,"A","4-0",0,-4,0,-5,2,20,"L",20
+2014-08-30,"Chelsea","Everton",6,3,"A","3-6",3,3,9,7,3,1,"W",1
+2014-08-30,"Manchester City","Stoke City",0,1,"H","0-1",0,-1,6,3,3,4,"L",2
+2014-08-31,"Arsenal","Leicester City",1,1,"A","1-1",1,0,5,1,3,7,"D",3
+2014-08-30,"Manchester United","Burnley",0,0,"A","0-0",1,0,2,-1,3,13,"D",4
+2014-08-31,"Tottenham Hotspur","Liverpool",0,3,"H","0-3",0,-3,6,2,3,6,"L",5
+2014-08-31,"Liverpool","Tottenham Hotspur",3,0,"A","0-3",3,3,6,2,3,5,"W",6
+2014-08-30,"Southampton","West Ham United",3,1,"A","1-3",3,2,4,1,3,8,"W",7
+2014-08-30,"Swansea City","West Bromwich Albion",3,0,"H","3-0",3,3,9,5,3,2,"W",8
+2014-08-30,"Stoke City","Manchester City",1,0,"A","0-1",3,1,4,0,3,10,"W",9
+2014-08-30,"Crystal Palace","Newcastle United",3,3,"A","3-3",1,0,1,-3,3,19,"D",10
+2014-08-30,"Everton","Chelsea",3,6,"H","3-6",0,-3,2,-3,3,17,"L",11
+2014-08-30,"West Ham United","Southampton",1,3,"H","1-3",0,-2,3,-1,3,11,"L",12
+2014-08-30,"West Bromwich Albion","Swansea City",0,3,"A","3-0",0,-3,2,-3,3,18,"L",13
+2014-08-31,"Leicester City","Arsenal",1,1,"H","1-1",1,0,2,-2,3,16,"D",14
+2014-08-30,"Newcastle United","Crystal Palace",3,3,"H","3-3",1,0,2,-2,3,15,"D",15
+2014-08-30,"Sunderland","Queens Park Rangers",0,1,"A","1-0",0,-1,2,-1,3,14,"L",16
+2014-08-31,"Aston Villa","Hull City",2,1,"H","2-1",3,1,7,2,3,3,"W",17
+2014-08-31,"Hull City","Aston Villa",1,2,"A","2-1",0,-1,4,0,3,9,"L",18
+2014-08-30,"Burnley","Manchester United",0,0,"H","0-0",1,0,1,-3,3,20,"D",19
+2014-08-30,"Queens Park Rangers","Sunderland",1,0,"H","1-0",3,1,3,-4,3,12,"W",20
+2014-09-13,"Chelsea","Swansea City",4,2,"H","4-2",3,2,12,9,4,1,"W",1
+2014-09-13,"Manchester City","Arsenal",2,2,"A","2-2",1,0,7,3,4,5,"D",2
+2014-09-13,"Arsenal","Manchester City",2,2,"H","2-2",1,0,6,1,4,7,"D",3
+2014-09-14,"Manchester United","Queens Park Rangers",4,0,"H","4-0",3,4,5,3,4,9,"W",4
+2014-09-13,"Tottenham Hotspur","Sunderland",2,2,"A","2-2",1,0,7,2,4,6,"D",5
+2014-09-13,"Liverpool","Aston Villa",0,1,"H","0-1",0,-1,6,1,4,8,"L",6
+2014-09-13,"Southampton","Newcastle United",4,0,"H","4-0",3,4,7,5,4,4,"W",7
+2014-09-13,"Swansea City","Chelsea",2,4,"A","4-2",0,-2,9,3,4,3,"L",8
+2014-09-13,"Stoke City","Leicester City",0,1,"H","0-1",0,-1,4,-1,4,14,"L",9
+2014-09-13,"Crystal Palace","Burnley",0,0,"H","0-0",1,0,2,-3,4,18,"D",10
+2014-09-13,"Everton","West Bromwich Albion",2,0,"A","0-2",3,2,5,-1,4,11,"W",11
+2014-09-15,"West Ham United","Hull City",2,2,"A","2-2",1,0,4,-1,4,13,"D",12
+2014-09-13,"West Bromwich Albion","Everton",0,2,"H","0-2",0,-2,2,-5,4,19,"L",13
+2014-09-13,"Leicester City","Stoke City",1,0,"A","0-1",3,1,5,-1,4,12,"W",14
+2014-09-13,"Newcastle United","Southampton",0,4,"A","4-0",0,-4,2,-6,4,20,"L",15
+2014-09-13,"Sunderland","Tottenham Hotspur",2,2,"H","2-2",1,0,3,-1,4,15,"D",16
+2014-09-13,"Aston Villa","Liverpool",1,0,"A","0-1",3,1,10,3,4,2,"W",17
+2014-09-15,"Hull City","West Ham United",2,2,"H","2-2",1,0,5,0,4,10,"D",18
+2014-09-13,"Burnley","Crystal Palace",0,0,"A","0-0",1,0,2,-3,4,17,"D",19
+2014-09-14,"Queens Park Rangers","Manchester United",0,4,"A","4-0",0,-4,3,-8,4,16,"L",20
+2014-09-21,"Chelsea","Manchester City",1,1,"A","1-1",1,0,13,9,5,1,"D",1
+2014-09-21,"Manchester City","Chelsea",1,1,"H","1-1",1,0,8,3,5,6,"D",2
+2014-09-20,"Arsenal","Aston Villa",3,0,"A","0-3",3,3,9,4,5,4,"W",3
+2014-09-21,"Manchester United","Leicester City",3,5,"A","5-3",0,-2,5,1,5,12,"L",4
+2014-09-21,"Tottenham Hotspur","West Bromwich Albion",0,1,"H","0-1",0,-1,7,1,5,9,"L",5
+2014-09-20,"Liverpool","West Ham United",1,3,"A","3-1",0,-2,6,-1,5,11,"L",6
+2014-09-20,"Southampton","Swansea City",1,0,"A","0-1",3,1,10,6,5,2,"W",7
+2014-09-20,"Swansea City","Southampton",0,1,"H","0-1",0,-1,9,2,5,5,"L",8
+2014-09-20,"Stoke City","Queens Park Rangers",2,2,"A","2-2",1,0,5,-1,5,13,"D",9
+2014-09-21,"Crystal Palace","Everton",3,2,"A","2-3",3,1,5,-2,5,14,"W",10
+2014-09-21,"Everton","Crystal Palace",2,3,"H","2-3",0,-1,5,-2,5,15,"L",11
+2014-09-20,"West Ham United","Liverpool",3,1,"H","3-1",3,2,7,1,5,8,"W",12
+2014-09-21,"West Bromwich Albion","Tottenham Hotspur",1,0,"A","0-1",3,1,5,-4,5,16,"W",13
+2014-09-21,"Leicester City","Manchester United",5,3,"H","5-3",3,2,8,1,5,7,"W",14
+2014-09-20,"Newcastle United","Hull City",2,2,"H","2-2",1,0,3,-6,5,20,"D",15
+2014-09-20,"Sunderland","Burnley",0,0,"A","0-0",1,0,4,-1,5,17,"D",16
+2014-09-20,"Aston Villa","Arsenal",0,3,"H","0-3",0,-3,10,0,5,3,"L",17
+2014-09-20,"Hull City","Newcastle United",2,2,"A","2-2",1,0,6,0,5,10,"D",18
+2014-09-20,"Burnley","Sunderland",0,0,"H","0-0",1,0,3,-3,5,19,"D",19
+2014-09-20,"Queens Park Rangers","Stoke City",2,2,"H","2-2",1,0,4,-8,5,18,"D",20
+2014-09-27,"Chelsea","Aston Villa",3,0,"H","3-0",3,3,16,12,6,1,"W",1
+2014-09-27,"Manchester City","Hull City",4,2,"A","2-4",3,2,11,5,6,3,"W",2
+2014-09-27,"Arsenal","Tottenham Hotspur",1,1,"H","1-1",1,0,10,4,6,4,"D",3
+2014-09-27,"Manchester United","West Ham United",2,1,"H","2-1",3,1,8,2,6,7,"W",4
+2014-09-27,"Tottenham Hotspur","Arsenal",1,1,"A","1-1",1,0,8,1,6,8,"D",5
+2014-09-27,"Liverpool","Everton",1,1,"H","1-1",1,0,7,-1,6,14,"D",6
+2014-09-27,"Southampton","Queens Park Rangers",2,1,"H","2-1",3,1,13,7,6,2,"W",7
+2014-09-27,"Swansea City","Sunderland",0,0,"A","0-0",1,0,10,2,6,5,"D",8
+2014-09-29,"Stoke City","Newcastle United",1,0,"H","1-0",3,1,8,0,6,11,"W",9
+2014-09-27,"Crystal Palace","Leicester City",2,0,"H","2-0",3,2,8,0,6,10,"W",10
+2014-09-27,"Everton","Liverpool",1,1,"A","1-1",1,0,6,-2,6,16,"D",11
+2014-09-27,"West Ham United","Manchester United",1,2,"A","2-1",0,-1,7,0,6,13,"L",12
+2014-09-28,"West Bromwich Albion","Burnley",4,0,"H","4-0",3,4,8,0,6,9,"W",13
+2014-09-27,"Leicester City","Crystal Palace",0,2,"A","2-0",0,-2,8,-1,6,12,"L",14
+2014-09-29,"Newcastle United","Stoke City",0,1,"A","1-0",0,-1,3,-7,6,20,"L",15
+2014-09-27,"Sunderland","Swansea City",0,0,"H","0-0",1,0,5,-1,6,17,"D",16
+2014-09-27,"Aston Villa","Chelsea",0,3,"A","3-0",0,-3,10,-3,6,6,"L",17
+2014-09-27,"Hull City","Manchester City",2,4,"H","2-4",0,-2,6,-2,6,15,"L",18
+2014-09-28,"Burnley","West Bromwich Albion",0,4,"A","4-0",0,-4,3,-7,6,19,"L",19
+2014-09-27,"Queens Park Rangers","Southampton",1,2,"A","2-1",0,-1,4,-9,6,18,"L",20
+2014-10-05,"Chelsea","Arsenal",2,0,"H","2-0",3,2,19,14,7,1,"W",1
+2014-10-04,"Manchester City","Aston Villa",2,0,"A","0-2",3,2,14,7,7,2,"W",2
+2014-10-05,"Arsenal","Chelsea",0,2,"A","2-0",0,-2,10,2,7,8,"L",3
+2014-10-05,"Manchester United","Everton",2,1,"H","2-1",3,1,11,3,7,4,"W",4
+2014-10-05,"Tottenham Hotspur","Southampton",1,0,"H","1-0",3,1,11,2,7,6,"W",5
+2014-10-04,"Liverpool","West Bromwich Albion",2,1,"H","2-1",3,1,10,0,7,9,"W",6
+2014-10-05,"Southampton","Tottenham Hotspur",0,1,"A","1-0",0,-1,13,6,7,3,"L",7
+2014-10-04,"Swansea City","Newcastle United",2,2,"H","2-2",1,0,11,2,7,5,"D",8
+2014-10-04,"Stoke City","Sunderland",1,3,"A","3-1",0,-2,8,-2,7,15,"L",9
+2014-10-04,"Crystal Palace","Hull City",0,2,"A","2-0",0,-2,8,-2,7,16,"L",10
+2014-10-05,"Everton","Manchester United",1,2,"A","2-1",0,-1,6,-3,7,17,"L",11
+2014-10-05,"West Ham United","Queens Park Rangers",2,0,"H","2-0",3,2,10,2,7,7,"W",12
+2014-10-04,"West Bromwich Albion","Liverpool",1,2,"A","2-1",0,-1,8,-1,7,14,"L",13
+2014-10-04,"Leicester City","Burnley",2,2,"H","2-2",1,0,9,-1,7,12,"D",14
+2014-10-04,"Newcastle United","Swansea City",2,2,"A","2-2",1,0,4,-7,7,19,"D",15
+2014-10-04,"Sunderland","Stoke City",3,1,"H","3-1",3,2,8,1,7,13,"W",16
+2014-10-04,"Aston Villa","Manchester City",0,2,"H","0-2",0,-2,10,-5,7,10,"L",17
+2014-10-04,"Hull City","Crystal Palace",2,0,"H","2-0",3,2,9,0,7,11,"W",18
+2014-10-04,"Burnley","Leicester City",2,2,"A","2-2",1,0,4,-7,7,18,"D",19
+2014-10-05,"Queens Park Rangers","West Ham United",0,2,"A","2-0",0,-2,4,-11,7,20,"L",20
+2014-10-18,"Chelsea","Crystal Palace",2,1,"A","1-2",3,1,22,15,8,1,"W",1
+2014-10-18,"Manchester City","Tottenham Hotspur",4,1,"H","4-1",3,3,17,10,8,2,"W",2
+2014-10-18,"Arsenal","Hull City",2,2,"H","2-2",1,0,11,2,8,7,"D",3
+2014-10-20,"Manchester United","West Bromwich Albion",2,2,"A","2-2",1,0,12,3,8,6,"D",4
+2014-10-18,"Tottenham Hotspur","Manchester City",1,4,"A","4-1",0,-3,11,-1,8,10,"L",5
+2014-10-19,"Liverpool","Queens Park Rangers",3,2,"A","2-3",3,1,13,1,8,5,"W",6
+2014-10-18,"Southampton","Sunderland",8,0,"H","8-0",3,8,16,14,8,3,"W",7
+2014-10-19,"Swansea City","Stoke City",1,2,"A","2-1",0,-1,11,1,8,8,"L",8
+2014-10-19,"Stoke City","Swansea City",2,1,"H","2-1",3,1,11,-1,8,9,"W",9
+2014-10-18,"Crystal Palace","Chelsea",1,2,"H","1-2",0,-1,8,-3,8,16,"L",10
+2014-10-18,"Everton","Aston Villa",3,0,"H","3-0",3,3,9,0,8,13,"W",11
+2014-10-18,"West Ham United","Burnley",3,1,"A","1-3",3,2,13,4,8,4,"W",12
+2014-10-20,"West Bromwich Albion","Manchester United",2,2,"H","2-2",1,0,9,-1,8,14,"D",13
+2014-10-18,"Leicester City","Newcastle United",0,1,"A","1-0",0,-1,9,-2,8,15,"L",14
+2014-10-18,"Newcastle United","Leicester City",1,0,"H","1-0",3,1,7,-6,8,18,"W",15
+2014-10-18,"Sunderland","Southampton",0,8,"A","8-0",0,-8,8,-7,8,17,"L",16
+2014-10-18,"Aston Villa","Everton",0,3,"A","3-0",0,-3,10,-8,8,12,"L",17
+2014-10-18,"Hull City","Arsenal",2,2,"A","2-2",1,0,10,0,8,11,"D",18
+2014-10-18,"Burnley","West Ham United",1,3,"H","1-3",0,-2,4,-9,8,19,"L",19
+2014-10-19,"Queens Park Rangers","Liverpool",2,3,"H","2-3",0,-1,4,-12,8,20,"L",20
+2014-10-26,"Chelsea","Manchester United",1,1,"A","1-1",1,0,23,15,9,1,"D",1
+2014-10-25,"Manchester City","West Ham United",1,2,"A","2-1",0,-1,17,9,9,3,"L",2
+2014-10-25,"Arsenal","Sunderland",2,0,"A","0-2",3,2,14,4,9,5,"W",3
+2014-10-26,"Manchester United","Chelsea",1,1,"H","1-1",1,0,13,3,9,8,"D",4
+2014-10-26,"Tottenham Hotspur","Newcastle United",1,2,"H","1-2",0,-1,11,-2,9,11,"L",5
+2014-10-25,"Liverpool","Hull City",0,0,"H","0-0",1,0,14,1,9,7,"D",6
+2014-10-25,"Southampton","Stoke City",1,0,"H","1-0",3,1,19,15,9,2,"W",7
+2014-10-25,"Swansea City","Leicester City",2,0,"H","2-0",3,2,14,3,9,6,"W",8
+2014-10-25,"Stoke City","Southampton",0,1,"A","1-0",0,-1,11,-2,9,12,"L",9
+2014-10-25,"Crystal Palace","West Bromwich Albion",2,2,"A","2-2",1,0,9,-3,9,16,"D",10
+2014-10-26,"Everton","Burnley",3,1,"A","1-3",3,2,12,2,9,9,"W",11
+2014-10-25,"West Ham United","Manchester City",2,1,"H","2-1",3,1,16,5,9,4,"W",12
+2014-10-25,"West Bromwich Albion","Crystal Palace",2,2,"H","2-2",1,0,10,-1,9,13,"D",13
+2014-10-25,"Leicester City","Swansea City",0,2,"A","2-0",0,-2,9,-4,9,17,"L",14
+2014-10-26,"Newcastle United","Tottenham Hotspur",2,1,"A","1-2",3,1,10,-5,9,14,"W",15
+2014-10-25,"Sunderland","Arsenal",0,2,"H","0-2",0,-2,8,-9,9,18,"L",16
+2014-10-27,"Aston Villa","Queens Park Rangers",0,2,"A","2-0",0,-2,10,-10,9,15,"L",17
+2014-10-25,"Hull City","Liverpool",0,0,"A","0-0",1,0,11,0,9,10,"D",18
+2014-10-26,"Burnley","Everton",1,3,"H","1-3",0,-2,4,-11,9,20,"L",19
+2014-10-27,"Queens Park Rangers","Aston Villa",2,0,"H","2-0",3,2,7,-10,9,19,"W",20
+2014-11-01,"Chelsea","Queens Park Rangers",2,1,"H","2-1",3,1,26,16,10,1,"W",1
+2014-11-02,"Manchester City","Manchester United",1,0,"H","1-0",3,1,20,10,10,3,"W",2
+2014-11-01,"Arsenal","Burnley",3,0,"H","3-0",3,3,17,7,10,4,"W",3
+2014-11-02,"Manchester United","Manchester City",0,1,"A","1-0",0,-1,13,2,10,10,"L",4
+2014-11-02,"Tottenham Hotspur","Aston Villa",2,1,"A","1-2",3,1,14,-1,10,8,"W",5
+2014-11-01,"Liverpool","Newcastle United",0,1,"A","1-0",0,-1,14,0,10,7,"L",6
+2014-11-01,"Southampton","Hull City",1,0,"A","0-1",3,1,22,16,10,2,"W",7
+2014-11-01,"Swansea City","Everton",0,0,"A","0-0",1,0,15,3,10,6,"D",8
+2014-11-01,"Stoke City","West Ham United",2,2,"H","2-2",1,0,12,-2,10,13,"D",9
+2014-11-03,"Crystal Palace","Sunderland",1,3,"H","1-3",0,-2,9,-5,10,17,"L",10
+2014-11-01,"Everton","Swansea City",0,0,"H","0-0",1,0,13,2,10,9,"D",11
+2014-11-01,"West Ham United","Stoke City",2,2,"A","2-2",1,0,17,5,10,5,"D",12
+2014-11-01,"West Bromwich Albion","Leicester City",1,0,"A","0-1",3,1,13,0,10,11,"W",13
+2014-11-01,"Leicester City","West Bromwich Albion",0,1,"H","0-1",0,-1,9,-5,10,18,"L",14
+2014-11-01,"Newcastle United","Liverpool",1,0,"H","1-0",3,1,13,-4,10,12,"W",15
+2014-11-03,"Sunderland","Crystal Palace",3,1,"A","1-3",3,2,11,-7,10,15,"W",16
+2014-11-02,"Aston Villa","Tottenham Hotspur",1,2,"H","1-2",0,-1,10,-11,10,16,"L",17
+2014-11-01,"Hull City","Southampton",0,1,"H","0-1",0,-1,11,-1,10,14,"L",18
+2014-11-01,"Burnley","Arsenal",0,3,"A","3-0",0,-3,4,-14,10,20,"L",19
+2014-11-01,"Queens Park Rangers","Chelsea",1,2,"A","2-1",0,-1,7,-11,10,19,"L",20
+2014-11-08,"Chelsea","Liverpool",2,1,"A","1-2",3,1,29,17,11,1,"W",1
+2014-11-08,"Manchester City","Queens Park Rangers",2,2,"A","2-2",1,0,21,10,11,3,"D",2
+2014-11-09,"Arsenal","Swansea City",1,2,"A","2-1",0,-1,17,6,11,6,"L",3
+2014-11-08,"Manchester United","Crystal Palace",1,0,"H","1-0",3,1,16,3,11,7,"W",4
+2014-11-09,"Tottenham Hotspur","Stoke City",1,2,"H","1-2",0,-1,14,-2,11,12,"L",5
+2014-11-08,"Liverpool","Chelsea",1,2,"H","1-2",0,-1,14,-1,11,11,"L",6
+2014-11-08,"Southampton","Leicester City",2,0,"H","2-0",3,2,25,18,11,2,"W",7
+2014-11-09,"Swansea City","Arsenal",2,1,"H","2-1",3,1,18,4,11,5,"W",8
+2014-11-09,"Stoke City","Tottenham Hotspur",2,1,"A","1-2",3,1,15,-1,11,9,"W",9
+2014-11-08,"Crystal Palace","Manchester United",0,1,"A","1-0",0,-1,9,-6,11,17,"L",10
+2014-11-09,"Everton","Sunderland",1,1,"A","1-1",1,0,14,2,11,10,"D",11
+2014-11-08,"West Ham United","Aston Villa",0,0,"H","0-0",1,0,18,5,11,4,"D",12
+2014-11-09,"West Bromwich Albion","Newcastle United",0,2,"H","0-2",0,-2,13,-2,11,13,"L",13
+2014-11-08,"Leicester City","Southampton",0,2,"A","2-0",0,-2,9,-7,11,18,"L",14
+2014-11-09,"Newcastle United","West Bromwich Albion",2,0,"A","0-2",3,2,16,-2,11,8,"W",15
+2014-11-09,"Sunderland","Everton",1,1,"H","1-1",1,0,12,-7,11,14,"D",16
+2014-11-08,"Aston Villa","West Ham United",0,0,"A","0-0",1,0,11,-11,11,16,"D",17
+2014-11-08,"Hull City","Burnley",0,1,"A","1-0",0,-1,11,-2,11,15,"L",18
+2014-11-08,"Burnley","Hull City",1,0,"H","1-0",3,1,7,-13,11,20,"W",19
+2014-11-08,"Queens Park Rangers","Manchester City",2,2,"H","2-2",1,0,8,-11,11,19,"D",20
+2014-11-22,"Chelsea","West Bromwich Albion",2,0,"H","2-0",3,2,32,19,12,1,"W",1
+2014-11-22,"Manchester City","Swansea City",2,1,"H","2-1",3,1,24,11,12,3,"W",2
+2014-11-22,"Arsenal","Manchester United",1,2,"H","1-2",0,-1,17,5,12,8,"L",3
+2014-11-22,"Manchester United","Arsenal",2,1,"A","1-2",3,1,19,4,12,4,"W",4
+2014-11-23,"Tottenham Hotspur","Hull City",2,1,"A","1-2",3,1,17,-1,12,10,"W",5
+2014-11-23,"Liverpool","Crystal Palace",1,3,"A","3-1",0,-2,14,-3,12,12,"L",6
+2014-11-24,"Southampton","Aston Villa",1,1,"A","1-1",1,0,26,18,12,2,"D",7
+2014-11-22,"Swansea City","Manchester City",1,2,"A","2-1",0,-1,18,3,12,7,"L",8
+2014-11-22,"Stoke City","Burnley",1,2,"H","1-2",0,-1,15,-2,12,11,"L",9
+2014-11-23,"Crystal Palace","Liverpool",3,1,"H","3-1",3,2,12,-4,12,15,"W",10
+2014-11-22,"Everton","West Ham United",2,1,"H","2-1",3,1,17,3,12,9,"W",11
+2014-11-22,"West Ham United","Everton",1,2,"A","2-1",0,-1,18,4,12,6,"L",12
+2014-11-22,"West Bromwich Albion","Chelsea",0,2,"A","2-0",0,-2,13,-4,12,13,"L",13
+2014-11-22,"Leicester City","Sunderland",0,0,"H","0-0",1,0,10,-7,12,18,"D",14
+2014-11-22,"Newcastle United","Queens Park Rangers",1,0,"H","1-0",3,1,19,-1,12,5,"W",15
+2014-11-22,"Sunderland","Leicester City",0,0,"A","0-0",1,0,13,-7,12,14,"D",16
+2014-11-24,"Aston Villa","Southampton",1,1,"H","1-1",1,0,12,-11,12,16,"D",17
+2014-11-23,"Hull City","Tottenham Hotspur",1,2,"H","1-2",0,-1,11,-3,12,17,"L",18
+2014-11-22,"Burnley","Stoke City",2,1,"A","1-2",3,1,10,-12,12,19,"W",19
+2014-11-22,"Queens Park Rangers","Newcastle United",0,1,"A","1-0",0,-1,8,-12,12,20,"L",20
+2014-11-29,"Chelsea","Sunderland",0,0,"A","0-0",1,0,33,19,13,1,"D",1
+2014-11-30,"Manchester City","Southampton",3,0,"A","0-3",3,3,27,14,13,2,"W",2
+2014-11-29,"Arsenal","West Bromwich Albion",1,0,"A","0-1",3,1,20,6,13,6,"W",3
+2014-11-29,"Manchester United","Hull City",3,0,"H","3-0",3,3,22,7,13,4,"W",4
+2014-11-30,"Tottenham Hotspur","Everton",2,1,"H","2-1",3,1,20,0,13,7,"W",5
+2014-11-29,"Liverpool","Stoke City",1,0,"H","1-0",3,1,17,-2,13,11,"W",6
+2014-11-30,"Southampton","Manchester City",0,3,"H","0-3",0,-3,26,15,13,3,"L",7
+2014-11-29,"Swansea City","Crystal Palace",1,1,"H","1-1",1,0,19,3,13,8,"D",8
+2014-11-29,"Stoke City","Liverpool",0,1,"A","1-0",0,-1,15,-3,13,12,"L",9
+2014-11-29,"Crystal Palace","Swansea City",1,1,"A","1-1",1,0,13,-4,13,14,"D",10
+2014-11-30,"Everton","Tottenham Hotspur",1,2,"A","2-1",0,-1,17,2,13,10,"L",11
+2014-11-29,"West Ham United","Newcastle United",1,0,"H","1-0",3,1,21,5,13,5,"W",12
+2014-11-29,"West Bromwich Albion","Arsenal",0,1,"H","0-1",0,-1,13,-5,13,15,"L",13
+2014-11-29,"Leicester City","Queens Park Rangers",2,3,"A","3-2",0,-1,10,-8,13,20,"L",14
+2014-11-29,"Newcastle United","West Ham United",0,1,"A","1-0",0,-1,19,-2,13,9,"L",15
+2014-11-29,"Sunderland","Chelsea",0,0,"H","0-0",1,0,14,-7,13,13,"D",16
+2014-11-29,"Aston Villa","Burnley",1,1,"A","1-1",1,0,13,-11,13,16,"D",17
+2014-11-29,"Hull City","Manchester United",0,3,"A","3-0",0,-3,11,-6,13,17,"L",18
+2014-11-29,"Burnley","Aston Villa",1,1,"H","1-1",1,0,11,-12,13,19,"D",19
+2014-11-29,"Queens Park Rangers","Leicester City",3,2,"H","3-2",3,1,11,-11,13,18,"W",20
+2014-12-03,"Chelsea","Tottenham Hotspur",3,0,"H","3-0",3,3,36,22,14,1,"W",1
+2014-12-03,"Manchester City","Sunderland",4,1,"A","1-4",3,3,30,17,14,2,"W",2
+2014-12-03,"Arsenal","Southampton",1,0,"H","1-0",3,1,23,7,14,6,"W",3
+2014-12-02,"Manchester United","Stoke City",2,1,"H","2-1",3,1,25,8,14,4,"W",4
+2014-12-03,"Tottenham Hotspur","Chelsea",0,3,"A","3-0",0,-3,20,-3,14,10,"L",5
+2014-12-02,"Liverpool","Leicester City",3,1,"A","1-3",3,2,20,0,14,8,"W",6
+2014-12-03,"Southampton","Arsenal",0,1,"A","1-0",0,-1,26,14,14,3,"L",7
+2014-12-02,"Swansea City","Queens Park Rangers",2,0,"H","2-0",3,2,22,5,14,7,"W",8
+2014-12-02,"Stoke City","Manchester United",1,2,"A","2-1",0,-1,15,-4,14,13,"L",9
+2014-12-02,"Crystal Palace","Aston Villa",0,1,"H","0-1",0,-1,13,-5,14,15,"L",10
+2014-12-03,"Everton","Hull City",1,1,"H","1-1",1,0,18,2,14,11,"D",11
+2014-12-02,"West Ham United","West Bromwich Albion",2,1,"A","1-2",3,1,24,6,14,5,"W",12
+2014-12-02,"West Bromwich Albion","West Ham United",1,2,"H","1-2",0,-1,13,-6,14,16,"L",13
+2014-12-02,"Leicester City","Liverpool",1,3,"H","1-3",0,-2,10,-10,14,20,"L",14
+2014-12-02,"Newcastle United","Burnley",1,1,"A","1-1",1,0,20,-2,14,9,"D",15
+2014-12-03,"Sunderland","Manchester City",1,4,"H","1-4",0,-3,14,-10,14,14,"L",16
+2014-12-02,"Aston Villa","Crystal Palace",1,0,"A","0-1",3,1,16,-10,14,12,"W",17
+2014-12-03,"Hull City","Everton",1,1,"A","1-1",1,0,12,-6,14,17,"D",18
+2014-12-02,"Burnley","Newcastle United",1,1,"H","1-1",1,0,12,-12,14,18,"D",19
+2014-12-02,"Queens Park Rangers","Swansea City",0,2,"A","2-0",0,-2,11,-13,14,19,"L",20
+2014-12-06,"Chelsea","Newcastle United",1,2,"A","2-1",0,-1,36,21,15,1,"L",1
+2014-12-06,"Manchester City","Everton",1,0,"H","1-0",3,1,33,18,15,2,"W",2
+2014-12-06,"Arsenal","Stoke City",2,3,"A","3-2",0,-1,23,6,15,6,"L",3
+2014-12-08,"Manchester United","Southampton",2,1,"A","1-2",3,1,28,9,15,3,"W",4
+2014-12-06,"Tottenham Hotspur","Crystal Palace",0,0,"H","0-0",1,0,21,-3,15,10,"D",5
+2014-12-06,"Liverpool","Sunderland",0,0,"H","0-0",1,0,21,0,15,9,"D",6
+2014-12-08,"Southampton","Manchester United",1,2,"H","1-2",0,-1,26,13,15,5,"L",7
+2014-12-07,"Swansea City","West Ham United",1,3,"A","3-1",0,-2,22,3,15,8,"L",8
+2014-12-06,"Stoke City","Arsenal",3,2,"H","3-2",3,1,18,-3,15,13,"W",9
+2014-12-06,"Crystal Palace","Tottenham Hotspur",0,0,"A","0-0",1,0,14,-5,15,15,"D",10
+2014-12-06,"Everton","Manchester City",0,1,"A","1-0",0,-1,18,1,15,12,"L",11
+2014-12-07,"West Ham United","Swansea City",3,1,"H","3-1",3,2,27,8,15,4,"W",12
+2014-12-06,"West Bromwich Albion","Hull City",0,0,"A","0-0",1,0,14,-6,15,16,"D",13
+2014-12-07,"Leicester City","Aston Villa",1,2,"A","2-1",0,-1,10,-11,15,20,"L",14
+2014-12-06,"Newcastle United","Chelsea",2,1,"H","2-1",3,1,23,-1,15,7,"W",15
+2014-12-06,"Sunderland","Liverpool",0,0,"A","0-0",1,0,15,-10,15,14,"D",16
+2014-12-07,"Aston Villa","Leicester City",2,1,"H","2-1",3,1,19,-9,15,11,"W",17
+2014-12-06,"Hull City","West Bromwich Albion",0,0,"H","0-0",1,0,13,-6,15,18,"D",18
+2014-12-06,"Burnley","Queens Park Rangers",0,2,"A","2-0",0,-2,12,-14,15,19,"L",19
+2014-12-06,"Queens Park Rangers","Burnley",2,0,"H","2-0",3,2,14,-11,15,17,"W",20
+2014-12-13,"Chelsea","Hull City",2,0,"H","2-0",3,2,39,23,16,1,"W",1
+2014-12-13,"Manchester City","Leicester City",1,0,"A","0-1",3,1,36,19,16,2,"W",2
+2014-12-13,"Arsenal","Newcastle United",4,1,"H","4-1",3,3,26,9,16,6,"W",3
+2014-12-14,"Manchester United","Liverpool",3,0,"H","3-0",3,3,31,12,16,3,"W",4
+2014-12-14,"Tottenham Hotspur","Swansea City",2,1,"A","1-2",3,1,24,-2,16,7,"W",5
+2014-12-14,"Liverpool","Manchester United",0,3,"A","3-0",0,-3,21,-3,16,11,"L",6
+2014-12-13,"Southampton","Burnley",0,1,"A","1-0",0,-1,26,12,16,5,"L",7
+2014-12-14,"Swansea City","Tottenham Hotspur",1,2,"H","1-2",0,-1,22,2,16,9,"L",8
+2014-12-13,"Stoke City","Crystal Palace",1,1,"A","1-1",1,0,19,-3,16,12,"D",9
+2014-12-13,"Crystal Palace","Stoke City",1,1,"H","1-1",1,0,15,-5,16,16,"D",10
+2014-12-15,"Everton","Queens Park Rangers",3,1,"H","3-1",3,2,21,3,16,10,"W",11
+2014-12-13,"West Ham United","Sunderland",1,1,"A","1-1",1,0,28,8,16,4,"D",12
+2014-12-13,"West Bromwich Albion","Aston Villa",1,0,"H","1-0",3,1,17,-5,16,14,"W",13
+2014-12-13,"Leicester City","Manchester City",0,1,"H","0-1",0,-1,10,-12,16,20,"L",14
+2014-12-13,"Newcastle United","Arsenal",1,4,"A","4-1",0,-3,23,-4,16,8,"L",15
+2014-12-13,"Sunderland","West Ham United",1,1,"H","1-1",1,0,16,-10,16,15,"D",16
+2014-12-13,"Aston Villa","West Bromwich Albion",0,1,"A","1-0",0,-1,19,-10,16,13,"L",17
+2014-12-13,"Hull City","Chelsea",0,2,"A","2-0",0,-2,13,-8,16,19,"L",18
+2014-12-13,"Burnley","Southampton",1,0,"H","1-0",3,1,15,-13,16,17,"W",19
+2014-12-15,"Queens Park Rangers","Everton",1,3,"A","3-1",0,-2,14,-13,16,18,"L",20
+2014-12-22,"Chelsea","Stoke City",2,0,"A","0-2",3,2,42,25,17,1,"W",1
+2014-12-20,"Manchester City","Crystal Palace",3,0,"H","3-0",3,3,39,22,17,2,"W",2
+2014-12-21,"Arsenal","Liverpool",2,2,"A","2-2",1,0,27,9,17,6,"D",3
+2014-12-20,"Manchester United","Aston Villa",1,1,"A","1-1",1,0,32,12,17,3,"D",4
+2014-12-20,"Tottenham Hotspur","Burnley",2,1,"H","2-1",3,1,27,-1,17,7,"W",5
+2014-12-21,"Liverpool","Arsenal",2,2,"H","2-2",1,0,22,-3,17,10,"D",6
+2014-12-20,"Southampton","Everton",3,0,"H","3-0",3,3,29,15,17,5,"W",7
+2014-12-20,"Swansea City","Hull City",1,0,"A","0-1",3,1,25,3,17,8,"W",8
+2014-12-22,"Stoke City","Chelsea",0,2,"H","0-2",0,-2,19,-5,17,13,"L",9
+2014-12-20,"Crystal Palace","Manchester City",0,3,"A","3-0",0,-3,15,-8,17,17,"L",10
+2014-12-20,"Everton","Southampton",0,3,"A","3-0",0,-3,21,0,17,11,"L",11
+2014-12-20,"West Ham United","Leicester City",2,0,"H","2-0",3,2,31,10,17,4,"W",12
+2014-12-20,"West Bromwich Albion","Queens Park Rangers",2,3,"A","3-2",0,-1,17,-6,17,15,"L",13
+2014-12-20,"Leicester City","West Ham United",0,2,"A","2-0",0,-2,10,-14,17,20,"L",14
+2014-12-21,"Newcastle United","Sunderland",0,1,"H","0-1",0,-1,23,-5,17,9,"L",15
+2014-12-21,"Sunderland","Newcastle United",1,0,"A","0-1",3,1,19,-9,17,14,"W",16
+2014-12-20,"Aston Villa","Manchester United",1,1,"H","1-1",1,0,20,-10,17,12,"D",17
+2014-12-20,"Hull City","Swansea City",0,1,"H","0-1",0,-1,13,-9,17,19,"L",18
+2014-12-20,"Burnley","Tottenham Hotspur",1,2,"A","2-1",0,-1,15,-14,17,18,"L",19
+2014-12-20,"Queens Park Rangers","West Bromwich Albion",3,2,"H","3-2",3,1,17,-12,17,16,"W",20
+2014-12-26,"Chelsea","West Ham United",2,0,"H","2-0",3,2,45,27,18,1,"W",1
+2014-12-26,"Manchester City","West Bromwich Albion",3,1,"A","1-3",3,2,42,24,18,2,"W",2
+2014-12-26,"Arsenal","Queens Park Rangers",2,1,"H","2-1",3,1,30,10,18,6,"W",3
+2014-12-26,"Manchester United","Newcastle United",3,1,"H","3-1",3,2,35,14,18,3,"W",4
+2014-12-26,"Tottenham Hotspur","Leicester City",2,1,"A","1-2",3,1,30,0,18,7,"W",5
+2014-12-26,"Liverpool","Burnley",1,0,"A","0-1",3,1,25,-2,18,9,"W",6
+2014-12-26,"Southampton","Crystal Palace",3,1,"A","1-3",3,2,32,17,18,4,"W",7
+2014-12-26,"Swansea City","Aston Villa",1,0,"H","1-0",3,1,28,4,18,8,"W",8
+2014-12-26,"Stoke City","Everton",1,0,"A","0-1",3,1,22,-4,18,11,"W",9
+2014-12-26,"Crystal Palace","Southampton",1,3,"H","1-3",0,-2,15,-10,18,18,"L",10
+2014-12-26,"Everton","Stoke City",0,1,"H","0-1",0,-1,21,-1,18,12,"L",11
+2014-12-26,"West Ham United","Chelsea",0,2,"A","2-0",0,-2,31,8,18,5,"L",12
+2014-12-26,"West Bromwich Albion","Manchester City",1,3,"H","1-3",0,-2,17,-8,18,15,"L",13
+2014-12-26,"Leicester City","Tottenham Hotspur",1,2,"H","1-2",0,-1,10,-15,18,20,"L",14
+2014-12-26,"Newcastle United","Manchester United",1,3,"A","3-1",0,-2,23,-7,18,10,"L",15
+2014-12-26,"Sunderland","Hull City",1,3,"H","1-3",0,-2,19,-11,18,14,"L",16
+2014-12-26,"Aston Villa","Swansea City",0,1,"A","1-0",0,-1,20,-11,18,13,"L",17
+2014-12-26,"Hull City","Sunderland",3,1,"A","1-3",3,2,16,-7,18,17,"W",18
+2014-12-26,"Burnley","Liverpool",0,1,"H","0-1",0,-1,15,-15,18,19,"L",19
+2014-12-26,"Queens Park Rangers","Arsenal",1,2,"A","2-1",0,-1,17,-13,18,16,"L",20
+2014-12-28,"Chelsea","Southampton",1,1,"A","1-1",1,0,46,27,19,1,"D",1
+2014-12-28,"Manchester City","Burnley",2,2,"H","2-2",1,0,43,24,19,2,"D",2
+2014-12-28,"Arsenal","West Ham United",2,1,"A","1-2",3,1,33,11,19,5,"W",3
+2014-12-28,"Manchester United","Tottenham Hotspur",0,0,"A","0-0",1,0,36,14,19,3,"D",4
+2014-12-28,"Tottenham Hotspur","Manchester United",0,0,"H","0-0",1,0,31,0,19,7,"D",5
+2014-12-29,"Liverpool","Swansea City",4,1,"H","4-1",3,3,28,1,19,8,"W",6
+2014-12-28,"Southampton","Chelsea",1,1,"H","1-1",1,0,33,17,19,4,"D",7
+2014-12-29,"Swansea City","Liverpool",1,4,"A","4-1",0,-3,28,1,19,9,"L",8
+2014-12-28,"Stoke City","West Bromwich Albion",2,0,"H","2-0",3,2,25,-2,19,11,"W",9
+2014-12-28,"Crystal Palace","Queens Park Rangers",0,0,"A","0-0",1,0,16,-10,19,18,"D",10
+2014-12-28,"Everton","Newcastle United",2,3,"A","3-2",0,-1,21,-2,19,12,"L",11
+2014-12-28,"West Ham United","Arsenal",1,2,"H","1-2",0,-1,31,7,19,6,"L",12
+2014-12-28,"West Bromwich Albion","Stoke City",0,2,"A","2-0",0,-2,17,-10,19,16,"L",13
+2014-12-28,"Leicester City","Hull City",1,0,"A","0-1",3,1,13,-14,19,20,"W",14
+2014-12-28,"Newcastle United","Everton",3,2,"H","3-2",3,1,26,-6,19,10,"W",15
+2014-12-28,"Sunderland","Aston Villa",0,0,"A","0-0",1,0,20,-11,19,14,"D",16
+2014-12-28,"Aston Villa","Sunderland",0,0,"H","0-0",1,0,21,-11,19,13,"D",17
+2014-12-28,"Hull City","Leicester City",0,1,"H","0-1",0,-1,16,-8,19,17,"L",18
+2014-12-28,"Burnley","Manchester City",2,2,"A","2-2",1,0,16,-15,19,19,"D",19
+2014-12-28,"Queens Park Rangers","Crystal Palace",0,0,"H","0-0",1,0,18,-13,19,15,"D",20
+2015-01-01,"Chelsea","Tottenham Hotspur",3,5,"A","5-3",0,-2,46,25,20,1,"L",1
+2015-01-01,"Manchester City","Sunderland",3,2,"H","3-2",3,1,46,25,20,2,"W",2
+2015-01-01,"Arsenal","Southampton",0,2,"A","2-0",0,-2,33,9,20,6,"L",3
+2015-01-01,"Manchester United","Stoke City",1,1,"A","1-1",1,0,37,14,20,3,"D",4
+2015-01-01,"Tottenham Hotspur","Chelsea",5,3,"H","5-3",3,2,34,2,20,5,"W",5
+2015-01-01,"Liverpool","Leicester City",2,2,"H","2-2",1,0,29,1,20,8,"D",6
+2015-01-01,"Southampton","Arsenal",2,0,"H","2-0",3,2,36,19,20,4,"W",7
+2015-01-01,"Swansea City","Queens Park Rangers",1,1,"A","1-1",1,0,29,1,20,9,"D",8
+2015-01-01,"Stoke City","Manchester United",1,1,"H","1-1",1,0,26,-2,20,11,"D",9
+2015-01-01,"Crystal Palace","Aston Villa",0,0,"A","0-0",1,0,17,-10,20,18,"D",10
+2015-01-01,"Everton","Hull City",0,2,"A","2-0",0,-2,21,-4,20,13,"L",11
+2015-01-01,"West Ham United","West Bromwich Albion",1,1,"H","1-1",1,0,32,7,20,7,"D",12
+2015-01-01,"West Bromwich Albion","West Ham United",1,1,"A","1-1",1,0,18,-10,20,17,"D",13
+2015-01-01,"Leicester City","Liverpool",2,2,"A","2-2",1,0,14,-14,20,20,"D",14
+2015-01-01,"Newcastle United","Burnley",3,3,"H","3-3",1,0,27,-6,20,10,"D",15
+2015-01-01,"Sunderland","Manchester City",2,3,"A","3-2",0,-1,20,-12,20,14,"L",16
+2015-01-01,"Aston Villa","Crystal Palace",0,0,"H","0-0",1,0,22,-11,20,12,"D",17
+2015-01-01,"Hull City","Everton",2,0,"H","2-0",3,2,19,-6,20,15,"W",18
+2015-01-01,"Burnley","Newcastle United",3,3,"A","3-3",1,0,17,-15,20,19,"D",19
+2015-01-01,"Queens Park Rangers","Swansea City",1,1,"H","1-1",1,0,19,-13,20,16,"D",20
+2015-01-10,"Chelsea","Newcastle United",2,0,"H","2-0",3,2,49,27,21,1,"W",1
+2015-01-10,"Manchester City","Everton",1,1,"A","1-1",1,0,47,25,21,2,"D",2
+2015-01-11,"Arsenal","Stoke City",3,0,"H","3-0",3,3,36,12,21,5,"W",3
+2015-01-11,"Manchester United","Southampton",0,1,"H","0-1",0,-1,37,13,21,4,"L",4
+2015-01-10,"Tottenham Hotspur","Crystal Palace",1,2,"A","2-1",0,-1,34,1,21,6,"L",5
+2015-01-10,"Liverpool","Sunderland",1,0,"A","0-1",3,1,32,2,21,8,"W",6
+2015-01-11,"Southampton","Manchester United",1,0,"A","0-1",3,1,39,20,21,3,"W",7
+2015-01-10,"Swansea City","West Ham United",1,1,"H","1-1",1,0,30,1,21,9,"D",8
+2015-01-11,"Stoke City","Arsenal",0,3,"A","3-0",0,-3,26,-5,21,11,"L",9
+2015-01-10,"Crystal Palace","Tottenham Hotspur",2,1,"H","2-1",3,1,20,-9,21,15,"W",10
+2015-01-10,"Everton","Manchester City",1,1,"H","1-1",1,0,22,-4,21,12,"D",11
+2015-01-10,"West Ham United","Swansea City",1,1,"A","1-1",1,0,33,7,21,7,"D",12
+2015-01-10,"West Bromwich Albion","Hull City",1,0,"H","1-0",3,1,21,-9,21,14,"W",13
+2015-01-10,"Leicester City","Aston Villa",1,0,"H","1-0",3,1,17,-13,21,20,"W",14
+2015-01-10,"Newcastle United","Chelsea",0,2,"A","2-0",0,-2,27,-8,21,10,"L",15
+2015-01-10,"Sunderland","Liverpool",0,1,"H","0-1",0,-1,20,-13,21,16,"L",16
+2015-01-10,"Aston Villa","Leicester City",0,1,"A","1-0",0,-1,22,-12,21,13,"L",17
+2015-01-10,"Hull City","West Bromwich Albion",0,1,"A","1-0",0,-1,19,-7,21,18,"L",18
+2015-01-10,"Burnley","Queens Park Rangers",2,1,"H","2-1",3,1,20,-14,21,17,"W",19
+2015-01-10,"Queens Park Rangers","Burnley",1,2,"A","2-1",0,-1,19,-14,21,19,"L",20
+2015-01-17,"Chelsea","Swansea City",5,0,"A","0-5",3,5,52,32,22,1,"W",1
+2015-01-18,"Manchester City","Arsenal",0,2,"H","0-2",0,-2,47,23,22,2,"L",2
+2015-01-18,"Arsenal","Manchester City",2,0,"A","0-2",3,2,39,14,22,5,"W",3
+2015-01-17,"Manchester United","Queens Park Rangers",2,0,"A","0-2",3,2,40,15,22,4,"W",4
+2015-01-17,"Tottenham Hotspur","Sunderland",2,1,"H","2-1",3,1,37,2,22,6,"W",5
+2015-01-17,"Liverpool","Aston Villa",2,0,"A","0-2",3,2,35,4,22,8,"W",6
+2015-01-17,"Southampton","Newcastle United",2,1,"A","1-2",3,1,42,21,22,3,"W",7
+2015-01-17,"Swansea City","Chelsea",0,5,"H","0-5",0,-5,30,-4,22,9,"L",8
+2015-01-17,"Stoke City","Leicester City",1,0,"A","0-1",3,1,29,-4,22,10,"W",9
+2015-01-17,"Crystal Palace","Burnley",3,2,"A","2-3",3,1,23,-8,22,13,"W",10
+2015-01-19,"Everton","West Bromwich Albion",0,0,"H","0-0",1,0,23,-4,22,12,"D",11
+2015-01-18,"West Ham United","Hull City",3,0,"H","3-0",3,3,36,10,22,7,"W",12
+2015-01-19,"West Bromwich Albion","Everton",0,0,"A","0-0",1,0,22,-9,22,14,"D",13
+2015-01-17,"Leicester City","Stoke City",0,1,"H","0-1",0,-1,17,-14,22,20,"L",14
+2015-01-17,"Newcastle United","Southampton",1,2,"H","1-2",0,-1,27,-9,22,11,"L",15
+2015-01-17,"Sunderland","Tottenham Hotspur",1,2,"A","2-1",0,-1,20,-14,22,16,"L",16
+2015-01-17,"Aston Villa","Liverpool",0,2,"H","0-2",0,-2,22,-14,22,15,"L",17
+2015-01-18,"Hull City","West Ham United",0,3,"A","3-0",0,-3,19,-10,22,18,"L",18
+2015-01-17,"Burnley","Crystal Palace",2,3,"H","2-3",0,-1,20,-15,22,17,"L",19
+2015-01-17,"Queens Park Rangers","Manchester United",0,2,"H","0-2",0,-2,19,-16,22,19,"L",20
+2015-01-31,"Chelsea","Manchester City",1,1,"H","1-1",1,0,53,32,23,1,"D",1
+2015-01-31,"Manchester City","Chelsea",1,1,"A","1-1",1,0,48,23,23,2,"D",2
+2015-02-01,"Arsenal","Aston Villa",5,0,"H","5-0",3,5,42,19,23,5,"W",3
+2015-01-31,"Manchester United","Leicester City",3,1,"H","3-1",3,2,43,17,23,3,"W",4
+2015-01-31,"Tottenham Hotspur","West Bromwich Albion",3,0,"A","0-3",3,3,40,5,23,6,"W",5
+2015-01-31,"Liverpool","West Ham United",2,0,"H","2-0",3,2,38,6,23,7,"W",6
+2015-02-01,"Southampton","Swansea City",0,1,"H","0-1",0,-1,42,20,23,4,"L",7
+2015-02-01,"Swansea City","Southampton",1,0,"A","0-1",3,1,33,-3,23,9,"W",8
+2015-01-31,"Stoke City","Queens Park Rangers",3,1,"H","3-1",3,2,32,-2,23,10,"W",9
+2015-01-31,"Crystal Palace","Everton",0,1,"H","0-1",0,-1,23,-9,23,13,"L",10
+2015-01-31,"Everton","Crystal Palace",1,0,"A","0-1",3,1,26,-3,23,12,"W",11
+2015-01-31,"West Ham United","Liverpool",0,2,"A","2-0",0,-2,36,8,23,8,"L",12
+2015-01-31,"West Bromwich Albion","Tottenham Hotspur",0,3,"H","0-3",0,-3,22,-12,23,15,"L",13
+2015-01-31,"Leicester City","Manchester United",1,3,"A","3-1",0,-2,17,-16,23,20,"L",14
+2015-01-31,"Newcastle United","Hull City",3,0,"A","0-3",3,3,30,-6,23,11,"W",15
+2015-01-31,"Sunderland","Burnley",2,0,"H","2-0",3,2,23,-12,23,14,"W",16
+2015-02-01,"Aston Villa","Arsenal",0,5,"A","5-0",0,-5,22,-19,23,16,"L",17
+2015-01-31,"Hull City","Newcastle United",0,3,"H","0-3",0,-3,19,-13,23,18,"L",18
+2015-01-31,"Burnley","Sunderland",0,2,"A","2-0",0,-2,20,-17,23,17,"L",19
+2015-01-31,"Queens Park Rangers","Stoke City",1,3,"A","3-1",0,-2,19,-18,23,19,"L",20
+2015-02-07,"Chelsea","Aston Villa",2,1,"A","1-2",3,1,56,33,24,1,"W",1
+2015-02-07,"Manchester City","Hull City",1,1,"H","1-1",1,0,49,23,24,2,"D",2
+2015-02-07,"Arsenal","Tottenham Hotspur",1,2,"A","2-1",0,-1,42,18,24,6,"L",3
+2015-02-08,"Manchester United","West Ham United",1,1,"A","1-1",1,0,44,17,24,4,"D",4
+2015-02-07,"Tottenham Hotspur","Arsenal",2,1,"H","2-1",3,1,43,6,24,5,"W",5
+2015-02-07,"Liverpool","Everton",0,0,"A","0-0",1,0,39,6,24,7,"D",6
+2015-02-07,"Southampton","Queens Park Rangers",1,0,"A","0-1",3,1,45,21,24,3,"W",7
+2015-02-07,"Swansea City","Sunderland",1,1,"H","1-1",1,0,34,-3,24,9,"D",8
+2015-02-08,"Stoke City","Newcastle United",1,1,"A","1-1",1,0,33,-2,24,10,"D",9
+2015-02-07,"Crystal Palace","Leicester City",1,0,"A","0-1",3,1,26,-8,24,13,"W",10
+2015-02-07,"Everton","Liverpool",0,0,"H","0-0",1,0,27,-3,24,12,"D",11
+2015-02-08,"West Ham United","Manchester United",1,1,"H","1-1",1,0,37,8,24,8,"D",12
+2015-02-08,"West Bromwich Albion","Burnley",2,2,"A","2-2",1,0,23,-12,24,15,"D",13
+2015-02-07,"Leicester City","Crystal Palace",0,1,"H","0-1",0,-1,17,-17,24,20,"L",14
+2015-02-08,"Newcastle United","Stoke City",1,1,"H","1-1",1,0,31,-6,24,11,"D",15
+2015-02-07,"Sunderland","Swansea City",1,1,"A","1-1",1,0,24,-12,24,14,"D",16
+2015-02-07,"Aston Villa","Chelsea",1,2,"H","1-2",0,-1,22,-20,24,16,"L",17
+2015-02-07,"Hull City","Manchester City",1,1,"A","1-1",1,0,20,-13,24,18,"D",18
+2015-02-08,"Burnley","West Bromwich Albion",2,2,"H","2-2",1,0,21,-17,24,17,"D",19
+2015-02-07,"Queens Park Rangers","Southampton",0,1,"H","0-1",0,-1,19,-19,24,19,"L",20
+2015-02-11,"Chelsea","Everton",1,0,"H","1-0",3,1,59,34,25,1,"W",1
+2015-02-11,"Manchester City","Stoke City",4,1,"A","1-4",3,3,52,26,25,2,"W",2
+2015-02-10,"Arsenal","Leicester City",2,1,"H","2-1",3,1,45,19,25,5,"W",3
+2015-02-11,"Manchester United","Burnley",3,1,"H","3-1",3,2,47,19,25,3,"W",4
+2015-02-10,"Tottenham Hotspur","Liverpool",2,3,"A","3-2",0,-1,43,5,25,6,"L",5
+2015-02-10,"Liverpool","Tottenham Hotspur",3,2,"H","3-2",3,1,42,7,25,7,"W",6
+2015-02-11,"Southampton","West Ham United",0,0,"H","0-0",1,0,46,21,25,4,"D",7
+2015-02-11,"Swansea City","West Bromwich Albion",0,2,"A","2-0",0,-2,34,-5,25,9,"L",8
+2015-02-11,"Stoke City","Manchester City",1,4,"H","1-4",0,-3,33,-5,25,10,"L",9
+2015-02-11,"Crystal Palace","Newcastle United",1,1,"H","1-1",1,0,27,-8,25,13,"D",10
+2015-02-11,"Everton","Chelsea",0,1,"A","1-0",0,-1,27,-4,25,12,"L",11
+2015-02-11,"West Ham United","Southampton",0,0,"A","0-0",1,0,38,8,25,8,"D",12
+2015-02-11,"West Bromwich Albion","Swansea City",2,0,"H","2-0",3,2,26,-10,25,14,"W",13
+2015-02-10,"Leicester City","Arsenal",1,2,"A","2-1",0,-1,17,-18,25,20,"L",14
+2015-02-11,"Newcastle United","Crystal Palace",1,1,"A","1-1",1,0,32,-6,25,11,"D",15
+2015-02-10,"Sunderland","Queens Park Rangers",0,2,"H","0-2",0,-2,24,-14,25,15,"L",16
+2015-02-10,"Aston Villa","Hull City",0,2,"A","2-0",0,-2,22,-22,25,18,"L",17
+2015-02-10,"Hull City","Aston Villa",2,0,"H","2-0",3,2,23,-11,25,16,"W",18
+2015-02-11,"Burnley","Manchester United",1,3,"A","3-1",0,-2,21,-19,25,19,"L",19
+2015-02-10,"Queens Park Rangers","Sunderland",2,0,"A","0-2",3,2,22,-17,25,17,"W",20
+2015-02-21,"Chelsea","Burnley",1,1,"H","1-1",1,0,60,34,26,1,"D",1
+2015-02-21,"Manchester City","Newcastle United",5,0,"H","5-0",3,5,55,31,26,2,"W",2
+2015-02-21,"Arsenal","Crystal Palace",2,1,"A","1-2",3,1,48,20,26,3,"W",3
+2015-02-21,"Manchester United","Swansea City",1,2,"A","2-1",0,-1,47,18,26,4,"L",4
+2015-02-22,"Tottenham Hotspur","West Ham United",2,2,"H","2-2",1,0,44,5,26,7,"D",5
+2015-02-22,"Liverpool","Southampton",2,0,"A","0-2",3,2,45,9,26,6,"W",6
+2015-02-22,"Southampton","Liverpool",0,2,"H","0-2",0,-2,46,19,26,5,"L",7
+2015-02-21,"Swansea City","Manchester United",2,1,"H","2-1",3,1,37,-4,26,9,"W",8
+2015-02-21,"Stoke City","Aston Villa",2,1,"A","1-2",3,1,36,-4,26,10,"W",9
+2015-02-21,"Crystal Palace","Arsenal",1,2,"H","1-2",0,-1,27,-9,26,13,"L",10
+2015-02-22,"Everton","Leicester City",2,2,"H","2-2",1,0,28,-4,26,12,"D",11
+2015-02-22,"West Ham United","Tottenham Hotspur",2,2,"A","2-2",1,0,39,8,26,8,"D",12
+2015-02-21,"West Bromwich Albion","Sunderland",0,0,"A","0-0",1,0,27,-10,26,14,"D",13
+2015-02-22,"Leicester City","Everton",2,2,"A","2-2",1,0,18,-18,26,20,"D",14
+2015-02-21,"Newcastle United","Manchester City",0,5,"A","5-0",0,-5,32,-11,26,11,"L",15
+2015-02-21,"Sunderland","West Bromwich Albion",0,0,"H","0-0",1,0,25,-14,26,16,"D",16
+2015-02-21,"Aston Villa","Stoke City",1,2,"H","1-2",0,-1,22,-23,26,19,"L",17
+2015-02-21,"Hull City","Queens Park Rangers",2,1,"H","2-1",3,1,26,-10,26,15,"W",18
+2015-02-21,"Burnley","Chelsea",1,1,"A","1-1",1,0,22,-19,26,18,"D",19
+2015-02-21,"Queens Park Rangers","Hull City",1,2,"A","2-1",0,-1,22,-18,26,17,"L",20
+2015-03-04,"Chelsea","West Ham United",1,0,"A","0-1",3,1,63,35,27,1,"W",1
+2015-03-01,"Manchester City","Liverpool",1,2,"A","2-1",0,-1,55,30,27,2,"L",2
+2015-03-01,"Arsenal","Everton",2,0,"H","2-0",3,2,51,22,27,3,"W",3
+2015-02-28,"Manchester United","Sunderland",2,0,"H","2-0",3,2,50,20,27,4,"W",4
+2015-03-04,"Tottenham Hotspur","Swansea City",3,2,"H","3-2",3,1,47,6,27,6,"W",5
+2015-03-01,"Liverpool","Manchester City",2,1,"H","2-1",3,1,48,10,27,5,"W",6
+2015-02-28,"Southampton","West Bromwich Albion",0,1,"A","1-0",0,-1,46,18,27,7,"L",7
+2015-02-28,"Swansea City","Burnley",1,0,"A","0-1",3,1,40,-3,27,8,"W",8
+2015-02-28,"Stoke City","Hull City",1,0,"H","1-0",3,1,39,-3,27,10,"W",9
+2015-02-28,"Crystal Palace","West Ham United",3,1,"A","1-3",3,2,30,-7,27,12,"W",10
+2015-03-01,"Everton","Arsenal",0,2,"A","2-0",0,-2,28,-6,27,14,"L",11
+2015-02-28,"West Ham United","Crystal Palace",1,3,"H","1-3",0,-2,39,6,27,9,"L",12
+2015-02-28,"West Bromwich Albion","Southampton",1,0,"H","1-0",3,1,30,-9,27,13,"W",13
+2015-03-04,"Leicester City","Manchester City",0,2,"A","2-0",0,-2,18,-20,27,20,"L",14
+2015-02-28,"Newcastle United","Aston Villa",1,0,"H","1-0",3,1,35,-10,27,11,"W",15
+2015-02-28,"Sunderland","Manchester United",0,2,"A","2-0",0,-2,25,-16,27,16,"L",16
+2015-02-28,"Aston Villa","Newcastle United",0,1,"A","1-0",0,-1,22,-24,27,19,"L",17
+2015-02-28,"Hull City","Stoke City",0,1,"A","1-0",0,-1,26,-11,27,15,"L",18
+2015-02-28,"Burnley","Swansea City",0,1,"H","0-1",0,-1,22,-20,27,18,"L",19
+2015-03-04,"Queens Park Rangers","Arsenal",1,2,"H","1-2",0,-1,22,-19,27,17,"L",20
+2015-03-15,"Chelsea","Southampton",1,1,"H","1-1",1,0,64,35,28,1,"D",1
+2015-03-04,"Manchester City","Leicester City",2,0,"H","2-0",3,2,58,32,28,2,"W",2
+2015-03-04,"Arsenal","Queens Park Rangers",2,1,"A","1-2",3,1,54,23,28,3,"W",3
+2015-03-04,"Manchester United","Newcastle United",1,0,"A","0-1",3,1,53,21,28,4,"W",4
+2015-03-07,"Tottenham Hotspur","Queens Park Rangers",2,1,"A","1-2",3,1,50,7,28,6,"W",5
+2015-03-04,"Liverpool","Burnley",2,0,"H","2-0",3,2,51,12,28,5,"W",6
+2015-03-03,"Southampton","Crystal Palace",1,0,"H","1-0",3,1,49,19,28,7,"W",7
+2015-03-04,"Swansea City","Tottenham Hotspur",2,3,"A","3-2",0,-1,40,-4,28,9,"L",8
+2015-03-04,"Stoke City","Everton",2,0,"H","2-0",3,2,42,-1,28,8,"W",9
+2015-03-03,"Crystal Palace","Southampton",0,1,"A","1-0",0,-1,30,-8,28,12,"L",10
+2015-03-04,"Everton","Stoke City",0,2,"A","2-0",0,-2,28,-8,28,14,"L",11
+2015-03-04,"West Ham United","Chelsea",0,1,"H","0-1",0,-1,39,5,28,10,"L",12
+2015-03-03,"West Bromwich Albion","Aston Villa",1,2,"A","2-1",0,-1,30,-10,28,13,"L",13
+2015-03-14,"Leicester City","Hull City",0,0,"H","0-0",1,0,19,-20,28,20,"D",14
+2015-03-04,"Newcastle United","Manchester United",0,1,"H","0-1",0,-1,35,-11,28,11,"L",15
+2015-03-03,"Sunderland","Hull City",1,1,"A","1-1",1,0,26,-16,28,16,"D",16
+2015-03-03,"Aston Villa","West Bromwich Albion",2,1,"H","2-1",3,1,25,-23,28,17,"W",17
+2015-03-03,"Hull City","Sunderland",1,1,"H","1-1",1,0,27,-11,28,15,"D",18
+2015-03-04,"Burnley","Liverpool",0,2,"A","2-0",0,-2,22,-22,28,19,"L",19
+2015-03-07,"Queens Park Rangers","Tottenham Hotspur",1,2,"H","1-2",0,-1,22,-20,28,18,"L",20
+2015-03-22,"Chelsea","Hull City",3,2,"A","2-3",3,1,67,36,29,1,"W",1
+2015-03-14,"Manchester City","Burnley",0,1,"A","1-0",0,-1,58,31,29,2,"L",2
+2015-03-14,"Arsenal","West Ham United",3,0,"H","3-0",3,3,57,26,29,3,"W",3
+2015-03-15,"Manchester United","Tottenham Hotspur",3,0,"H","3-0",3,3,56,24,29,4,"W",4
+2015-03-15,"Tottenham Hotspur","Manchester United",0,3,"A","3-0",0,-3,50,4,29,7,"L",5
+2015-03-16,"Liverpool","Swansea City",1,0,"A","0-1",3,1,54,13,29,5,"W",6
+2015-03-15,"Southampton","Chelsea",1,1,"A","1-1",1,0,50,19,29,6,"D",7
+2015-03-16,"Swansea City","Liverpool",0,1,"H","0-1",0,-1,40,-5,29,9,"L",8
+2015-03-14,"Stoke City","West Bromwich Albion",0,1,"A","1-0",0,-1,42,-2,29,8,"L",9
+2015-03-14,"Crystal Palace","Queens Park Rangers",3,1,"H","3-1",3,2,33,-6,29,12,"W",10
+2015-03-15,"Everton","Newcastle United",3,0,"H","3-0",3,3,31,-5,29,14,"W",11
+2015-03-14,"West Ham United","Arsenal",0,3,"A","3-0",0,-3,39,2,29,10,"L",12
+2015-03-14,"West Bromwich Albion","Stoke City",1,0,"H","1-0",3,1,33,-9,29,13,"W",13
+2015-03-21,"Leicester City","Tottenham Hotspur",3,4,"A","4-3",0,-1,19,-21,29,20,"L",14
+2015-03-15,"Newcastle United","Everton",0,3,"A","3-0",0,-3,35,-14,29,11,"L",15
+2015-03-14,"Sunderland","Aston Villa",0,4,"H","0-4",0,-4,26,-20,29,17,"L",16
+2015-03-14,"Aston Villa","Sunderland",4,0,"A","0-4",3,4,28,-19,29,16,"W",17
+2015-03-14,"Hull City","Leicester City",0,0,"A","0-0",1,0,28,-11,29,15,"D",18
+2015-03-14,"Burnley","Manchester City",1,0,"H","1-0",3,1,25,-21,29,18,"W",19
+2015-03-14,"Queens Park Rangers","Crystal Palace",1,3,"A","3-1",0,-2,22,-22,29,19,"L",20
+2015-04-04,"Chelsea","Stoke City",2,1,"H","2-1",3,1,70,37,30,1,"W",1
+2015-03-21,"Manchester City","West Bromwich Albion",3,0,"H","3-0",3,3,61,34,30,2,"W",2
+2015-03-21,"Arsenal","Newcastle United",2,1,"A","1-2",3,1,60,27,30,3,"W",3
+2015-03-22,"Manchester United","Liverpool",2,1,"A","1-2",3,1,59,25,30,4,"W",4
+2015-03-21,"Tottenham Hotspur","Leicester City",4,3,"H","4-3",3,1,53,5,30,7,"W",5
+2015-03-22,"Liverpool","Manchester United",1,2,"H","1-2",0,-1,54,12,30,5,"L",6
+2015-03-21,"Southampton","Burnley",2,0,"H","2-0",3,2,53,21,30,6,"W",7
+2015-03-21,"Swansea City","Aston Villa",1,0,"A","0-1",3,1,43,-4,30,8,"W",8
+2015-03-21,"Stoke City","Crystal Palace",1,2,"H","1-2",0,-1,42,-3,30,10,"L",9
+2015-03-21,"Crystal Palace","Stoke City",2,1,"A","1-2",3,1,36,-5,30,11,"W",10
+2015-03-22,"Everton","Queens Park Rangers",2,1,"A","1-2",3,1,34,-4,30,13,"W",11
+2015-03-21,"West Ham United","Sunderland",1,0,"H","1-0",3,1,42,3,30,9,"W",12
+2015-03-21,"West Bromwich Albion","Manchester City",0,3,"A","3-0",0,-3,33,-12,30,14,"L",13
+2015-04-04,"Leicester City","West Ham United",2,1,"H","2-1",3,1,22,-20,30,19,"W",14
+2015-03-21,"Newcastle United","Arsenal",1,2,"H","1-2",0,-1,35,-15,30,12,"L",15
+2015-03-21,"Sunderland","West Ham United",0,1,"A","1-0",0,-1,26,-21,30,17,"L",16
+2015-03-21,"Aston Villa","Swansea City",0,1,"H","0-1",0,-1,28,-20,30,16,"L",17
+2015-03-22,"Hull City","Chelsea",2,3,"H","2-3",0,-1,28,-12,30,15,"L",18
+2015-03-21,"Burnley","Southampton",0,2,"A","2-0",0,-2,25,-23,30,18,"L",19
+2015-03-22,"Queens Park Rangers","Everton",1,2,"H","1-2",0,-1,22,-23,30,20,"L",20
+2015-04-12,"Chelsea","Queens Park Rangers",1,0,"A","0-1",3,1,73,38,31,1,"W",1
+2015-04-06,"Manchester City","Crystal Palace",1,2,"A","2-1",0,-1,61,33,31,4,"L",2
+2015-04-04,"Arsenal","Liverpool",4,1,"H","4-1",3,3,63,30,31,2,"W",3
+2015-04-04,"Manchester United","Aston Villa",3,1,"H","3-1",3,2,62,27,31,3,"W",4
+2015-04-05,"Tottenham Hotspur","Burnley",0,0,"A","0-0",1,0,54,5,31,6,"D",5
+2015-04-04,"Liverpool","Arsenal",1,4,"A","4-1",0,-3,54,9,31,5,"L",6
+2015-04-04,"Southampton","Everton",0,1,"A","1-0",0,-1,53,20,31,7,"L",7
+2015-04-04,"Swansea City","Hull City",3,1,"H","3-1",3,2,46,-2,31,8,"W",8
+2015-04-04,"Stoke City","Chelsea",1,2,"A","2-1",0,-1,42,-4,31,10,"L",9
+2015-04-06,"Crystal Palace","Manchester City",2,1,"H","2-1",3,1,39,-4,31,11,"W",10
+2015-04-04,"Everton","Southampton",1,0,"H","1-0",3,1,37,-3,31,12,"W",11
+2015-04-04,"West Ham United","Leicester City",1,2,"A","2-1",0,-1,42,2,31,9,"L",12
+2015-04-04,"West Bromwich Albion","Queens Park Rangers",1,4,"H","1-4",0,-3,33,-15,31,14,"L",13
+2015-04-11,"Leicester City","West Bromwich Albion",3,2,"A","2-3",3,1,25,-19,31,19,"W",14
+2015-04-05,"Newcastle United","Sunderland",0,1,"A","1-0",0,-1,35,-16,31,13,"L",15
+2015-04-05,"Sunderland","Newcastle United",1,0,"H","1-0",3,1,29,-20,31,15,"W",16
+2015-04-04,"Aston Villa","Manchester United",1,3,"A","3-1",0,-2,28,-22,31,17,"L",17
+2015-04-04,"Hull City","Swansea City",1,3,"A","3-1",0,-2,28,-14,31,16,"L",18
+2015-04-05,"Burnley","Tottenham Hotspur",0,0,"H","0-0",1,0,26,-23,31,18,"D",19
+2015-04-04,"Queens Park Rangers","West Bromwich Albion",4,1,"A","1-4",3,3,25,-20,31,20,"W",20
+2015-04-18,"Chelsea","Manchester United",1,0,"H","1-0",3,1,76,39,32,1,"W",1
+2015-04-12,"Manchester City","Manchester United",2,4,"A","4-2",0,-2,61,31,32,4,"L",2
+2015-04-11,"Arsenal","Burnley",1,0,"A","0-1",3,1,66,31,32,2,"W",3
+2015-04-12,"Manchester United","Manchester City",4,2,"H","4-2",3,2,65,29,32,3,"W",4
+2015-04-11,"Tottenham Hotspur","Aston Villa",0,1,"H","0-1",0,-1,54,4,32,7,"L",5
+2015-04-13,"Liverpool","Newcastle United",2,0,"H","2-0",3,2,57,11,32,5,"W",6
+2015-04-11,"Southampton","Hull City",2,0,"H","2-0",3,2,56,22,32,6,"W",7
+2015-04-11,"Swansea City","Everton",1,1,"H","1-1",1,0,47,-2,32,8,"D",8
+2015-04-11,"Stoke City","West Ham United",1,1,"A","1-1",1,0,43,-4,32,10,"D",9
+2015-04-11,"Crystal Palace","Sunderland",4,1,"A","1-4",3,3,42,-1,32,11,"W",10
+2015-04-11,"Everton","Swansea City",1,1,"A","1-1",1,0,38,-3,32,12,"D",11
+2015-04-11,"West Ham United","Stoke City",1,1,"H","1-1",1,0,43,2,32,9,"D",12
+2015-04-11,"West Bromwich Albion","Leicester City",2,3,"H","2-3",0,-1,33,-16,32,14,"L",13
+2015-04-18,"Leicester City","Swansea City",2,0,"H","2-0",3,2,28,-17,32,18,"W",14
+2015-04-13,"Newcastle United","Liverpool",0,2,"A","2-0",0,-2,35,-18,32,13,"L",15
+2015-04-11,"Sunderland","Crystal Palace",1,4,"H","1-4",0,-3,29,-23,32,16,"L",16
+2015-04-07,"Aston Villa","Queens Park Rangers",3,3,"H","3-3",1,0,29,-22,32,15,"D",17
+2015-04-11,"Hull City","Southampton",0,2,"A","2-0",0,-2,28,-16,32,17,"L",18
+2015-04-11,"Burnley","Arsenal",0,1,"H","0-1",0,-1,26,-24,32,20,"L",19
+2015-04-07,"Queens Park Rangers","Aston Villa",3,3,"A","3-3",1,0,26,-20,32,19,"D",20
+2015-04-26,"Chelsea","Arsenal",0,0,"A","0-0",1,0,77,39,33,1,"D",1
+2015-04-19,"Manchester City","West Ham United",2,0,"H","2-0",3,2,64,33,33,4,"W",2
+2015-04-26,"Arsenal","Chelsea",0,0,"H","0-0",1,0,67,31,33,2,"D",3
+2015-04-18,"Manchester United","Chelsea",0,1,"A","1-0",0,-1,65,28,33,3,"L",4
+2015-04-19,"Tottenham Hotspur","Newcastle United",3,1,"A","1-3",3,2,57,6,33,6,"W",5
+2015-04-25,"Liverpool","West Bromwich Albion",0,0,"A","0-0",1,0,58,11,33,5,"D",6
+2015-04-18,"Southampton","Stoke City",1,2,"A","2-1",0,-1,56,21,33,7,"L",7
+2015-04-18,"Swansea City","Leicester City",0,2,"A","2-0",0,-2,47,-4,33,8,"L",8
+2015-04-18,"Stoke City","Southampton",2,1,"H","2-1",3,1,46,-3,33,9,"W",9
+2015-04-18,"Crystal Palace","West Bromwich Albion",0,2,"H","0-2",0,-2,42,-3,33,11,"L",10
+2015-04-18,"Everton","Burnley",1,0,"H","1-0",3,1,41,-2,33,12,"W",11
+2015-04-19,"West Ham United","Manchester City",0,2,"A","2-0",0,-2,43,0,33,10,"L",12
+2015-04-18,"West Bromwich Albion","Crystal Palace",2,0,"A","0-2",3,2,36,-14,33,13,"W",13
+2015-04-25,"Leicester City","Burnley",1,0,"A","0-1",3,1,31,-16,33,17,"W",14
+2015-04-19,"Newcastle United","Tottenham Hotspur",1,3,"H","1-3",0,-2,35,-20,33,14,"L",15
+2015-04-25,"Sunderland","Stoke City",1,1,"A","1-1",1,0,30,-23,33,18,"D",16
+2015-04-11,"Aston Villa","Tottenham Hotspur",1,0,"A","0-1",3,1,32,-21,33,15,"W",17
+2015-04-25,"Hull City","Crystal Palace",2,0,"A","0-2",3,2,31,-14,33,16,"W",18
+2015-04-18,"Burnley","Everton",0,1,"A","1-0",0,-1,26,-25,33,20,"L",19
+2015-04-12,"Queens Park Rangers","Chelsea",0,1,"H","0-1",0,-1,26,-21,33,19,"L",20
+2015-04-29,"Chelsea","Leicester City",3,1,"A","1-3",3,2,80,41,34,1,"W",1
+2015-04-25,"Manchester City","Aston Villa",3,2,"H","3-2",3,1,67,34,34,3,"W",2
+2015-05-04,"Arsenal","Hull City",3,1,"A","1-3",3,2,70,33,34,2,"W",3
+2015-04-26,"Manchester United","Everton",0,3,"A","3-0",0,-3,65,25,34,4,"L",4
+2015-04-25,"Tottenham Hotspur","Southampton",2,2,"A","2-2",1,0,58,6,34,6,"D",5
+2015-04-28,"Liverpool","Hull City",0,1,"A","1-0",0,-1,58,10,34,5,"L",6
+2015-04-25,"Southampton","Tottenham Hotspur",2,2,"H","2-2",1,0,57,21,34,7,"D",7
+2015-04-25,"Swansea City","Newcastle United",3,2,"A","2-3",3,1,50,-3,34,8,"W",8
+2015-04-25,"Stoke City","Sunderland",1,1,"H","1-1",1,0,47,-3,34,9,"D",9
+2015-04-25,"Crystal Palace","Hull City",0,2,"H","0-2",0,-2,42,-5,34,12,"L",10
+2015-04-26,"Everton","Manchester United",3,0,"H","3-0",3,3,44,1,34,10,"W",11
+2015-04-25,"West Ham United","Queens Park Rangers",0,0,"A","0-0",1,0,44,0,34,11,"D",12
+2015-04-25,"West Bromwich Albion","Liverpool",0,0,"H","0-0",1,0,37,-14,34,13,"D",13
+2015-04-29,"Leicester City","Chelsea",1,3,"H","1-3",0,-2,31,-18,34,18,"L",14
+2015-04-25,"Newcastle United","Swansea City",2,3,"H","2-3",0,-1,35,-21,34,14,"L",15
+2015-05-02,"Sunderland","Southampton",2,1,"H","2-1",3,1,33,-22,34,16,"W",16
+2015-04-25,"Aston Villa","Manchester City",2,3,"A","3-2",0,-1,32,-22,34,17,"L",17
+2015-04-28,"Hull City","Liverpool",1,0,"H","1-0",3,1,34,-13,34,15,"W",18
+2015-04-25,"Burnley","Leicester City",0,1,"H","0-1",0,-1,26,-26,34,20,"L",19
+2015-04-25,"Queens Park Rangers","West Ham United",0,0,"H","0-0",1,0,27,-21,34,19,"D",20
+2015-05-03,"Chelsea","Crystal Palace",1,0,"H","1-0",3,1,83,42,35,1,"W",1
+2015-05-03,"Manchester City","Tottenham Hotspur",1,0,"A","0-1",3,1,70,35,35,2,"W",2
+2015-05-11,"Arsenal","Swansea City",0,1,"H","0-1",0,-1,70,32,35,3,"L",3
+2015-05-02,"Manchester United","West Bromwich Albion",0,1,"H","0-1",0,-1,65,24,35,4,"L",4
+2015-05-03,"Tottenham Hotspur","Manchester City",0,1,"H","0-1",0,-1,58,5,35,6,"L",5
+2015-05-02,"Liverpool","Queens Park Rangers",2,1,"H","2-1",3,1,61,11,35,5,"W",6
+2015-05-02,"Southampton","Sunderland",1,2,"A","2-1",0,-1,57,20,35,7,"L",7
+2015-05-02,"Swansea City","Stoke City",2,0,"H","2-0",3,2,53,-1,35,8,"W",8
+2015-05-02,"Stoke City","Swansea City",0,2,"A","2-0",0,-2,47,-5,35,10,"L",9
+2015-05-03,"Crystal Palace","Chelsea",0,1,"A","1-0",0,-1,42,-6,35,12,"L",10
+2015-05-02,"Everton","Aston Villa",2,3,"A","3-2",0,-1,44,0,35,11,"L",11
+2015-05-02,"West Ham United","Burnley",1,0,"H","1-0",3,1,47,1,35,9,"W",12
+2015-05-02,"West Bromwich Albion","Manchester United",1,0,"A","0-1",3,1,40,-13,35,13,"W",13
+2015-05-02,"Leicester City","Newcastle United",3,0,"H","3-0",3,3,34,-15,35,17,"W",14
+2015-05-02,"Newcastle United","Leicester City",0,3,"A","3-0",0,-3,35,-24,35,16,"L",15
+2015-05-09,"Sunderland","Everton",2,0,"A","0-2",3,2,36,-20,35,14,"W",16
+2015-05-02,"Aston Villa","Everton",3,2,"H","3-2",3,1,35,-21,35,15,"W",17
+2015-05-04,"Hull City","Arsenal",1,3,"H","1-3",0,-2,34,-15,35,18,"L",18
+2015-05-02,"Burnley","West Ham United",0,1,"A","1-0",0,-1,26,-27,35,20,"L",19
+2015-05-02,"Queens Park Rangers","Liverpool",1,2,"A","2-1",0,-1,27,-22,35,19,"L",20
+2015-05-10,"Chelsea","Liverpool",1,1,"H","1-1",1,0,84,42,36,1,"D",1
+2015-05-10,"Manchester City","Queens Park Rangers",6,0,"H","6-0",3,6,73,41,36,2,"W",2
+2015-05-17,"Arsenal","Manchester United",1,1,"A","1-1",1,0,71,32,36,3,"D",3
+2015-05-09,"Manchester United","Crystal Palace",2,1,"A","1-2",3,1,68,25,36,4,"W",4
+2015-05-09,"Tottenham Hotspur","Stoke City",0,3,"A","3-0",0,-3,58,2,36,6,"L",5
+2015-05-10,"Liverpool","Chelsea",1,1,"A","1-1",1,0,62,11,36,5,"D",6
+2015-05-09,"Southampton","Leicester City",0,2,"A","2-0",0,-2,57,18,36,7,"L",7
+2015-05-11,"Swansea City","Arsenal",1,0,"A","0-1",3,1,56,0,36,8,"W",8
+2015-05-09,"Stoke City","Tottenham Hotspur",3,0,"H","3-0",3,3,50,-2,36,9,"W",9
+2015-05-09,"Crystal Palace","Manchester United",1,2,"H","1-2",0,-1,42,-7,36,12,"L",10
+2015-05-09,"Everton","Sunderland",0,2,"H","0-2",0,-2,44,-2,36,11,"L",11
+2015-05-09,"West Ham United","Aston Villa",0,1,"A","1-0",0,-1,47,0,36,10,"L",12
+2015-05-09,"West Bromwich Albion","Newcastle United",1,1,"A","1-1",1,0,41,-13,36,13,"D",13
+2015-05-09,"Leicester City","Southampton",2,0,"H","2-0",3,2,37,-13,36,15,"W",14
+2015-05-09,"Newcastle United","West Bromwich Albion",1,1,"H","1-1",1,0,36,-24,36,17,"D",15
+2015-05-16,"Sunderland","Leicester City",0,0,"H","0-0",1,0,37,-20,36,16,"D",16
+2015-05-09,"Aston Villa","West Ham United",1,0,"H","1-0",3,1,38,-20,36,14,"W",17
+2015-05-09,"Hull City","Burnley",0,1,"H","0-1",0,-1,34,-16,36,18,"L",18
+2015-05-09,"Burnley","Hull City",1,0,"A","0-1",3,1,29,-26,36,19,"W",19
+2015-05-10,"Queens Park Rangers","Manchester City",0,6,"A","6-0",0,-6,27,-28,36,20,"L",20
+2015-05-18,"Chelsea","West Bromwich Albion",0,3,"A","3-0",0,-3,84,39,37,1,"L",1
+2015-05-17,"Manchester City","Swansea City",4,2,"A","2-4",3,2,76,43,37,2,"W",2
+2015-05-20,"Arsenal","Sunderland",0,0,"H","0-0",1,0,72,32,37,3,"D",3
+2015-05-17,"Manchester United","Arsenal",1,1,"H","1-1",1,0,69,25,37,4,"D",4
+2015-05-16,"Tottenham Hotspur","Hull City",2,0,"H","2-0",3,2,61,4,37,6,"W",5
+2015-05-16,"Liverpool","Crystal Palace",1,3,"H","1-3",0,-2,62,9,37,5,"L",6
+2015-05-16,"Southampton","Aston Villa",6,1,"H","6-1",3,5,60,23,37,7,"W",7
+2015-05-17,"Swansea City","Manchester City",2,4,"H","2-4",0,-2,56,-2,37,8,"L",8
+2015-05-16,"Stoke City","Burnley",0,0,"A","0-0",1,0,51,-2,37,9,"D",9
+2015-05-16,"Crystal Palace","Liverpool",3,1,"A","1-3",3,2,45,-5,37,12,"W",10
+2015-05-16,"Everton","West Ham United",2,1,"A","1-2",3,1,47,-1,37,10,"W",11
+2015-05-16,"West Ham United","Everton",1,2,"H","1-2",0,-1,47,-1,37,11,"L",12
+2015-05-18,"West Bromwich Albion","Chelsea",3,0,"H","3-0",3,3,44,-10,37,13,"W",13
+2015-05-16,"Leicester City","Sunderland",0,0,"A","0-0",1,0,38,-13,37,14,"D",14
+2015-05-16,"Newcastle United","Queens Park Rangers",1,2,"A","2-1",0,-1,36,-25,37,17,"L",15
+2015-05-20,"Sunderland","Arsenal",0,0,"A","0-0",1,0,38,-20,37,15,"D",16
+2015-05-16,"Aston Villa","Southampton",1,6,"A","6-1",0,-5,38,-25,37,16,"L",17
+2015-05-16,"Hull City","Tottenham Hotspur",0,2,"A","2-0",0,-2,34,-18,37,18,"L",18
+2015-05-16,"Burnley","Stoke City",0,0,"H","0-0",1,0,30,-26,37,19,"D",19
+2015-05-16,"Queens Park Rangers","Newcastle United",2,1,"H","2-1",3,1,30,-27,37,20,"W",20
+2015-05-24,"Chelsea","Sunderland",3,1,"H","3-1",3,2,87,41,38,1,"W",1
+2015-05-24,"Manchester City","Southampton",2,0,"H","2-0",3,2,79,45,38,2,"W",2
+2015-05-24,"Arsenal","West Bromwich Albion",4,1,"H","4-1",3,3,75,35,38,3,"W",3
+2015-05-24,"Manchester United","Hull City",0,0,"A","0-0",1,0,70,25,38,4,"D",4
+2015-05-24,"Tottenham Hotspur","Everton",1,0,"A","0-1",3,1,64,5,38,5,"W",5
+2015-05-24,"Liverpool","Stoke City",1,6,"A","6-1",0,-5,62,4,38,6,"L",6
+2015-05-24,"Southampton","Manchester City",0,2,"A","2-0",0,-2,60,21,38,7,"L",7
+2015-05-24,"Swansea City","Crystal Palace",0,1,"A","1-0",0,-1,56,-3,38,8,"L",8
+2015-05-24,"Stoke City","Liverpool",6,1,"H","6-1",3,5,54,3,38,9,"W",9
+2015-05-24,"Crystal Palace","Swansea City",1,0,"H","1-0",3,1,48,-4,38,10,"W",10
+2015-05-24,"Everton","Tottenham Hotspur",0,1,"H","0-1",0,-1,47,-2,38,11,"L",11
+2015-05-24,"West Ham United","Newcastle United",0,2,"A","2-0",0,-2,47,-3,38,12,"L",12
+2015-05-24,"West Bromwich Albion","Arsenal",1,4,"A","4-1",0,-3,44,-13,38,13,"L",13
+2015-05-24,"Leicester City","Queens Park Rangers",5,1,"H","5-1",3,4,41,-9,38,14,"W",14
+2015-05-24,"Newcastle United","West Ham United",2,0,"H","2-0",3,2,39,-23,38,15,"W",15
+2015-05-24,"Sunderland","Chelsea",1,3,"A","3-1",0,-2,38,-22,38,16,"L",16
+2015-05-24,"Aston Villa","Burnley",0,1,"H","0-1",0,-1,38,-26,38,17,"L",17
+2015-05-24,"Hull City","Manchester United",0,0,"H","0-0",1,0,35,-18,38,18,"D",18
+2015-05-24,"Burnley","Aston Villa",1,0,"A","0-1",3,1,33,-25,38,19,"W",19
+2015-05-24,"Queens Park Rangers","Leicester City",1,5,"A","5-1",0,-4,30,-31,38,20,"L",20
