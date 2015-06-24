@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+  <title>My Heatmap</title>
+    <style>
+      
+       rect.bordered {
+        stroke: #ffffff;
+        stroke-width:1.2px; 
+
+      }
+ 
+ 
+      rect.cell-hover {
+        stroke: #ffffff;
+        stroke-width: 0.3px;
+        opacity: 0.2;   
+      }
+
+
+      body {
+        font-size: 11pt;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        fill: #777;
+      }
+      
+    </style>
+    <script src="http://d3js.org/d3.v3.js"></script>
+  </head>
+  <body>
+    
+  <h1>Dynamic Matrix</h1>
+    <br>
+  
+  <br>
+
+This is just a placeholder for some code for one way to produce matrices using <a href="http://d3js.org/">d3.js</a>.  The left-to-right transition is just a bit of a gimmick but might be useful in some contexts.The code can be found <a href="https://github.com/jalapic/jalapic.github.io">here</a>.  I very much welcome criticism and feedback.  Please get in touch via twitter - <a href="https://twitter.com/jalapic">@jalapic</a> 
+
+<br>
+<br>
+
+
+
+    <h2>ABC:</h2>
+    <div id="MyChart"></div> 
+        
+    <script type="text/javascript">
+    
+      var margin = { top: 20, right: 5, bottom: 100, left: 70 },
+          width = 1500 - margin.left - margin.right,
+          height = 950 - margin.top - margin.bottom,
+          gridSize = Math.floor(width / 55),
+          legendElementWidth = gridSize*2,
+          colors,
+          ids,
+          no;
+ 
+ 
+      d3.csv("alphabetty.csv",
+        function(d) {
+          return {
+            no: +d.NO,
+            value: +d.VALUE,
+            idd: +d.ID,
+          };
+        },
+        
+        function(error, data) {
+            colors = ["#f7fbff","#191970"]; // default colors
+            colors2 = ["#FFFF4D","#FF0000"]; //  colors for hover - defined below
+        
+// first color scheme
+          var colorScale = d3.scale.linear()
+              .domain([0, 5]) // this equates to range of color scale
+              .range(colors);
+         
+// second color scheme 
+          var colorScale2 = d3.scale.linear()
+              .domain([0, 5]) // this equates to range of color scale
+              .range(colors2);
+
+          var svg = d3.select("#MyChart").append("svg")
+              .attr("width", width + margin.left + margin.right)
+              .attr("height", height + margin.top + margin.bottom)
+              .append("g")
+              .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+ 
+          var heatMap = svg.selectAll(".no")
+              .data(data)
+              .enter().append("rect")
+              .attr("x", function(d) { return (d.no - 1) * gridSize; }) 
+              .attr("y", function(d) { return (d.idd - 1) * gridSize; }) 
+              .attr("rx", 2) 
+              .attr("ry", 2)
+              .attr("class", "no bordered")
+              .attr("width", gridSize) 
+              .attr("height", gridSize) 
+              .style("fill", "white") //default colors
+              .on("mouseover", function(d){
+                     
+                      tempcolor = this.style.fill
+
+                      d3.select(this).classed("cell-hover",true)
+                      .style('fill', function(d) { return colorScale2(d.value); }); 
+                  })
+              .on("mouseout", function(){
+                      d3.select(this).classed("cell-hover",false)
+                      .style('fill',tempcolor);
+                  })
+              ;
+
+    // Transitions
+            heatMap.transition()
+              .delay(function(d,i){return i * 40;})
+              .ease('elastic')
+              .duration(2000)
+              .style("fill", function(d) { return colorScale2(d.value); })
+
+          
+      });
+      
+      
+    </script>
+    
+
+  </body>
+</html>
