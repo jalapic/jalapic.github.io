@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>D3 + Isotope Gantt chart</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="libs/d3.v3.min.js"></script>
+    <script src="libs/jquery.isotope.min.js"></script>
+
+    <style>
+
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light","Helvetica Neue", Helvetica,sans-serif;
+    font-size: 16px;
+    color: #696969;
+    padding: 3px;
+}
+
+
+p {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light","Helvetica Neue", Helvetica,sans-serif;
+    font-size: 14px;
+    color: #696969;
+    padding: 3px;
+}
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: none;
+            shape-rendering: crispEdges;
+        }
+        .axis text {
+            font-family: sans-serif;
+            font-size: 11px;
+        }
+        .bar{
+            background-color:#8A2BE2;
+            height:10px;
+            margin-bottom:8px;
+        }
+        .bar-wrapper{
+            width:100%;
+        }
+        .bar-wrapper:hover .bar{
+            opacity:.55;
+            -moz-opacity:.55;
+            -webkit-opacity:.55;
+        }
+        .bar-wrapper:hover .bar-name{
+            text-decoration: underline;
+
+        }
+        .bar-name{
+            font-size:11px;
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light","Helvetica Neue", Helvetica,sans-serif;
+            font-weight: 500;
+            position: absolute;
+            left: 0;
+            padding-top:4px;
+        }
+        .bar-name:hover{
+            cursor:default;
+        }
+        
+
+
+        #button-container{
+            height:100px;
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light","Helvetica Neue", Helvetica,sans-serif;
+            font-weight: 300;
+            text-align: left;
+            padding-bottom: 10px; 
+
+        }
+
+        h4{
+    margin: 0;
+    padding: 0;
+
+        }
+        
+        .button-block li a{
+            font-size:14px;
+            color:purple;
+            text-decoration: none;
+
+
+
+        }
+        .button-block li a:hover{
+            text-decoration: underline;
+            background: #ffffff;
+        }
+        .button-block{
+            float:left;
+            margin-top:20px;
+
+      
+        }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+     padding-right: 60px; 
+}
+
+#sorter li { list-style-type: none; display: inline; padding-right: 20px; }
+#color li { list-style-type: none; display: inline; padding-right: 20px; }
+#filter li { list-style-type: none; display: inline; padding-right: 20px; }
+
+
+
+        /* tooltip */
+
+
+
+
+        /**** Isotope Filtering ****/
+
+        .isotope-item {
+          z-index: 2;
+        }
+
+        .isotope-hidden.isotope-item {
+          pointer-events: none;
+          z-index: 1;
+        }
+
+        /**** Isotope CSS3 transitions ****/
+
+        .isotope,
+        .isotope .isotope-item {
+          -webkit-transition-duration: 0.4s;
+             -moz-transition-duration: 0.4s;
+              -ms-transition-duration: 0.4s;
+               -o-transition-duration: 0.4s;
+                  transition-duration: 0.4s;
+        }
+
+        .isotope {
+          -webkit-transition-property: height, width;
+             -moz-transition-property: height, width;
+              -ms-transition-property: height, width;
+               -o-transition-property: height, width;
+                  transition-property: height, width;
+        }
+
+        .isotope .isotope-item {
+          -webkit-transition-property: -webkit-transform, opacity;
+             -moz-transition-property:    -moz-transform, opacity;
+              -ms-transition-property:     -ms-transform, opacity;
+               -o-transition-property:      -o-transform, opacity;
+                  transition-property:         transform, opacity;
+        }
+
+        /**** disabling Isotope CSS3 transitions ****/
+
+        .isotope.no-transition,
+        .isotope.no-transition .isotope-item,
+        .isotope .isotope-item.no-transition {
+          -webkit-transition-duration: 0s;
+             -moz-transition-duration: 0s;
+              -ms-transition-duration: 0s;
+               -o-transition-duration: 0s;
+                  transition-duration: 0s;
+        }
+    </style>
+</head>
+<body>
+
+<h1> Supreme Court Justices of the United States of America </h1>
+
+<br>
+
+
+    <div id="button-container">
+        <div class="button-block">
+            <h4>Sort by</h4>
+            <ul id="sorter">
+                <li><a href="#" data-sorter="name">Name</a></li>
+                <li><a href="#" data-sorter="start_date">Start date</a></li>
+                <li><a href="#" data-sorter="end_date">End date</a></li>
+                <li><a href="#" data-sorter="years">Years</a></li>
+            </ul>
+        </div>
+        <div class="button-block">
+            <h4>Filter by</h4>
+            <ul id="filter">
+                <li><a href="#" data-filter="">All</a></li>
+                <li><a href="#" data-filter=".male">Male</a></li>
+                <li><a href="#" data-filter=".female">Female</a></li>
+                <li><a href="#" data-filter=".chief">Chief</a></li>
+                <li><a href="#" data-filter=".recess">Recess</a></li>
+                <li><a href="#" data-filter=".Federalist">Federalist</a></li>
+                <li><a href="#" data-filter=".Democrat">Democrat</a></li>
+                <li><a href="#" data-filter=".Republican">Republican</a></li>
+            </ul>
+        </div>
+        <div class="button-block">
+            <h4>Color by</h4>
+            <ul id="color">
+                <li><a href="#" data-color="">None</a></li>
+                <li><a href="#" data-color="years">Years</a></li>
+                <li><a href="#" data-color="party1">Party</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="chart-canvas" style="width:100%;position:relative;float:left;">
+        <div id="svg-canvas" style="position:absolute;top:0;bottom:0;left:0;right:0;"></div>
+        <div id="gantt-bar-container" style="position:absolute;top:0;bottom:0;left:0;right:0;padding-top:30px;"></div>
+
+    </div>
+
+    <script>
+    (function(){
+
+
+        var canvas_left_edge = $('#chart-canvas').offset().left;
+        var canvas_width = $('#chart-canvas').width();
+        var yearsScale;
+
+
+        d3.csv('justices.csv', function(data){
+            console.log(data)
+
+            // Compute the height our canvas needs to be once we get the data
+            var number_of_bars = data.length
+            var bar_height = 10;
+            var bar_margin_bottom = 8;
+            var container_top_padding = 30;
+            var container_bottom_padding = 40;
+            var canvas_height = number_of_bars * (bar_height + bar_margin_bottom) + container_top_padding + container_bottom_padding;
+
+            $('#chart-canvas').css('height',canvas_height)
+
+
+
+            function accessStartDate(d) { return d['start_date']; }
+            function accessEndDate(d) { return d['end_date']; }
+
+            // Find min/max of our dates
+            var min = d3.min(data, accessStartDate);
+            //var max = d3.max(data, accessEndDate);
+
+            var xScale = d3.scale.linear()
+                .domain([min,2020])
+                .range([125, canvas_width-100]);
+
+
+
+            // This creates an axis. You can see that it assign's the scale we made up above
+            var xAxis = d3.svg.axis()
+                .scale(xScale)
+                .orient("bottom")
+                .tickFormat(d3.format("d"));  //remove comma
+
+                
+            // Create svg container
+            var svg = d3.select("#svg-canvas")
+                    .append("svg")
+                    .attr("width", canvas_width)
+                    .attr("height", canvas_height);
+
+
+            // Bottom Axis
+            var btmAxis = svg.append("g")
+                .attr("transform", "translate(0,"+(canvas_height - 25)+")")
+                .attr("class", "axis")
+                .call(xAxis);
+
+            // Top Axis
+            var topAxis = svg.append("g")
+                .attr("transform", "translate(0,0)")
+                .attr("class", "axis")
+                .call(xAxis);
+
+            // Lines
+            var line = svg.append("g")
+                .selectAll("line")
+                    .data(xScale.ticks(10))
+              .enter().append("line")
+                .attr("x1", xScale)
+                .attr("x2", xScale)
+                .attr("y1", 30)
+                .attr("y2", canvas_height-50)
+                .style("stroke", "#ccc");
+
+            $.each(data, function(index, value){
+                var start_pixels = xScale(value['start_date'])
+                var bar_width = xScale(value['end_date']) - start_pixels
+
+                var new_bar = '<div class="bar-wrapper '+value['sex']+' '+value['party']+' '+value['chief']+' '+value['recess']+' " data-name="'+value['name']+'" data-start_date="'+value['start_date']+'" data-end_date="'+value['end_date']+'" data-years="'+value['years']+'" data-party="'+value['party1']+'">\
+                    <div class="bar" style="margin-left:'+start_pixels+'px;width:'+bar_width+'px;">\
+                        <div class="bar-name">'+value['name']+'</div>\
+                    </div>\
+                </div>'
+                $('#gantt-bar-container').append(new_bar)
+
+            })
+
+            $container = $('#gantt-bar-container');
+            $container.isotope({
+              itemSelector : '.bar-wrapper',
+              getSortData : {
+                  name : function ( $elem ) {
+                      return $elem.attr('data-name')
+                  },
+                  start_date : function ( $elem ) {
+                      return parseInt($elem.attr('data-start_date'))
+                  },
+                  end_date : function ( $elem ) {
+                      return parseInt($elem.attr('data-end_date'))
+                  },
+                  years: function ( $elem ) {
+                      return parseInt($elem.attr('data-years'))
+                  }
+              }
+            });
+
+            var years_extent = d3.extent(data, function(d){return Number(d['years'])})
+
+            // Make the scale
+            yearsScale = d3.scale.linear()
+                .domain(years_extent)
+                .range([0,5]);
+
+
+        });
+
+        // Sorting buttons
+        // So let's make a simple sort_ascending boolean variable and set it to true
+        var sort_ascending = true;
+
+        $('#sorter li a').click(function(){
+            // Set it to what it ain't
+            sort_ascending = !sort_ascending
+
+            var sorter_selector = $(this).attr('data-sorter');
+          
+            // When we update the isotope layout, it has a property called sortAscending that will then get our value
+            $('#gantt-bar-container').isotope({ sortBy : sorter_selector, sortAscending: sort_ascending });
+
+
+        });
+
+        // Filter buttons
+        $('#filter li a').click(function(){
+          var filter_selector = $(this).attr('data-filter');
+          $('#gantt-bar-container').isotope({ filter: filter_selector });
+          return false;
+        });
+
+        var GREENS = ["#B2D0B2","#80B280","#66A266","#338333","#006400","#003C00"]
+        var PCOLORS = ["pink","purple","blue","black","red"]
+
+        // Color buttons
+        $('#color li a').click(function(){
+          var color_selector = $(this).attr('data-color');
+          // Get all the bars
+          var $bar_wrappers = $('.bar-wrapper');
+
+
+ if (color_selector == 'party1'){
+            $.each($bar_wrappers, function(index, bar_wrapper){
+                // Find each div's data years
+                var this_years = $(bar_wrapper).attr('data-party')
+                // Run this through our color scale
+               // var new_color_at_index = Math.floor(yearsScale(this_years))
+                $(bar_wrapper).find('.bar').css({'background-color':PCOLORS[this_years]})
+
+            });
+          }
+
+else if  (color_selector == 'years'){
+            $.each($bar_wrappers, function(index, bar_wrapper){
+                // Find each div's data years
+                var this_years = $(bar_wrapper).attr('data-years')
+                // Run this through our color scale
+                var new_color_at_index = Math.floor(yearsScale(this_years))
+                $(bar_wrapper).find('.bar').css({'background-color':GREENS[new_color_at_index]})
+
+});
+          }
+
+          else{
+            $.each($bar_wrappers, function(index, bar_wrapper){
+                // Reset to the default background color
+                $(bar_wrapper).find('.bar').css({'background-color':''})
+            });
+          }
+
+        });
+
+    }).call(this)
+    </script>
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<hr>
+
+<p>This is my first attempt at reproducing a Gantt chart using javascript and specifically <a href="http://d3js.org/">d3.js</a>. I have leant heavily upon this example by <a href="http://mhkeller.github.io/d3-gantt-isotope/">Michael Keller</a> - thanks to him for the inspiration.   At the moment, I have very little experience with this and his code was super easy to work with.</p>
+
+<p>A few extra notes.  To sort, click on name, start date, end date or years - click on them again to reverse sort.    on each teamname to highlight its line.  The 'recess' in the filter option refers to <a href="https://en.wikipedia.org/wiki/Recess_appointment">recess appointments</a>. 'Chief' refers to chief justices.   In the color party option, the colors are:<br> <span style="color: blue">blue</span> - Democrat, <span style="color: red">red</span> - Republican, <span style="color: purple">purple</span> - Federalist, <span style="color: black">black</span> - Whig, <span style="color: HotPink">pink</span> - Independent.  </p>
+
+<p>There is much more I'd like to do with this if I had the time.  I would especially like to add in a tooltip to give more biographical information about each individual, and perhaps more sortable/filtering options.  Any  criticism and feedback please get in touch via twitter - <a href="https://twitter.com/jalapic">@jalapic</a>.  Code and data are available on my <a href="https://github.com/jalapic/jalapic.github.io">GitHub</a>.</p>
+
+
+
+</body>
+</html>
