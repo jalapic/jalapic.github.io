@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style> /* set the CSS */
+
+
+body { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+       font-size: 22px;
+       background-color:  #191919; 
+       color: white;
+       padding: 3px;
+}
+
+h1 { 
+       font-size: 30px;
+    
+}
+
+
+p { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+       font-size: 16px;
+       background-color:  #191919; 
+       color: white;
+       padding: 3px;
+}
+
+a {
+ font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+       font-size: 16px;
+       background-color:  #191919; 
+       color: orange;
+       padding: 3px;
+       font-weight: bold;
+}
+
+path { 
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+
+.axis line {
+    fill: none;
+    stroke: white;
+    stroke-width: 1.5;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+                font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+                font-size: 22px;
+                fill: white; 
+            }
+
+.legend {
+    font-size: 22px;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+
+div.tooltip {
+  position: absolute;
+  /* background-color: #999;
+   rgba(255,255,255,1) */
+  padding: 10px;
+  border: 1px solid #ddd;
+  
+
+*/
+
+ font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+ font-size: 16px;
+ 
+  transition: opacity 500ms linear;
+  -moz-transition: opacity 500ms linear;
+  -webkit-transition: opacity 500ms linear;
+
+  transition-delay: 500ms
+  -moz-transition-delay: 500ms;
+  -webkit-transition-delay: 500ms;
+
+  -moz-box-shadow: 4px 4px 12px rgba(0,0,0,.5);
+  -webkit-box-shadow: 4px 4px 12px rgba(0,0,0,.5);
+  box-shadow: 4px 4px 12px rgba(0,0,0,.5);
+
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+div.tooltip h3 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+}
+
+div.tooltip p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+div.tooltip span {
+  display: inline-block;
+  margin: 2px 0;
+}
+
+.graph-svg-component {
+    background-color: #191919;
+}
+
+/* Attempts at dimmimg non-selected lines
+ svg:hover path:not(:hover) { opacity: .05; } */
+/*  path:not(:hover) { opacity: .05; }   */
+/* path:not(:hover) { opacity: .05; } */
+
+</style>
+<body>
+
+
+
+
+<!-- load the d3.js library -->    
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<div id="header">
+    <h1>Goals per Game in Select European Leagues<h1>
+</div>
+
+<div id="section">
+<script>
+
+
+
+
+// Set the dimensions of the canvas / graph
+var margin = {top: 30, right: 20, bottom: 20, left: 90},
+    width = 1500 - margin.left - margin.right,
+    height = 750 - margin.top - margin.bottom;
+
+
+//To set colors manually
+var color = d3.scale.ordinal()
+ .range(["#0066FF", "#FF0000", "#00CC00", "yellow", "#FF6600"]);
+
+var colorX = d3.scale.ordinal()
+ .range(["#4D94FF", "#FF4D4D", "#4DDB4D", "#FFFF4D", "#FF944D"]);
+
+
+// Set the ranges
+var x = d3.scale.linear().range([0, width]);
+var y = d3.scale.linear().range([height, 0]);
+
+// Define the axes
+var xAxis = d3.svg.axis().scale(x)
+    .orient("bottom").ticks(10).tickFormat(d3.format("d"));  //remove comma
+
+var yAxis = d3.svg.axis().scale(y)
+    .orient("left").ticks(5);
+
+// Define the line
+var valueline = d3.svg.line()
+    .interpolate("basis")  // change smoothing of line
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.close); });
+    
+// Adds the svg canvas
+var svg = d3.select("body")
+    .append("svg")
+        .attr("width", width + (2*margin.left) + margin.right)
+        .attr("height", height + (2*margin.top) + margin.bottom)
+        .attr("class", "graph-svg-component")  // for background color
+    .append("g")
+        .attr("transform", 
+              "translate(" + margin.left + "," + (0.5*margin.top) + ")");
+
+
+    
+// add tooltip
+var div = d3.select("body").append("div")   
+    .attr("class", "tooltip")               
+    .style("opacity", 0);
+
+// Get the data
+d3.csv("data/gpg1.csv", function(error, data) {
+    data.forEach(function(d) {
+        d.date = +d.date;
+        d.close = +d.close;
+    });
+
+// Scale the range of the data
+    x.domain(d3.extent(data, function(d) { return d.date; }));
+    y.domain([1.5, d3.max(data, function(d) { return d.close; })]);
+
+
+// Nest the entries by team
+    var dataNest = d3.nest()
+        .key(function(d) {return d.team;})
+        .entries(data);
+
+
+legendSpace = 200/dataNest.length;
+
+// Loop through each symbol / key
+dataNest.forEach(function(d,i) {
+
+ svg.append("path")
+            .attr("class", "line")
+            .style("stroke", function() {
+                return d.color = color(d.key); })
+            .attr("id", 'tag'+d.key.replace(/\s+/g, '')) // assign ID **
+            .attr("d", valueline(d.values));
+
+
+
+          
+// Add the Legend
+        svg.append("text")    
+            .attr("y", (legendSpace/4)+i*legendSpace) // spacing 
+            .attr("x", (margin.left*0.1) + 1320)   
+            .attr("class", "legend")    // style the legend   
+            .style("fill", function() { // dynamic colours    
+                return d.color = color(d.key); })         
+            .on("click", function(){                
+                // Determine if current line is visible 
+                var active   = d.active ? false : true,   
+                newOpacity = active ? 0 : 1;         
+                // Hide or show the elements based on the ID
+                d3.select("#tag"+d.key.replace(/\s+/g, '')) 
+                    .transition().duration(100)         
+                    .style("opacity", newOpacity);       
+                // Update whether or not the elements are active
+                d.active = active;                      
+                })                                       
+            .text(d.key);                                    
+    });
+
+
+
+
+// Add some datapoints
+        svg.selectAll("dot")
+            .data(data)
+            .enter().append("circle")
+            .attr("r", 4)
+             .style("fill", function(d) { return colorX(d.team); })       
+             .style("opacity", .8)  
+             .style("stroke-width", 2.5) 
+             .style("stroke", function(d) { return color(d.team); })   
+           .attr("cx", function(d) { return x(d.date); })
+            .attr("cy", function(d) { return y(d.close); })
+            .on("mouseover", function(d) {  
+
+            d3.select(this)
+                .attr("r", 8)
+                 .style("fill-opacity", .1)
+                 .style("stroke-width", 4);
+
+    
+            div.transition()        
+                .duration(50)  //reduce this if seems glitchy
+                .style("opacity", .75);      
+            div .html(d.team + " " + d.date + "<br/>"  + 
+            Math.round(d.close*100)/100 + " gpg")  //bit weird
+                .style("left", (d3.event.pageX+6) + "px")     
+                .style("top", (d3.event.pageY - 50) + "px");    
+
+
+            })   
+
+        .on("mouseout", function(d) {
+         d3.select(this)
+         .attr("r", 4)
+              .style("stroke-width", 2.5)
+              .style("fill-opacity", .8);
+      div.transition()        
+                .duration(100)      
+                .style("opacity", 0);   
+        });
+        
+
+    // Add the X Axis
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    // Add the Y Axis
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+
+// text label for the x axis
+svg.append("text")      
+        .attr("x", width / 2 )
+        .attr("y",  height + (margin.bottom/0.6))
+        .attr("dy", "1em")
+        .attr("style","font-weight: bold;") // to bold title
+        .attr("style","fill: white;")
+        .style("text-anchor", "middle")
+        .text("Season");
+
+
+
+// Add the text label for the Y axis
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left)
+        .attr("x",0 - (height / 2))
+        .attr("dy", "1em")
+        .attr("style","font-weight: bold;") // to bold title
+        .attr("style","fill: white;") 
+        .style("text-anchor", "middle")
+        .text("Goal per Game");
+
+// add legend
+
+
+});
+
+
+
+
+
+</script>
+</div>
+
+<div id="nextsection">
+
+<p>
+This chart was built using <a href="http://d3js.org/">d3.js</a>.   Click on each country to highlight or remove its trendline.  Hover over points to find out more information about individual seasons.  The data were gathered and processed from my R package <a href="https://github.com/jalapic/engsoccerdata">engsoccerdata</a>.
+</p>
+<p>
+All code are available at my <a href="https://github.com/jalapic/jalapic.github.io">GitHub page</a>.  I welcome feedback.  Please get in touch via twitter - <a href="https://twitter.com/jalapic">@jalapic</a> 
+</p>
+
+
+
+</div>
+
+</body>
