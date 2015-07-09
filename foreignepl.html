@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+
+body{
+	margin: 0px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+path.player{
+	stroke: firebrick;
+	stroke-width: 5px;
+	fill: none;
+}
+
+
+.axis text{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+circle{
+	stroke-width: 3px;
+	stroke: firebrick;
+}
+
+.name{
+	text-shadow: 0 2px 0 #fff, 2px 0 0 #fff, 0 -2px 0 #fff, -2px 0 0 #fff;
+	fill: black;
+}
+
+div.tooltip {   
+position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 28px;
+  padding: 2px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  font-style: bold;
+  color: darkblue;
+  background: none;
+  border: none;
+  pointer-events: none; 
+}
+
+
+
+
+</style>
+
+<body></body>
+
+
+<script src="http://bl.ocks.org/1wheel/raw/67b47524ed8ed829d021/d3-3.5.5.js"></script>
+<script src="http://bl.ocks.org/1wheel/raw/67b47524ed8ed829d021/lodash-3.8.0.js"></script>
+<script src='http://bl.ocks.org/1wheel/raw/1b6758978dc2d52d3a37/d3-jetpack.js'></script>
+<script src='http://bl.ocks.org/1wheel/raw/1b6758978dc2d52d3a37/d3-starterkit.js'></script>
+
+<br>
+<h2>American EPL players</h3>
+
+
+<script>
+
+
+
+var players = [
+
+
+{name: 'Geoff&nbsp;Cameron',   start: 2013,  stop: 2016, clubs: "Stoke City"},
+{name: 'Gedion&nbsp;Zelalem',   start: 2013,  stop: 2016, clubs: "Arsenal"},
+{name: 'Brek&nbsp;Shea',   start: 2012,  stop: 2014, clubs: "Stoke City"},
+{name: 'Eric&nbsp;Lichaj',   start: 2010,  stop: 2012, clubs: "Aston Villa"},
+{name: 'Landon&nbsp;Donovan',   start: 2009,  stop: 2012, clubs: "Everton"},
+{name: 'Stuart&nbsp;Holden',   start: 2009,  stop: 2011, clubs: "Bolton"},
+{name: 'Eddie&nbsp;Johnson',   start: 2007,  stop: 2011, clubs: "Fulham"},
+{name: 'Clint&nbsp;Dempsey',   start: 2006,  stop: 2014, clubs: "Fulham, Spurs"},
+{name: 'Marcus&nbsp;Hahnemann',   start: 2006,  stop: 2011, clubs: "Reading, Wolves"},
+{name: 'Bobby&nbsp;Convey',   start: 2006,  stop: 2008, clubs: "Reading"},
+{name: 'Jozy&nbsp;Altidore',  start: 2009,  stop: 2010, clubs: "Hull City"},
+{name: 'Jozy&nbsp;Altidore',   start: 2013,  stop: 2015, clubs: "Sunderland"},
+{name: 'DeMarcus&nbsp;Beasley',   start: 2006,  stop: 2007, clubs: "Man City"},
+{name: 'Tim&nbsp;Howard',   start: 2003,  stop: 2016, clubs: "Everton, Man Utd"},
+{name: 'Carlos&nbsp;Bocanegra',   start: 2003,  stop: 2008, clubs: "Fulham"},
+{name: 'Michael&nbsp;Bradley',   start: 2010,  stop: 2011, clubs: "Aston Villa"},
+{name: 'Jay&nbsp;DeMerit',   start: 2006,  stop: 2007, clubs: "Watford"},
+{name: 'Maurice&nbsp;Edu',   start: 2012,  stop: 2013, clubs: "Stoke City"},
+{name: 'Benny&nbsp;Feilhaber',   start: 2007,  stop: 2008, clubs: "Derby"},
+{name: 'Ian&nbsp;Feuer',   start: 1999,  stop: 2002, clubs: "West Ham, Derby"},
+{name: 'Brad&nbsp;Freidel',   start: 1997,  stop: 2014, clubs: "Liverpool, Blackburn, Aston Villa, Spurs"},
+{name: 'Brad&nbsp;Guzan',   start: 2008,  stop: 2009, clubs: "Aston Villa"},
+{name: 'Brad&nbsp;Guzan',   start: 2011,  stop: 2016, clubs: "Aston Villa"},
+{name: 'Roy&nbsp;Wegerle',   start: 1992,  stop: 1995, clubs: "Blackburn, Coventry"},
+{name: 'Predrag&nbsp;Radosavljevic',   start: 1992,  stop: 1994, clubs: "Everton"},
+{name: 'John&nbsp;Harkes',   start: 1992,  stop: 1993, clubs: "Sheff Weds"},
+{name: 'John&nbsp;Harkes',   start: 1995,  stop: 1996, clubs: "West Ham"},
+{name: 'John&nbsp;Harkes',   start: 1998,  stop: 1999, clubs: "Notts Forest"},
+{name: 'Cobi&nbsp;Jones',   start: 1994,  stop: 1995, clubs: "Coventry"},
+{name: 'Jermaine&nbsp;Jones',   start: 2010,  stop: 2011, clubs: "Blackburn"},
+{name: 'Claudio&nbsp;Reyna',   start: 2001,  stop: 2007, clubs: "Sunderland, Man City"},
+{name: 'Kasey&nbsp;Keller',   start: 1996,  stop: 1999, clubs: "Leicester"},
+{name: 'Kasey&nbsp;Keller',   start: 2001,  stop: 2005, clubs: "Spurs, Southampton"},
+{name: 'Kasey&nbsp;Keller',   start: 2007,  stop: 2008, clubs: "Fulham"},
+{name: 'Brian&nbsp;McBride',   start: 2002,  stop: 2008, clubs: "Everton, Fulham"},
+{name: 'Jovan&nbsp;Kirovski',   start: 2002,  stop: 2004, clubs: "Birmingham"},
+{name: 'Eddie&nbsp;Lewis',   start: 2001,  stop: 2002, clubs: "Fulham"},
+{name: 'Eddie&nbsp;Lewis',   start: 2007,  stop: 2008, clubs: "Derby"},
+{name: 'Joe&#8209;Max&nbsp;Moore',   start: 1999,  stop: 2002, clubs: "Everton"},
+{name: 'Oguchi&nbsp;Onyewu',   start: 2006,  stop: 2007, clubs: "Newcastle"},
+{name: 'Tim&nbsp;Ream',   start: 2011,  stop: 2012, clubs: "Bolton"},
+{name: 'Johann&nbsp;Smith',   start: 2006,  stop: 2007, clubs: "Bolton"},
+{name: 'Juergen&nbsp;Sommer',   start: 1995,  stop: 1996, clubs: "QPR"},
+{name: 'Jonathan&nbsp;Spector',   start: 2004,  stop: 2011, clubs: "Man Utd, Charlton, West Ham"},
+{name: 'DeAndre&nbsp;Yedlin',   start: 2014,  stop: 2016, clubs: "Spurs"},
+{name: 'Zak&nbsp;Whitbread',   start: 2011,  stop: 2012, clubs: "Norwich"},
+
+]
+
+
+players = _.sortBy(players, 'start')
+
+
+players.forEach(function(d){ d.years = [] })
+
+
+d3.range(1991, 2017).forEach(function(year){
+  var currentHeight = 0
+  players.forEach(function(d){
+    if (d.start <= year && year <= d.stop){
+      d.years.push({year: year, height: ++currentHeight})
+      if (d.stop  == year) d.stopHeight  = currentHeight
+      if (d.start == year) d.startHeight = currentHeight
+
+    }
+  })
+})
+
+var margin = {top: 20, right: 10, bottom: 20, left: 10};
+
+var c = d3.conventions({height: 220})
+
+c.x.domain([1991, 2017])
+c.y.domain([0, 20])
+c.yAxis.ticks(5).tickFormat(d3.format("d"));  //remove comma
+c.xAxis.ticks(12).tickFormat(d3.format("d"));  //remove comma
+c.drawAxis()
+
+
+
+
+var line = d3.svg.line()
+    .x(ƒ('year', c.x))
+    .y(ƒ('height', c.y))
+
+var div = d3.select("body").append("div")   
+    .attr("class", "tooltip")               
+    .style("opacity", 0);
+
+c.svg.dataAppend(players, 'path.player')
+    .attr('d', ƒ('years', line))
+    .on("mouseover", function(d) {      
+                d3.select(this)
+                .style("stroke", 'darkblue')
+           div.transition()        
+                .duration(200)      
+                .style("opacity", .9);      
+            div.html(d.name + "<br/>")  
+                .style("left", 225 + "px")     
+                .style("top", 75 + "px");    
+              })                  
+        .on("mouseout", function(d) {       
+                 d3.select(this)
+                     .style("stroke", 'firebrick')
+                  div.transition()        
+                      .duration(500)      
+                      .style("opacity", 0);   
+        });
+
+
+c.svg.dataAppend(players, 'circle.start')
+    .attr({cx: ƒ('stop', c.x), cy: ƒ('stopHeight', c.y)})
+    .attr({r: 6, fill: 'white'})  //change circle radius
+
+c.svg.dataAppend(players, 'circle.stop')
+    .attr({cx: ƒ('start', c.x), cy: ƒ('startHeight', c.y)})
+    .attr({r: 6, fill: '#D89090'})
+
+
+d3.select(self.frameElement).style("height", d3.select('svg').attr('height') + "px");
+
+
+</script>
+
+<br>
+<h2>Canadian  EPL players</h3>
+
+<script>
+
+var players1 = [
+
+{name: 'Jim&nbsp;Brennan',   start: 2004,  stop: 2005, clubs: "Norwich"},
+{name: 'Terry&nbsp;Dunfield',   start: 2000,  stop: 2001, clubs: "Man City"},
+{name: 'David&nbsp;Edgar',   start: 2006,  stop: 2010, clubs: "Newcastle, Burnley"},
+{name: 'Craig&nbsp;Forrest',   start: 1992,  stop: 2001, clubs: "Ipswich, Chelsea, West Ham"},
+{name: 'Junior&nbsp;Hoilett',   start: 2009,  stop: 2015, clubs: "Blackburn, QPR"},
+{name: 'Simeon&nbsp;Jackson',   start: 2011,  stop: 2013, clubs: "Norwich"},
+{name: 'Tomasz&nbsp;Radzinski',   start: 2001,  stop: 2007, clubs: "Everton, Fulham"},
+{name: 'Paul&nbsp;Stalteri',   start: 2005,  stop: 2008, clubs: "Spurs, Fulham"},
+{name: 'Frank&nbsp;Yallop',   start: 1992,  stop: 1995, clubs: "Ipswich"},
+
+]
+
+
+players1 = _.sortBy(players1, 'start')
+
+players1.forEach(function(d){ d.years = [] })
+
+
+d3.range(1991, 2017).forEach(function(year){
+  var currentHeight = 0
+  players1.forEach(function(d){
+    if (d.start <= year && year <= d.stop){
+      d.years.push({year: year, height: ++currentHeight})
+      if (d.stop  == year) d.stopHeight  = currentHeight
+      if (d.start == year) d.startHeight = currentHeight
+
+    }
+  })
+})
+
+
+var c1 = d3.conventions({height: 220})
+
+c1.x.domain([1991, 2017])
+c1.y.domain([0, 20])
+c1.yAxis.ticks(5).tickFormat(d3.format("d"));  //remove comma
+c1.xAxis.ticks(12).tickFormat(d3.format("d"));  //remove comma
+c1.drawAxis()
+
+
+var line1 = d3.svg.line()
+    .x(ƒ('year', c1.x))
+    .y(ƒ('height', c1.y))
+
+
+c1.svg.dataAppend(players1, 'path.player')
+    .attr('d', ƒ('years', line1))
+    .style("stroke", "red")
+    .on("mouseover", function(d) {      
+                d3.select(this)
+                .style("stroke", 'darkblue')
+           div.transition()        
+                .duration(200)      
+                .style("opacity", .9);      
+            div.html(d.name + "<br/>")  
+                .style("left", 225 + "px")     
+                .style("top", 400 + "px");    
+              })                  
+        .on("mouseout", function(d) {       
+                 d3.select(this)
+                     .style("stroke", 'red')
+                  div.transition()        
+                      .duration(500)      
+                      .style("opacity", 0);   
+        });
+
+
+c1.svg.dataAppend(players1, 'circle.start')
+    .attr({cx: ƒ('stop', c1.x), cy: ƒ('stopHeight', c1.y)})
+    .attr({r: 6, fill: 'white'})  //change circle radius
+    .style("stroke", "red")
+
+c1.svg.dataAppend(players1, 'circle.stop')
+    .attr({cx: ƒ('start', c1.x), cy: ƒ('startHeight', c1.y)})
+    .attr({r: 6, fill: '#FF9999'})
+    .style("stroke", "red")
+
+
+d3.select(self.frameElement).style("height", d3.select('svg').attr('height') + "px");
+
+
+</script>
+
+
+<br>
+<h2>Mexican  EPL players</h3>
+
+<script>
+
+var players2 = [
+
+{name: 'Pablo&nbsp;Barrera',   start: 2010,  stop: 2011},
+{name: 'Jared&nbsp;Borgetti',   start: 2005,  stop: 2006},
+{name: 'Nery&nbsp;Castillo',   start: 2007,  stop: 2008},
+{name: 'Giovani&nbsp;dos&nbsp;Santos',   start: 2008,  stop: 2012},
+{name: 'Guillermo&nbsp;Franco',   start: 2009,  stop: 2010},
+{name: 'Javier&nbsp;Hern&aacute;ndez',   start: 2010,  stop: 2015},
+{name: 'Carlos&nbsp;Salcido',   start: 2010,  stop: 2011},
+{name: 'Carlos&nbsp;Vela',   start: 2008,  stop: 2011},
+]
+
+
+players2 = _.sortBy(players2, 'start')
+
+players2.forEach(function(d){ d.years = [] })
+
+
+d3.range(1991, 2017).forEach(function(year){
+  var currentHeight = 0
+  players2.forEach(function(d){
+    if (d.start <= year && year <= d.stop){
+      d.years.push({year: year, height: ++currentHeight})
+      if (d.stop  == year) d.stopHeight  = currentHeight
+      if (d.start == year) d.startHeight = currentHeight
+
+    }
+  })
+})
+
+
+var c2 = d3.conventions({height: 220})
+
+c2.x.domain([1991, 2017])
+c2.y.domain([0, 20])
+c2.yAxis.ticks(5).tickFormat(d3.format("d"));  //remove comma
+c2.xAxis.ticks(12).tickFormat(d3.format("d"));  //remove comma
+c2.drawAxis()
+
+
+var line2 = d3.svg.line()
+    .x(ƒ('year', c1.x))
+    .y(ƒ('height', c1.y))
+
+
+c2.svg.dataAppend(players2, 'path.player')
+    .attr('d', ƒ('years', line2))
+    .style("stroke", "darkgreen")
+    .on("mouseover", function(d) {      
+                d3.select(this)
+                .style("stroke", 'darkblue')
+           div.transition()        
+                .duration(200)      
+                .style("opacity", .9);      
+            div.html(d.name + "<br/>")  
+                .style("left", 225 + "px")     
+                .style("top", 720 + "px");    
+              })                  
+        .on("mouseout", function(d) {       
+                 d3.select(this)
+                     .style("stroke", 'darkgreen')
+                  div.transition()        
+                      .duration(500)      
+                      .style("opacity", 0);   
+        });
+
+
+c2.svg.dataAppend(players2, 'circle.start')
+    .attr({cx: ƒ('stop', c2.x), cy: ƒ('stopHeight', c2.y)})
+    .attr({r: 6, fill: 'white'})  //change circle radius
+    .style("stroke", "darkgreen")
+
+c2.svg.dataAppend(players2, 'circle.stop')
+    .attr({cx: ƒ('start', c2.x), cy: ƒ('startHeight', c2.y)})
+    .attr({r: 6, fill: 'green'})
+    .style("stroke", "darkgreen")
+
+
+d3.select(self.frameElement).style("height", d3.select('svg').attr('height') + "px");
+
+
+</script>
+<br>
+<br>
+<br>
+<p>This was built using <a href="http://d3js.org/">d3.js</a> based upon code written by <a href="https://github.com/1wheel">Adam Pearce</a>. My code is available on my <a href="https://github.com/jalapic">GitHub page</a></p>
+
+<p>There are still things that I would like to do to this. I would like to make the circles change color simultaneously to the lines when the lines are hovered over.  I would also like to have the clubs of each player show up in the tooltip but at a reduced font size - I'm not sure yet how to mix fontsizes in the same tooltip.  It would actually be cool to be able to generate lots of small multiples of these types of charts for any country using <a href="https://en.wikipedia.org/wiki/List_of_foreign_Premier_League_players">these data</a>. </p>
