@@ -1,0 +1,601 @@
+date,comp,player,titles,TOT,AUS,FRA,WIM,US
+1935.5,Australian Open,Adrian Quist,0,4,4,0,0,0
+1936,Australian Open,Adrian Quist,1,4,4,0,0,0
+1940,Australian Open,Adrian Quist,2,4,4,0,0,0
+1948,Australian Open,Adrian Quist,3,4,4,0,0,0
+1975.5,French Open,Adriano Panatta,0,2,0,2,0,0
+1976,French Open,Adriano Panatta,1,2,0,2,0,0
+2001.5,French Open,Albert Costa,0,2,0,2,0,0
+2002,French Open,Albert Costa,1,2,0,2,0,0
+1958.5,Australian Open,Alex Olmedo,0,3,2,0,1,0
+1959,Australian Open,Alex Olmedo,1,3,2,0,1,0
+1959,Wimbledon,Alex Olmedo,2,3,2,0,1,0
+1918.5,Australian Open,Algernon Kingscote,0,2,2,0,0,0
+1919,Australian Open,Algernon Kingscote,1,2,2,0,0,0
+1991.5,Wimbledon,Andre Agassi,0,9,4,1,2,2
+1992,Wimbledon,Andre Agassi,1,9,4,1,2,2
+1994,US Open,Andre Agassi,2,9,4,1,2,2
+1995,Australian Open,Andre Agassi,3,9,4,1,2,2
+1999,French Open,Andre Agassi,4,9,4,1,2,2
+1999,US Open,Andre Agassi,5,9,4,1,2,2
+2000,Australian Open,Andre Agassi,6,9,4,1,2,2
+2001,Australian Open,Andre Agassi,7,9,4,1,2,2
+2003,Australian Open,Andre Agassi,8,9,4,1,2,2
+1971.5,French Open,Andres Gimeno,0,2,0,2,0,0
+1972,French Open,Andres Gimeno,1,2,0,2,0,0
+1989.5,French Open,Andres Gomez,0,2,0,2,0,0
+1990,French Open,Andres Gomez,1,2,0,2,0,0
+2011.5,US Open,Andy Murray,0,3,0,0,1,2
+2012,US Open,Andy Murray,1,3,0,0,1,2
+2013,Wimbledon,Andy Murray,2,3,0,0,1,2
+2002.5,US Open,Andy Roddick,0,2,0,0,0,2
+2003,US Open,Andy Roddick,1,2,0,0,0,2
+1905.5,Australian Open,Anthony Wilding,0,7,3,0,4,0
+1906,Australian Open,Anthony Wilding,1,7,3,0,4,0
+1909,Australian Open,Anthony Wilding,2,7,3,0,4,0
+1910,Wimbledon,Anthony Wilding,3,7,3,0,4,0
+1911,Wimbledon,Anthony Wilding,4,7,3,0,4,0
+1912,Wimbledon,Anthony Wilding,5,7,3,0,4,0
+1913,Wimbledon,Anthony Wilding,6,7,3,0,4,0
+1967.5,US Open,Arthur Ashe,0,4,1,0,1,2
+1968,US Open,Arthur Ashe,1,4,1,0,1,2
+1970,Australian Open,Arthur Ashe,2,4,1,0,1,2
+1975,Wimbledon,Arthur Ashe,3,4,1,0,1,2
+1900.5,Wimbledon,Arthur Gore,0,4,0,0,4,0
+1901,Wimbledon,Arthur Gore,1,4,0,0,4,0
+1908,Wimbledon,Arthur Gore,2,4,0,0,4,0
+1909,Wimbledon,Arthur Gore,3,4,0,0,4,0
+1949.5,US Open,Arthur Larsen,0,2,0,0,0,2
+1950,US Open,Arthur Larsen,1,2,0,0,0,2
+1913.5,Australian Open,Arthur O'Hara Wood,0,2,2,0,0,0
+1914,Australian Open,Arthur O'Hara Wood,1,2,2,0,0,0
+1956.5,Australian Open,Ashley Cooper,0,5,3,0,1,1
+1957,Australian Open,Ashley Cooper,1,5,3,0,1,1
+1958,Australian Open,Ashley Cooper,2,5,3,0,1,1
+1958,Wimbledon,Ashley Cooper,3,5,3,0,1,1
+1958,US Open,Ashley Cooper,4,5,3,0,1,1
+1904.5,US Open,Beals Wright,0,2,0,0,0,2
+1905,US Open,Beals Wright,1,2,0,0,0,2
+1919.5,Wimbledon,Bill Tilden,0,11,0,0,4,7
+1920,Wimbledon,Bill Tilden,1,11,0,0,4,7
+1920,US Open,Bill Tilden,2,11,0,0,4,7
+1921,Wimbledon,Bill Tilden,3,11,0,0,4,7
+1921,US Open,Bill Tilden,4,11,0,0,4,7
+1922,US Open,Bill Tilden,5,11,0,0,4,7
+1923,US Open,Bill Tilden,6,11,0,0,4,7
+1924,US Open,Bill Tilden,7,11,0,0,4,7
+1925,US Open,Bill Tilden,8,11,0,0,4,7
+1929,US Open,Bill Tilden,9,11,0,0,4,7
+1930,Wimbledon,Bill Tilden,10,11,0,0,4,7
+1973.5,French Open,Bjorn Borg,0,12,0,7,5,0
+1974,French Open,Bjorn Borg,1,12,0,7,5,0
+1975,French Open,Bjorn Borg,2,12,0,7,5,0
+1976,Wimbledon,Bjorn Borg,3,12,0,7,5,0
+1977,Wimbledon,Bjorn Borg,4,12,0,7,5,0
+1978,French Open,Bjorn Borg,5,12,0,7,5,0
+1978,Wimbledon,Bjorn Borg,6,12,0,7,5,0
+1979,French Open,Bjorn Borg,7,12,0,7,5,0
+1979,Wimbledon,Bjorn Borg,8,12,0,7,5,0
+1980,French Open,Bjorn Borg,9,12,0,7,5,0
+1980,Wimbledon,Bjorn Borg,10,12,0,7,5,0
+1981,French Open,Bjorn Borg,11,12,0,7,5,0
+1947.5,Wimbledon,Bob Falkenburg,0,2,0,0,2,0
+1948,Wimbledon,Bob Falkenburg,1,2,0,0,2,0
+1938.5,Wimbledon,Bobby Riggs,0,4,0,0,2,2
+1939,Wimbledon,Bobby Riggs,1,4,0,0,2,2
+1939,US Open,Bobby Riggs,2,4,0,0,2,2
+1941,US Open,Bobby Riggs,3,4,0,0,2,2
+1984.5,Wimbledon,Boris Becker,0,7,2,0,4,1
+1985,Wimbledon,Boris Becker,1,7,2,0,4,1
+1986,Wimbledon,Boris Becker,2,7,2,0,4,1
+1989,Wimbledon,Boris Becker,3,7,2,0,4,1
+1989,US Open,Boris Becker,4,7,2,0,4,1
+1991,Australian Open,Boris Becker,5,7,2,0,4,1
+1996,Australian Open,Boris Becker,6,7,2,0,4,1
+1979.5,Australian Open,Brian Teacher,0,2,2,0,0,0
+1980,Australian Open,Brian Teacher,1,2,2,0,0,0
+1949.5,French Open,Budge Patty,0,3,0,2,1,0
+1950,French Open,Budge Patty,1,3,0,2,1,0
+1950,Wimbledon,Budge Patty,2,3,0,2,1,0
+1997.5,French Open,Carlos Moya,0,2,0,2,0,0
+1998,French Open,Carlos Moya,1,2,0,2,0,0
+1962.5,Wimbledon,Chuck McKinley,0,2,0,0,2,0
+1963,Wimbledon,Chuck McKinley,1,2,0,0,2,0
+1946.5,Australian Open,Dinny Pails,0,2,2,0,0,0
+1947,Australian Open,Dinny Pails,1,2,2,0,0,0
+1936.5,Wimbledon,Don Budge,0,7,1,1,3,2
+1937,Wimbledon,Don Budge,1,7,1,1,3,2
+1937,US Open,Don Budge,2,7,1,1,3,2
+1938,Australian Open,Don Budge,3,7,1,1,3,2
+1938,French Open,Don Budge,4,7,1,1,3,2
+1938,Wimbledon,Don Budge,5,7,1,1,3,2
+1938,US Open,Don Budge,6,7,1,1,3,2
+1938.5,French Open,Don McNeill,0,3,0,2,0,1
+1939,French Open,Don McNeill,1,3,0,2,0,1
+1940,US Open,Don McNeill,2,3,0,2,0,1
+1929.5,Australian Open,Edgar Moon,0,2,2,0,0,0
+1930,Australian Open,Edgar Moon,1,2,2,0,0,0
+1930.5,US Open,Ellsworth Vines,0,4,0,0,1,3
+1931,US Open,Ellsworth Vines,1,4,0,0,1,3
+1932,Wimbledon,Ellsworth Vines,2,4,0,0,1,3
+1932,US Open,Ellsworth Vines,3,4,0,0,1,3
+1887.5,Wimbledon,Ernest Renshaw,0,2,0,0,2,0
+1888,Wimbledon,Ernest Renshaw,1,2,0,0,2,0
+1912.5,Australian Open,Ernie Parker,0,2,2,0,0,0
+1913,Australian Open,Ernie Parker,1,2,2,0,0,0
+1914.5,Australian Open,Francis Lowe,0,2,2,0,0,0
+1915,Australian Open,Francis Lowe,1,2,2,0,0,0
+1877.5,Wimbledon,Frank Hadow,0,2,0,0,2,0
+1878,Wimbledon,Frank Hadow,1,2,0,0,2,0
+1943.5,US Open,Frank Parker,0,5,0,2,0,3
+1944,US Open,Frank Parker,1,5,0,2,0,3
+1945,US Open,Frank Parker,2,5,0,2,0,3
+1948,French Open,Frank Parker,3,5,0,2,0,3
+1949,French Open,Frank Parker,4,5,0,2,0,3
+1948.5,Australian Open,Frank Sedgman,0,6,3,0,1,2
+1949,Australian Open,Frank Sedgman,1,6,3,0,1,2
+1950,Australian Open,Frank Sedgman,2,6,3,0,1,2
+1951,US Open,Frank Sedgman,3,6,3,0,1,2
+1952,Wimbledon,Frank Sedgman,4,6,3,0,1,2
+1952,US Open,Frank Sedgman,5,6,3,0,1,2
+1907.5,Australian Open,Fred Alexander,0,2,2,0,0,0
+1908,Australian Open,Fred Alexander,1,2,2,0,0,0
+1894.5,US Open,Fred Hovey,0,2,0,0,0,2
+1895,US Open,Fred Hovey,1,2,0,0,0,2
+1932.5,US Open,Fred Perry,0,9,1,1,3,4
+1933,US Open,Fred Perry,1,9,1,1,3,4
+1934,Australian Open,Fred Perry,2,9,1,1,3,4
+1934,Wimbledon,Fred Perry,3,9,1,1,3,4
+1934,US Open,Fred Perry,4,9,1,1,3,4
+1935,French Open,Fred Perry,5,9,1,1,3,4
+1935,Wimbledon,Fred Perry,6,9,1,1,3,4
+1936,Wimbledon,Fred Perry,7,9,1,1,3,4
+1936,US Open,Fred Perry,8,9,1,1,3,4
+1964.5,French Open,Fred Stolle,0,3,0,2,0,1
+1965,French Open,Fred Stolle,1,3,0,2,0,1
+1966,US Open,Fred Stolle,2,3,0,2,0,1
+2003.5,French Open,Gaston Gaudio,0,2,0,2,0,0
+2004,French Open,Gaston Gaudio,1,2,0,2,0,0
+1918.5,Wimbledon,Gerald Patterson,0,4,1,0,3,0
+1919,Wimbledon,Gerald Patterson,1,4,1,0,3,0
+1922,Wimbledon,Gerald Patterson,2,4,1,0,3,0
+1927,Australian Open,Gerald Patterson,3,4,1,0,3,0
+2000.5,Wimbledon,Goran Ivanisevic,0,2,0,0,2,0
+2001,Wimbledon,Goran Ivanisevic,1,2,0,0,2,0
+1933.5,French Open,Gottfried von Cramm,0,3,0,3,0,0
+1934,French Open,Gottfried von Cramm,1,3,0,3,0,0
+1936,French Open,Gottfried von Cramm,2,3,0,3,0,0
+1976.5,French Open,Guillermo Vilas,0,5,2,2,0,1
+1977,French Open,Guillermo Vilas,1,5,2,2,0,1
+1977,US Open,Guillermo Vilas,2,5,2,2,0,1
+1978,Australian Open,Guillermo Vilas,3,5,2,2,0,1
+1979,Australian Open,Guillermo Vilas,4,5,2,2,0,1
+1996.5,French Open,Gustavo Kuerten,0,4,0,4,0,0
+1997,French Open,Gustavo Kuerten,1,4,0,4,0,0
+2000,French Open,Gustavo Kuerten,2,4,0,4,0,0
+2001,French Open,Gustavo Kuerten,3,4,0,4,0,0
+1895.5,Wimbledon,Harold Mahoney,0,2,0,0,2,0
+1896,Wimbledon,Harold Mahoney,1,2,0,0,2,0
+1936.5,French Open,Henner Henkel,0,2,0,2,0,0
+1937,French Open,Henner Henkel,1,2,0,2,0,0
+1925.5,French Open,Henri Cochet,0,8,0,5,2,1
+1926,French Open,Henri Cochet,1,8,0,5,2,1
+1927,Wimbledon,Henri Cochet,2,8,0,5,2,1
+1928,French Open,Henri Cochet,3,8,0,5,2,1
+1928,US Open,Henri Cochet,4,8,0,5,2,1
+1929,Wimbledon,Henri Cochet,5,8,0,5,2,1
+1930,French Open,Henri Cochet,6,8,0,5,2,1
+1932,French Open,Henri Cochet,7,8,0,5,2,1
+1887.5,US Open,Henry Slocum,0,3,0,0,0,3
+1888,US Open,Henry Slocum,1,3,0,0,0,3
+1889,US Open,Henry Slocum,2,3,0,0,0,3
+1886.5,Wimbledon,Herbert Lawford,0,2,0,0,2,0
+1887,Wimbledon,Herbert Lawford,1,2,0,0,2,0
+1903.5,US Open,Holcombe Ward,0,2,0,0,0,2
+1904,US Open,Holcombe Ward,1,2,0,0,0,2
+1906.5,Australian Open,Horace Rice,0,2,2,0,0,0
+1907,Australian Open,Horace Rice,1,2,2,0,0,0
+1971.5,US Open,Ilie Nastase,0,3,0,1,0,2
+1972,US Open,Ilie Nastase,1,3,0,1,0,2
+1973,French Open,Ilie Nastase,2,3,0,1,0,2
+1983.5,French Open,Ivan Lendl,0,9,2,4,0,3
+1984,French Open,Ivan Lendl,1,9,2,4,0,3
+1985,US Open,Ivan Lendl,2,9,2,4,0,3
+1986,French Open,Ivan Lendl,3,9,2,4,0,3
+1986,US Open,Ivan Lendl,4,9,2,4,0,3
+1987,French Open,Ivan Lendl,5,9,2,4,0,3
+1987,US Open,Ivan Lendl,6,9,2,4,0,3
+1989,Australian Open,Ivan Lendl,7,9,2,4,0,3
+1990,Australian Open,Ivan Lendl,8,9,2,4,0,3
+1930.5,Australian Open,Jack Crawford,0,7,5,1,1,0
+1931,Australian Open,Jack Crawford,1,7,5,1,1,0
+1932,Australian Open,Jack Crawford,2,7,5,1,1,0
+1933,Australian Open,Jack Crawford,3,7,5,1,1,0
+1933,French Open,Jack Crawford,4,7,5,1,1,0
+1933,Wimbledon,Jack Crawford,5,7,5,1,1,0
+1935,Australian Open,Jack Crawford,6,7,5,1,1,0
+1945.5,US Open,Jack Kramer,0,4,0,0,1,3
+1946,US Open,Jack Kramer,1,4,0,0,1,3
+1947,Wimbledon,Jack Kramer,2,4,0,0,1,3
+1947,US Open,Jack Kramer,3,4,0,0,1,3
+1921.5,Australian Open,James Anderson,0,4,4,0,0,0
+1922,Australian Open,James Anderson,1,4,4,0,0,0
+1924,Australian Open,James Anderson,2,4,4,0,0,0
+1925,Australian Open,James Anderson,3,4,4,0,0,0
+1911.5,Australian Open,James Cecil Parke,0,2,2,0,0,0
+1912,Australian Open,James Cecil Parke,1,2,2,0,0,0
+1969.5,French Open,Jan Kodes,0,4,0,3,1,0
+1970,French Open,Jan Kodes,1,4,0,3,1,0
+1971,French Open,Jan Kodes,2,4,0,3,1,0
+1973,Wimbledon,Jan Kodes,3,4,0,3,1,0
+1950.5,French Open,Jaroslav Drobny,0,4,0,3,1,0
+1951,French Open,Jaroslav Drobny,1,4,0,3,1,0
+1952,French Open,Jaroslav Drobny,2,4,0,3,1,0
+1954,Wimbledon,Jaroslav Drobny,3,4,0,3,1,0
+1923.5,Wimbledon,Jean Borotra,0,5,1,1,3,0
+1924,Wimbledon,Jean Borotra,1,5,1,1,3,0
+1926,Wimbledon,Jean Borotra,2,5,1,1,3,0
+1928,Australian Open,Jean Borotra,3,5,1,1,3,0
+1931,French Open,Jean Borotra,4,5,1,1,3,0
+1990.5,French Open,Jim Courier,0,5,2,3,0,0
+1991,French Open,Jim Courier,1,5,2,3,0,0
+1992,Australian Open,Jim Courier,2,5,2,3,0,0
+1992,French Open,Jim Courier,3,5,2,3,0,0
+1993,Australian Open,Jim Courier,4,5,2,3,0,0
+1973.5,Australian Open,Jimmy Connors,0,9,2,0,2,5
+1974,Australian Open,Jimmy Connors,1,9,2,0,2,5
+1974,Wimbledon,Jimmy Connors,2,9,2,0,2,5
+1974,US Open,Jimmy Connors,3,9,2,0,2,5
+1976,US Open,Jimmy Connors,4,9,2,0,2,5
+1978,US Open,Jimmy Connors,5,9,2,0,2,5
+1982,Wimbledon,Jimmy Connors,6,9,2,0,2,5
+1982,US Open,Jimmy Connors,7,9,2,0,2,5
+1983,US Open,Jimmy Connors,8,9,2,0,2,5
+1980.5,Australian Open,Johan Kriek,0,3,3,0,0,0
+1981,Australian Open,Johan Kriek,1,3,3,0,0,0
+1982,Australian Open,Johan Kriek,2,3,3,0,0,0
+1938.5,Australian Open,John Bromwich,0,3,3,0,0,0
+1939,Australian Open,John Bromwich,1,3,3,0,0,0
+1946,Australian Open,John Bromwich,2,3,3,0,0,0
+1929.5,US Open,John Doeg,0,2,0,0,0,2
+1930,US Open,John Doeg,1,2,0,0,0,2
+1928.5,Australian Open,John Gregory,0,2,2,0,0,0
+1929,Australian Open,John Gregory,1,2,2,0,0,0
+1878.5,Wimbledon,John Hartley,0,3,0,0,3,0
+1879,Wimbledon,John Hartley,1,3,0,0,3,0
+1880,Wimbledon,John Hartley,2,3,0,0,3,0
+1925.5,Australian Open,John Hawkes,0,2,2,0,0,0
+1926,Australian Open,John Hawkes,1,2,2,0,0,0
+1978.5,US Open,John McEnroe,0,8,0,0,3,5
+1979,US Open,John McEnroe,1,8,0,0,3,5
+1980,US Open,John McEnroe,2,8,0,0,3,5
+1981,Wimbledon,John McEnroe,3,8,0,0,3,5
+1981,US Open,John McEnroe,4,8,0,0,3,5
+1983,Wimbledon,John McEnroe,5,8,0,0,3,5
+1984,Wimbledon,John McEnroe,6,8,0,0,3,5
+1984,US Open,John McEnroe,7,8,0,0,3,5
+1966.5,Wimbledon,John Newcombe,0,8,2,0,4,2
+1967,Wimbledon,John Newcombe,1,8,2,0,4,2
+1967,US Open,John Newcombe,2,8,2,0,4,2
+1970,Wimbledon,John Newcombe,3,8,2,0,4,2
+1971,Wimbledon,John Newcombe,4,8,2,0,4,2
+1973,Australian Open,John Newcombe,5,8,2,0,4,2
+1973,US Open,John Newcombe,6,8,2,0,4,2
+1975,Australian Open,John Newcombe,7,8,2,0,4,2
+1942.5,US Open,Joseph Hunt,0,2,0,0,0,2
+1943,US Open,Joseph Hunt,1,2,0,0,0,2
+1892.5,Wimbledon,Joshua Pim,0,3,0,0,3,0
+1893,Wimbledon,Joshua Pim,1,3,0,0,3,0
+1894,Wimbledon,Joshua Pim,2,3,0,0,3,0
+2002.5,French Open,Juan Carlos Ferrero,0,2,0,2,0,0
+2003,French Open,Juan Carlos Ferrero,1,2,0,2,0,0
+2008.5,US Open,Juan Martin del Potro,0,2,0,0,0,2
+2009,US Open,Juan Martin del Potro,1,2,0,0,0,2
+1946.5,French Open,Jozsef Asboth,0,2,0,2,0,0
+1947,French Open,Jozsef Asboth,1,2,0,2,0,0
+1951.5,Australian Open,Ken McGregor,0,2,2,0,0,0
+1952,Australian Open,Ken McGregor,1,2,2,0,0,0
+1952.5,Australian Open,Ken Rosewall,0,9,5,2,0,2
+1953,Australian Open,Ken Rosewall,1,9,5,2,0,2
+1953,French Open,Ken Rosewall,2,9,5,2,0,2
+1955,Australian Open,Ken Rosewall,3,9,5,2,0,2
+1956,US Open,Ken Rosewall,4,9,5,2,0,2
+1968,French Open,Ken Rosewall,5,9,5,2,0,2
+1970,US Open,Ken Rosewall,6,9,5,2,0,2
+1971,Australian Open,Ken Rosewall,7,9,5,2,0,2
+1972,Australian Open,Ken Rosewall,8,9,5,2,0,2
+1901.5,Wimbledon,Lawrence Doherty,0,7,0,0,6,1
+1902,Wimbledon,Lawrence Doherty,1,7,0,0,6,1
+1903,Wimbledon,Lawrence Doherty,2,7,0,0,6,1
+1903,US Open,Lawrence Doherty,3,7,0,0,6,1
+1904,Wimbledon,Lawrence Doherty,4,7,0,0,6,1
+1905,Wimbledon,Lawrence Doherty,5,7,0,0,6,1
+1906,Wimbledon,Lawrence Doherty,6,7,0,0,6,1
+1955.5,Australian Open,Lew Hoad,0,5,2,1,2,0
+1956,Australian Open,Lew Hoad,1,5,2,1,2,0
+1956,French Open,Lew Hoad,2,5,2,1,2,0
+1956,Wimbledon,Lew Hoad,3,5,2,1,2,0
+1957,Wimbledon,Lew Hoad,4,5,2,1,2,0
+2000.5,US Open,Lleyton Hewitt,0,3,0,0,1,2
+2001,US Open,Lleyton Hewitt,1,3,0,0,1,2
+2002,Wimbledon,Lleyton Hewitt,2,3,0,0,1,2
+1956.5,US Open,Malcolm Anderson,0,2,0,0,0,2
+1957,US Open,Malcolm Anderson,1,2,0,0,0,2
+1897.5,US Open,Malcolm Whitman,0,4,0,0,0,4
+1898,US Open,Malcolm Whitman,1,4,0,0,0,4
+1899,US Open,Malcolm Whitman,2,4,0,0,0,4
+1900,US Open,Malcolm Whitman,3,4,0,0,0,4
+1974.5,US Open,Manuel Orantes,0,2,0,0,0,2
+1975,US Open,Manuel Orantes,1,2,0,0,0,2
+1960.5,French Open,Manuel Santana,0,5,0,3,1,1
+1961,French Open,Manuel Santana,1,5,0,3,1,1
+1964,French Open,Manuel Santana,2,5,0,3,1,1
+1965,US Open,Manuel Santana,3,5,0,3,1,1
+1966,Wimbledon,Manuel Santana,4,5,0,3,1,1
+1999.5,US Open,Marat Safin,0,3,1,0,0,2
+2000,US Open,Marat Safin,1,3,1,0,0,2
+2005,Australian Open,Marat Safin,2,3,1,0,0,2
+1945.5,French Open,Marcel Bernard,0,2,0,2,0,0
+1946,French Open,Marcel Bernard,1,2,0,2,0,0
+2013.5,US Open,Marin Cilic,0,2,0,0,0,2
+2014,US Open,Marin Cilic,1,2,0,0,0,2
+1975.5,Australian Open,Mark Edmondson,0,2,2,0,0,0
+1976,Australian Open,Mark Edmondson,1,2,2,0,0,0
+1981.5,French Open,Mats Wilander,0,8,3,4,0,1
+1982,French Open,Mats Wilander,1,8,3,4,0,1
+1983,Australian Open,Mats Wilander,2,8,3,4,0,1
+1984,Australian Open,Mats Wilander,3,8,3,4,0,1
+1985,French Open,Mats Wilander,4,8,3,4,0,1
+1988,Australian Open,Mats Wilander,5,8,3,4,0,1
+1988,French Open,Mats Wilander,6,8,3,4,0,1
+1988,US Open,Mats Wilander,7,8,3,4,0,1
+1911.5,US Open,Maurice McLoughlin,0,3,0,0,0,3
+1912,US Open,Maurice McLoughlin,1,3,0,0,0,3
+1913,US Open,Maurice McLoughlin,2,3,0,0,0,3
+1953.5,Australian Open,Mervyn Rose,0,3,2,1,0,0
+1954,Australian Open,Mervyn Rose,1,3,2,1,0,0
+1958,French Open,Mervyn Rose,2,3,2,1,0,0
+1988.5,French Open,Michael Chang,0,2,0,2,0,0
+1989,French Open,Michael Chang,1,2,0,2,0,0
+1990.5,Wimbledon,Michael Stich,0,2,0,0,2,0
+1991,Wimbledon,Michael Stich,1,2,0,0,2,0
+1958.5,US Open,Neale Fraser,0,4,0,0,1,3
+1959,US Open,Neale Fraser,1,4,0,0,1,3
+1960,Wimbledon,Neale Fraser,2,4,0,0,1,3
+1960,US Open,Neale Fraser,3,4,0,0,1,3
+1958.5,French Open,Nicola Pietrangeli,0,3,0,3,0,0
+1959,French Open,Nicola Pietrangeli,1,3,0,3,0,0
+1960,French Open,Nicola Pietrangeli,2,3,0,3,0,0
+1906.5,Wimbledon,Norman Brookes,0,4,1,0,3,0
+1907,Wimbledon,Norman Brookes,1,4,1,0,3,0
+1911,Australian Open,Norman Brookes,2,4,1,0,3,0
+1914,Wimbledon,Norman Brookes,3,4,1,0,3,0
+2007.5,Australian Open,Novak Djokovic,0,10,6,0,3,1
+2008,Australian Open,Novak Djokovic,1,10,6,0,3,1
+2011,Australian Open,Novak Djokovic,2,10,6,0,3,1
+2011,Wimbledon,Novak Djokovic,3,10,6,0,3,1
+2011,US Open,Novak Djokovic,4,10,6,0,3,1
+2012,Australian Open,Novak Djokovic,5,10,6,0,3,1
+2013,Australian Open,Novak Djokovic,6,10,6,0,3,1
+2014,Wimbledon,Novak Djokovic,7,10,6,0,3,1
+2015,Australian Open,Novak Djokovic,8,10,6,0,3,1
+2015,Wimbledon,Novak Djokovic,9,10,6,0,3,1
+1889.5,US Open,Oliver Campbell,0,4,0,0,0,4
+1890,US Open,Oliver Campbell,1,4,0,0,0,4
+1891,US Open,Oliver Campbell,2,4,0,0,0,4
+1892,US Open,Oliver Campbell,3,4,0,0,0,4
+1947.5,US Open,Pancho Gonzales,0,3,0,0,0,3
+1948,US Open,Pancho Gonzales,1,3,0,0,0,3
+1949,US Open,Pancho Gonzales,2,3,0,0,0,3
+1986.5,Wimbledon,Pat Cash,0,2,0,0,2,0
+1987,Wimbledon,Pat Cash,1,2,0,0,2,0
+1919.5,Australian Open,Pat O'Hara Wood,0,3,3,0,0,0
+1920,Australian Open,Pat O'Hara Wood,1,3,3,0,0,0
+1923,Australian Open,Pat O'Hara Wood,2,3,3,0,0,0
+1996.5,US Open,Patrick Rafter,0,3,0,0,0,3
+1997,US Open,Patrick Rafter,1,3,0,0,0,3
+1998,US Open,Patrick Rafter,2,3,0,0,0,3
+1989.5,US Open,Pete Sampras,0,15,2,0,7,6
+1990,US Open,Pete Sampras,1,15,2,0,7,6
+1993,Wimbledon,Pete Sampras,2,15,2,0,7,6
+1993,US Open,Pete Sampras,3,15,2,0,7,6
+1994,Australian Open,Pete Sampras,4,15,2,0,7,6
+1994,Wimbledon,Pete Sampras,5,15,2,0,7,6
+1995,Wimbledon,Pete Sampras,6,15,2,0,7,6
+1995,US Open,Pete Sampras,7,15,2,0,7,6
+1996,US Open,Pete Sampras,8,15,2,0,7,6
+1997,Australian Open,Pete Sampras,9,15,2,0,7,6
+1997,Wimbledon,Pete Sampras,10,15,2,0,7,6
+1998,Wimbledon,Pete Sampras,11,15,2,0,7,6
+1999,Wimbledon,Pete Sampras,12,15,2,0,7,6
+2000,Wimbledon,Pete Sampras,13,15,2,0,7,6
+2002,US Open,Pete Sampras,14,15,2,0,7,6
+1997.5,Australian Open,Petr Korda,0,2,2,0,0,0
+1998,Australian Open,Petr Korda,1,2,2,0,0,0
+2004.5,French Open,Rafael Nadal,0,15,1,10,2,2
+2005,French Open,Rafael Nadal,1,15,1,10,2,2
+2006,French Open,Rafael Nadal,2,15,1,10,2,2
+2007,French Open,Rafael Nadal,3,15,1,10,2,2
+2008,French Open,Rafael Nadal,4,15,1,10,2,2
+2008,Wimbledon,Rafael Nadal,5,15,1,10,2,2
+2009,Australian Open,Rafael Nadal,6,15,1,10,2,2
+2010,French Open,Rafael Nadal,7,15,1,10,2,2
+2010,Wimbledon,Rafael Nadal,8,15,1,10,2,2
+2010,US Open,Rafael Nadal,9,15,1,10,2,2
+2011,French Open,Rafael Nadal,10,15,1,10,2,2
+2012,French Open,Rafael Nadal,11,15,1,10,2,2
+2013,French Open,Rafael Nadal,12,15,1,10,2,2
+2013,US Open,Rafael Nadal,13,15,1,10,2,2
+2014,French Open,Rafael Nadal,14,15,1,10,2,2
+1962.5,US Open,Rafael Osuna,0,2,0,0,0,2
+1963,US Open,Rafael Osuna,1,2,0,0,0,2
+1896.5,Wimbledon,Reginald Doherty,0,5,0,0,5,0
+1897,Wimbledon,Reginald Doherty,1,5,0,0,5,0
+1898,Wimbledon,Reginald Doherty,2,5,0,0,5,0
+1899,Wimbledon,Reginald Doherty,3,5,0,0,5,0
+1900,Wimbledon,Reginald Doherty,4,5,0,0,5,0
+1924.5,French Open,Rene Lacoste,0,8,0,4,2,2
+1925,French Open,Rene Lacoste,1,8,0,4,2,2
+1925,Wimbledon,Rene Lacoste,2,8,0,4,2,2
+1926,US Open,Rene Lacoste,3,8,0,4,2,2
+1927,French Open,Rene Lacoste,4,8,0,4,2,2
+1927,US Open,Rene Lacoste,5,8,0,4,2,2
+1928,Wimbledon,Rene Lacoste,6,8,0,4,2,2
+1929,French Open,Rene Lacoste,7,8,0,4,2,2
+1920.5,Australian Open,Rhys Gemmell,0,2,2,0,0,0
+1921,Australian Open,Rhys Gemmell,1,2,2,0,0,0
+1995.5,Wimbledon,Richard Krajicek,0,2,0,0,2,0
+1996,Wimbledon,Richard Krajicek,1,2,0,0,2,0
+1950.5,Australian Open,Richard Savitt,0,3,2,0,1,0
+1951,Australian Open,Richard Savitt,1,3,2,0,1,0
+1951,Wimbledon,Richard Savitt,2,3,2,0,1,0
+1880.5,US Open,Richard Sears,0,8,0,0,0,8
+1881,US Open,Richard Sears,1,8,0,0,0,8
+1882,US Open,Richard Sears,2,8,0,0,0,8
+1883,US Open,Richard Sears,3,8,0,0,0,8
+1884,US Open,Richard Sears,4,8,0,0,0,8
+1885,US Open,Richard Sears,5,8,0,0,0,8
+1886,US Open,Richard Sears,6,8,0,0,0,8
+1887,US Open,Richard Sears,7,8,0,0,0,8
+1913.5,US Open,Richard Williams,0,3,0,0,0,3
+1914,US Open,Richard Williams,1,3,0,0,0,3
+1916,US Open,Richard Williams,2,3,0,0,0,3
+1916.5,US Open,Robert Lindley Murray,0,3,0,0,0,3
+1917,US Open,Robert Lindley Murray,1,3,0,0,0,3
+1918,US Open,Robert Lindley Murray,2,3,0,0,0,3
+1892.5,US Open,Robert Wrenn,0,5,0,0,0,5
+1893,US Open,Robert Wrenn,1,5,0,0,0,5
+1894,US Open,Robert Wrenn,2,5,0,0,0,5
+1896,US Open,Robert Wrenn,3,5,0,0,0,5
+1897,US Open,Robert Wrenn,4,5,0,0,0,5
+1959.5,Australian Open,Rod Laver,0,12,4,2,4,2
+1960,Australian Open,Rod Laver,1,12,4,2,4,2
+1961,Wimbledon,Rod Laver,2,12,4,2,4,2
+1962,Australian Open,Rod Laver,3,12,4,2,4,2
+1962,French Open,Rod Laver,4,12,4,2,4,2
+1962,Wimbledon,Rod Laver,5,12,4,2,4,2
+1962,US Open,Rod Laver,6,12,4,2,4,2
+1968,Wimbledon,Rod Laver,7,12,4,2,4,2
+1969,Australian Open,Rod Laver,8,12,4,2,4,2
+1969,French Open,Rod Laver,9,12,4,2,4,2
+1969,Wimbledon,Rod Laver,10,12,4,2,4,2
+1969,US Open,Rod Laver,11,12,4,2,4,2
+1904.5,Australian Open,Rodney Heath,0,3,3,0,0,0
+1905,Australian Open,Rodney Heath,1,3,3,0,0,0
+1910,Australian Open,Rodney Heath,2,3,3,0,0,0
+2002.5,Wimbledon,Roger Federer,0,18,4,1,8,5
+2003,Wimbledon,Roger Federer,1,18,4,1,8,5
+2004,Australian Open,Roger Federer,2,18,4,1,8,5
+2004,Wimbledon,Roger Federer,3,18,4,1,8,5
+2004,US Open,Roger Federer,4,18,4,1,8,5
+2005,Wimbledon,Roger Federer,5,18,4,1,8,5
+2005,US Open,Roger Federer,6,18,4,1,8,5
+2006,Australian Open,Roger Federer,7,18,4,1,8,5
+2006,Wimbledon,Roger Federer,8,18,4,1,8,5
+2006,US Open,Roger Federer,9,18,4,1,8,5
+2007,Australian Open,Roger Federer,10,18,4,1,8,5
+2007,Wimbledon,Roger Federer,11,18,4,1,8,5
+2007,US Open,Roger Federer,12,18,4,1,8,5
+2008,US Open,Roger Federer,13,18,4,1,8,5
+2009,French Open,Roger Federer,14,18,4,1,8,5
+2009,Wimbledon,Roger Federer,15,18,4,1,8,5
+2010,Australian Open,Roger Federer,16,18,4,1,8,5
+2012,Wimbledon,Roger Federer,17,18,4,1,8,5
+1976.5,Australian Open,Roscoe Tanner,0,2,2,0,0,0
+1977,Australian Open,Roscoe Tanner,1,2,2,0,0,0
+1960.5,Australian Open,Roy Emerson,0,13,7,2,2,2
+1961,Australian Open,Roy Emerson,1,13,7,2,2,2
+1961,US Open,Roy Emerson,2,13,7,2,2,2
+1963,Australian Open,Roy Emerson,3,13,7,2,2,2
+1963,French Open,Roy Emerson,4,13,7,2,2,2
+1964,Australian Open,Roy Emerson,5,13,7,2,2,2
+1964,Wimbledon,Roy Emerson,6,13,7,2,2,2
+1964,US Open,Roy Emerson,7,13,7,2,2,2
+1965,Australian Open,Roy Emerson,8,13,7,2,2,2
+1965,Wimbledon,Roy Emerson,9,13,7,2,2,2
+1966,Australian Open,Roy Emerson,10,13,7,2,2,2
+1967,Australian Open,Roy Emerson,11,13,7,2,2,2
+1967,French Open,Roy Emerson,12,13,7,2,2,2
+1992.5,French Open,Sergi Bruguera,0,3,0,3,0,0
+1993,French Open,Sergi Bruguera,1,3,0,3,0,0
+1994,French Open,Sergi Bruguera,2,3,0,3,0,0
+1930.5,Wimbledon,Sidney Wood,0,2,0,0,2,0
+1931,Wimbledon,Sidney Wood,1,2,0,0,2,0
+1876.5,Wimbledon,Spencer Gore,0,2,0,0,2,0
+1877,Wimbledon,Spencer Gore,1,2,0,0,2,0
+1970.5,US Open,Stan Smith,0,3,0,0,1,2
+1971,US Open,Stan Smith,1,3,0,0,1,2
+1972,Wimbledon,Stan Smith,2,3,0,0,1,2
+2013.5,Australian Open,Stan Wawrinka,0,3,2,1,0,0
+2014,Australian Open,Stan Wawrinka,1,3,2,1,0,0
+2015,French Open,Stan Wawrinka,2,3,2,1,0,0
+1984.5,Australian Open,Stefan Edberg,0,7,3,0,2,2
+1985,Australian Open,Stefan Edberg,1,7,3,0,2,2
+1987,Australian Open,Stefan Edberg,2,7,3,0,2,2
+1988,Wimbledon,Stefan Edberg,3,7,3,0,2,2
+1990,Wimbledon,Stefan Edberg,4,7,3,0,2,2
+1991,US Open,Stefan Edberg,5,7,3,0,2,2
+1992,US Open,Stefan Edberg,6,7,3,0,2,2
+1956.5,French Open,Sven Davidson,0,2,0,2,0,0
+1957,French Open,Sven Davidson,1,2,0,2,0,0
+1941.5,US Open,Ted Schroeder,0,3,0,0,1,2
+1942,US Open,Ted Schroeder,1,3,0,0,1,2
+1949,Wimbledon,Ted Schroeder,2,3,0,0,1,2
+2001.5,Australian Open,Thomas Johansson,0,2,2,0,0,0
+2002,Australian Open,Thomas Johansson,1,2,2,0,0,0
+1994.5,French Open,Thomas Muster,0,2,0,2,0,0
+1995,French Open,Thomas Muster,1,2,0,2,0,0
+1965.5,French Open,Tony Roche,0,2,0,2,0,0
+1966,French Open,Tony Roche,1,2,0,2,0,0
+1952.5,US Open,Tony Trabert,0,6,0,2,1,3
+1953,US Open,Tony Trabert,1,6,0,2,1,3
+1954,French Open,Tony Trabert,2,6,0,2,1,3
+1955,French Open,Tony Trabert,3,6,0,2,1,3
+1955,Wimbledon,Tony Trabert,4,6,0,2,1,3
+1955,US Open,Tony Trabert,5,6,0,2,1,3
+1952.5,Wimbledon,Vic Seixas,0,3,0,0,2,1
+1953,Wimbledon,Vic Seixas,1,3,0,0,2,1
+1954,US Open,Vic Seixas,2,3,0,0,2,1
+1976.5,Australian Open,Vitas Gerulaitis,0,2,2,0,0,0
+1977,Australian Open,Vitas Gerulaitis,1,2,2,0,0,0
+1936.5,Australian Open,Vivian McGrath,0,2,2,0,0,0
+1937,Australian Open,Vivian McGrath,1,2,2,0,0,0
+1890.5,Wimbledon,Wilfred Baddeley,0,4,0,0,4,0
+1891,Wimbledon,Wilfred Baddeley,1,4,0,0,4,0
+1892,Wimbledon,Wilfred Baddeley,2,4,0,0,4,0
+1895,Wimbledon,Wilfred Baddeley,3,4,0,0,4,0
+1967.5,Australian Open,William Bowrey,0,2,2,0,0,0
+1968,Australian Open,William Bowrey,1,2,2,0,0,0
+1905.5,US Open,William Clothier,0,2,0,0,0,2
+1906,US Open,William Clothier,1,2,0,0,0,2
+1914.5,US Open,William Johnston,0,4,0,0,1,3
+1915,US Open,William Johnston,1,4,0,0,1,3
+1919,US Open,William Johnston,2,4,0,0,1,3
+1923,Wimbledon,William Johnston,3,4,0,0,1,3
+1900.5,US Open,William Larned,0,8,0,0,0,8
+1901,US Open,William Larned,1,8,0,0,0,8
+1902,US Open,William Larned,2,8,0,0,0,8
+1907,US Open,William Larned,3,8,0,0,0,8
+1908,US Open,William Larned,4,8,0,0,0,8
+1909,US Open,William Larned,5,8,0,0,0,8
+1910,US Open,William Larned,6,8,0,0,0,8
+1911,US Open,William Larned,7,8,0,0,0,8
+1880.5,Wimbledon,William Renshaw,0,8,0,0,8,0
+1881,Wimbledon,William Renshaw,1,8,0,0,8,0
+1882,Wimbledon,William Renshaw,2,8,0,0,8,0
+1883,Wimbledon,William Renshaw,3,8,0,0,8,0
+1884,Wimbledon,William Renshaw,4,8,0,0,8,0
+1885,Wimbledon,William Renshaw,5,8,0,0,8,0
+1886,Wimbledon,William Renshaw,6,8,0,0,8,0
+1889,Wimbledon,William Renshaw,7,8,0,0,8,0
+1889.5,Wimbledon,Willoughby Hamilton,0,2,0,0,2,0
+1890,Wimbledon,Willoughby Hamilton,1,2,0,0,2,0
+1934.5,US Open,Wilmer Allison,0,2,0,0,0,2
+1935,US Open,Wilmer Allison,1,2,0,0,0,2
+1982.5,French Open,Yannick Noah,0,2,0,2,0,0
+1983,French Open,Yannick Noah,1,2,0,2,0,0
+1995.5,French Open,Yevgeny Kafelnikov,0,3,1,2,0,0
+1996,French Open,Yevgeny Kafelnikov,1,3,1,2,0,0
+1999,Australian Open,Yevgeny Kafelnikov,2,3,1,2,0,0
+1945.5,Wimbledon,Yvon Petra,0,2,0,0,2,0
+1946,Wimbledon,Yvon Petra,1,2,0,0,2,0

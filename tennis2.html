@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+svg {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  fill:none;
+  stroke:#000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+
+}
+
+
+
+.line {
+  fill: none;
+  stroke-width: 2px;
+}
+
+h1{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  font-style: bold;
+  
+}
+
+p{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;  
+}
+
+div.tooltip {   
+position: absolute;
+  text-align: left;
+  width: 60px;
+  height: 28px;
+  padding: 2px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-style: bold;
+  color: darkblue;
+  background: none;
+  border: none;
+  pointer-events: none; 
+}
+
+</style>
+
+<h1> Cumulative Grand Slams by Male Tennis Players</h1>
+<br>
+<br>
+
+
+<body>
+<script src="http://d3js.org/d3.v3.js"></script>
+<script>
+
+
+
+var margin = {top: 20, right: 80, bottom: 40, left: 50},
+    width = 900 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+
+var x = d3.scale.linear()
+    .range([0,width]);
+    
+var y = d3.scale.linear()
+    .range([height,0]);
+
+var color = d3.scale.category10();
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom")
+    .tickFormat(d3.format("d"));;
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var line = d3.svg.line()
+    .interpolate("basis")
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.titles); });
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.csv("data/tennis2.csv", function(error, data) {
+
+   
+color.domain(d3.keys(data[0]).filter(function(key) { return key == "player"; }));
+   
+// get data into format
+data = data.map( function (d) { 
+    return { 
+      player: d.player,
+      date: +d.date,
+      titles: +d.titles }; 
+});   
+  
+  
+// nest data
+  data = d3.nest().key(function(d) { return d.player; }).entries(data);
+
+ 
+  x.domain([d3.min(data, function(d) { return d3.min(d.values, function (d) { return d.date; }); }),
+             d3.max(data, function(d) { return d3.max(d.values, function (d) { return d.date; }); })]);
+  
+
+  y.domain([0, d3.max(data, function(d) { return d3.max(d.values, function (d) { return d.titles; }); })]);
+
+
+// Define the div for the tooltip
+var div = d3.select("body").append("div")   
+    .attr("class", "tooltip")               
+    .style("opacity", 0);
+
+                                                                                   
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis);
+
+  var cities = svg.selectAll(".player")
+      .data(data, function(d) { return d.key; })
+    .enter().append("g")
+      .attr("class", "player");
+
+  
+  cities.append("path")
+      .attr("class", "line")
+      .attr("d", function(d) { return line(d.values); })
+      .style("stroke", function(d) { return color(d.key); })
+
+      //;
+
+
+          .on("mouseover", function(d) {      
+                d3.select(this)
+                .style("stroke", 'darkblue')
+                .style("stroke-width", '4px');
+           div.transition()        
+                .duration(200)      
+                .style("opacity", .9);      
+          div.html(d.key + "<br/>")  
+                .style("left", (d3.event.pageX+12) + "px")     
+                .style("top", (d3.event.pageY-60) + "px");    
+    })    
+
+       .on("mouseout", function(d) {       
+                 d3.select(this)
+                .style("stroke", function(d) { return color(d.key); })
+                .style("stroke-width", '2px')
+                  div.transition()        
+                      .duration(500)      
+                      .style("opacity", 0);
+        });
+
+
+// text label for the x axis
+svg.append("text")      
+        .attr("x", width / 2 )
+        .attr("y",  height + (margin.bottom/1))
+       // .attr("style","font-size:16px;")
+        .attr("style","font-size:16px; font-weight: bold;") // to bold title
+        .style("text-anchor", "middle")
+        .text("Year");
+
+
+
+// Add the text label for the Y axis
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left)
+        .attr("x",0 - (height / 2))
+        .attr("dy", "1em")
+       // .attr("style","font-size:16px;")
+        .attr("style","font-size:16px; font-weight: bold;") // to bold title
+        .style("text-anchor", "middle")
+        .text("Cumulative Grand Slams");
+
+
+});                    
+
+
+</script>
+
+<br>
+<p>A quick <a href="http://d3js.org/">d3.js</a> visualization of the cumulative increase in grand slams by male tennis players.   A similar visualization for female tennis grand slam winners can be <a href="http://jalapic.github.io/tennis1">found here</a>.  Data was scraped from wikipedia using <a href="https://gist.github.com/jalapic/a0d269730f18252e592f">this R script</a>. </p>
+
+
+<p> If I was to invest more time in this, I would certainly improve the tooltip to include more information about tournaments won and nationality.  I could also make dots on the line to give more information about the grand slam won (e.g. opponent, score).  This quick visualization gives a good impression though of the data trends. Code and data are  <a href="https://github.com/jalapic/jalapic.github.io">available here </a>. Please get in touch via twitter - <a href="https://twitter.com/jalapic">@jalapic</a> </p>
