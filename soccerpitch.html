@@ -138,26 +138,29 @@ var vis = d3.select("body").append("svg")
 var pi = Math.PI;
     
 var arc = d3.svg.arc()
-    .innerRadius(45)
-    .outerRadius(50)
-    .startAngle(0) //radians
-    .endAngle(pi) //just radians
+    .innerRadius(65)
+    .outerRadius(70)
+    .startAngle(0.82) //radians
+    .endAngle(2.3) //just radians
     
 var arc2 = d3.svg.arc()
-    .innerRadius(45)
-    .outerRadius(50)
-    .startAngle(0) //radians
-    .endAngle(-pi) //just radians
+    .innerRadius(65)
+    .outerRadius(70)
+    .startAngle(-0.82) //radians
+    .endAngle(-2.3) //just radians
 
     holder.append("path")
     .attr("d", arc)
     .attr("fill", "#001400")
-    .attr("transform", "translate(170,250)");
+    .attr("transform", "translate(120,250)");
 
     holder.append("path")
     .attr("d", arc2)
     .attr("fill", "#001400")
-    .attr("transform", "translate(830,250)");
+    .attr("transform", "translate(880,250)");
+
+
+
 
 
         </script>
