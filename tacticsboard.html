@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tactics Board</title>
+    <meta charset="utf-8" />
+
+ <script src="http://d3js.org/d3.v3.js"></script>
+
+
+<h1> Tactics Board - Drag and Drop!</h1>
+
+
+<style>
+h1{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  font-style: bold;
+  
+}
+p{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;  
+}
+
+
+.dot circle {
+  stroke-width: 4px;
+}
+
+/*.dot circle.dragging {
+  fill: white;
+  stroke: brown;
+}
+*/
+
+</style>
+
+</head>
+
+
+<body>    
+  
+
+<script type="text/javascript">
+
+
+var holder = d3.select("body") // select the 'body' element
+      .append("svg")           // append an SVG element to the body
+      .attr("width", 1200)      
+      .attr("height", 600);   
+
+
+// draw a rectangle - pitch
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 0)          // position the top of the rectangle
+    .attr("height", 500)    // set the height
+    .attr("width", 1000)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+
+// draw a rectangle - halves
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 0)          // position the top of the rectangle
+    .attr("height", 500)    // set the height
+    .attr("width", 500)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+
+// draw a circle - center circle
+holder.append("circle")          // attach a circle
+    .attr("cx", 500)             // position the x-centre
+    .attr("cy", 250)             // position the y-centre
+    .attr("r", 50)               // set the radius
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")      // set the line colour
+    .style("fill", "none");      // set the fill colour
+
+
+// draw a rectangle - penalty area 1
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 105)          // position the top of the rectangle
+    .attr("height", 290)    // set the height
+    .attr("width", 170)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+
+// draw a rectangle - penalty area 2
+holder.append("rect")        // attach a rectangle
+    .attr("x", 830)         // position the left of the rectangle
+    .attr("y", 105)          // position the top of the rectangle
+    .attr("height", 290)    // set the height
+    .attr("width", 170)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+// draw a rectangle - six yard box 1
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 184)          // position the top of the rectangle
+    .attr("height", 132)    // set the height
+    .attr("width", 60)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+// draw a rectangle - six yard box 2
+holder.append("rect")        // attach a rectangle
+    .attr("x", 940)         // position the left of the rectangle
+    .attr("y", 184)          // position the top of the rectangle
+    .attr("height", 132)    // set the height
+    .attr("width", 60)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+
+// draw a circle - penalty spot 1
+holder.append("circle")        // attach a circle
+    .attr("cx", 120)           // position the x-centre
+    .attr("cy", 250)           // position the y-centre
+    .attr("r", 5)             // set the radius
+    .style("fill", "#001400");     // set the fill colour
+
+// draw a circle - penalty spot 2
+holder.append("circle")        // attach a circle
+    .attr("cx", 880)           // position the x-centre
+    .attr("cy", 250)           // position the y-centre
+    .attr("r", 5)             // set the radius
+    .style("fill", "#001400");     // set the fill colour
+
+// draw a circle - center spot
+holder.append("circle")        // attach a circle
+    .attr("cx", 500)           // position the x-centre
+    .attr("cy", 250)           // position the y-centre
+    .attr("r", 5)             // set the radius
+    .style("fill", "#001400");     // set the fill colour
+
+
+// penalty box semi-circle 1
+var vis = d3.select("body").append("svg")
+var pi = Math.PI;
+    
+var arc = d3.svg.arc()
+    .innerRadius(70)
+    .outerRadius(75)
+    .startAngle(0.75) //radians
+    .endAngle(2.4) //just radians
+    
+var arc2 = d3.svg.arc()
+    .innerRadius(70)
+    .outerRadius(75)
+    .startAngle(-0.75) //radians
+    .endAngle(-2.4) //just radians
+
+    holder.append("path")
+    .attr("d", arc)
+    .attr("fill", "#001400")
+    .attr("transform", "translate(120,250)");
+
+    holder.append("path")
+    .attr("d", arc2)
+    .attr("fill", "#001400")
+    .attr("transform", "translate(880,250)");
+
+
+// Dragging circles
+
+var color = d3.scale.ordinal().range(["maroon", "pink"]);
+var color1 = d3.scale.ordinal().range(["mediumturquoise", "red"]);
+
+//var color = d3.scale.category10();
+
+var drag = d3.behavior.drag()
+    .origin(function(d) { return d; })
+    .on("dragstart", dragstarted)
+    .on("drag", dragged)
+    .on("dragend", dragended);
+
+d3.csv("data/dots.csv", dottype, function(error, dots) {
+  dot = holder.append("g")
+      .attr("class", "dot")
+    .selectAll("circle")
+      .data(dots)
+    .enter().append("circle")
+      .attr("r", 14)
+      .attr("cx", function(d) { return d.x; })
+      .attr("cy", function(d) { return d.y; })
+      .style("fill", function(d) { return color(d.team); })
+      .style("stroke", function(d) { return color1(d.team); })
+      .call(drag);
+});
+
+
+
+// functions for above...
+
+function dottype(d) {
+  d.x = +d.x;
+  d.y = +d.y;
+  return d;
+}
+
+
+function dragstarted(d) {
+  d3.event.sourceEvent.stopPropagation();
+  d3.select(this)
+  //.classed("dragging", true);
+;
+}
+
+function dragged(d) {
+  d3.select(this)
+  .attr("cx", d.x = d3.event.x)
+  .attr("cy", d.y = d3.event.y)
+  .style("opacity", .5);
+}
+
+function dragended(d) {
+  d3.select(this)
+  .style("opacity", 1) 
+//  .classed("dragging", false);
+;
+}
+
+
+  </script>
+
+<p>A simple <a href="http://d3js.org/">d3.js</a> visualization. This is just a quick initial demonstration as to the adaptability of d3.js.  The individual circles can be dragged around to illustrate different tactical formations.  You can recreate your very own Andy Townsend's Tactics Truck or indeed Andy Gray's bootroom.  Lots of other things (e.g. animations) are possible - stay tuned.</p>
+
+<p> Code and data are  <a href="https://github.com/jalapic/jalapic.github.io">available here </a>. Please get in touch via twitter - <a href="https://twitter.com/jalapic">@jalapic</a> </p>
+
+
+</body>
+</html>
