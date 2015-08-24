@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A title </title>
+    <meta charset="utf-8" />
+
+ <script src="http://d3js.org/d3.v3.js"></script>
+
+
+<h1> A d3.js soccer pitch </h1>
+
+
+<style>
+h1{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  font-style: bold;
+  
+}
+p{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;  
+}
+
+</style>
+
+</head>
+
+
+<body>    
+  
+
+<script type="text/javascript">
+
+var holder = d3.select("body") // select the 'body' element
+      .append("svg")           // append an SVG element to the body
+      .attr("width", 1200)      
+      .attr("height", 600);   
+
+// draw a rectangle - pitch
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 0)          // position the top of the rectangle
+    .attr("height", 500)    // set the height
+    .attr("width", 1000)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+
+// draw a rectangle - halves
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 0)          // position the top of the rectangle
+    .attr("height", 500)    // set the height
+    .attr("width", 500)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+
+// draw a circle - center circle
+holder.append("circle")          // attach a circle
+    .attr("cx", 500)             // position the x-centre
+    .attr("cy", 250)             // position the y-centre
+    .attr("r", 50)               // set the radius
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")      // set the line colour
+    .style("fill", "none");      // set the fill colour
+
+
+// draw a rectangle - penalty area 1
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 105)          // position the top of the rectangle
+    .attr("height", 290)    // set the height
+    .attr("width", 170)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+
+// draw a rectangle - penalty area 2
+holder.append("rect")        // attach a rectangle
+    .attr("x", 830)         // position the left of the rectangle
+    .attr("y", 105)          // position the top of the rectangle
+    .attr("height", 290)    // set the height
+    .attr("width", 170)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+// draw a rectangle - six yard box 1
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 184)          // position the top of the rectangle
+    .attr("height", 132)    // set the height
+    .attr("width", 60)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+// draw a rectangle - six yard box 2
+holder.append("rect")        // attach a rectangle
+    .attr("x", 940)         // position the left of the rectangle
+    .attr("y", 184)          // position the top of the rectangle
+    .attr("height", 132)    // set the height
+    .attr("width", 60)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+
+// draw a circle - penalty spot 1
+holder.append("circle")        // attach a circle
+    .attr("cx", 120)           // position the x-centre
+    .attr("cy", 250)           // position the y-centre
+    .attr("r", 5)             // set the radius
+    .style("fill", "#001400");     // set the fill colour
+
+// draw a circle - penalty spot 2
+holder.append("circle")        // attach a circle
+    .attr("cx", 880)           // position the x-centre
+    .attr("cy", 250)           // position the y-centre
+    .attr("r", 5)             // set the radius
+    .style("fill", "#001400");     // set the fill colour
+
+// draw a circle - center spot
+holder.append("circle")        // attach a circle
+    .attr("cx", 500)           // position the x-centre
+    .attr("cy", 250)           // position the y-centre
+    .attr("r", 5)             // set the radius
+    .style("fill", "#001400");     // set the fill colour
+
+
+// penalty box semi-circle 1
+var vis = d3.select("body").append("svg")
+var pi = Math.PI;
+    
+var arc = d3.svg.arc()
+    .innerRadius(45)
+    .outerRadius(50)
+    .startAngle(0) //radians
+    .endAngle(pi) //just radians
+    
+var arc2 = d3.svg.arc()
+    .innerRadius(45)
+    .outerRadius(50)
+    .startAngle(0) //radians
+    .endAngle(-pi) //just radians
+
+    holder.append("path")
+    .attr("d", arc)
+    .attr("fill", "#001400")
+    .attr("transform", "translate(170,250)");
+
+    holder.append("path")
+    .attr("d", arc2)
+    .attr("fill", "#001400")
+    .attr("transform", "translate(830,250)");
+
+
+        </script>
+
+<p>A simple <a href="http://d3js.org/">d3.js</a> visualization of a soccer pitch. The coordinates are based on the OPTA coordinate scale.  The field length is 1000px and height is 500px.  Therefore to plot to a 100x100 coordinate plot, the data points will need to be scaled as appropriate.  </p>
+
+<p> Code and data are  <a href="https://github.com/jalapic/jalapic.github.io">available here </a>. Please get in touch via twitter - <a href="https://twitter.com/jalapic">@jalapic</a> </p>
+
+
+</body>
+</html>
