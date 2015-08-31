@@ -1,0 +1,35 @@
+x1x1,y1y1,x2x2,y2y2,starttype,endtype,op,timeevent,player,recipient,opp
+675,340,665,311,circle,arrow,1,18,pass success,Schweinsteiger,Crystal Palace
+650,310,655,350,circle,arrow,1,24,pass success,Mata,Crystal Palace
+680,275,670,475,circle,arrow,1,79,pass success,Darmian,Crystal Palace
+675,315,688,302,circle,stub,1,60,pass incomplete,,Crystal Palace
+672,309,705,340,circle,arrow,1,69,pass success,Herrera,Crystal Palace
+520,98,700,440,circle,stub,1,7,pass incomplete,,Crystal Palace
+645,305,675,275,circle,stub,1,12,pass incomplete,,Crystal Palace
+720,266,680,240,circle,arrow,1,18,pass success,Schweinsteiger,Crystal Palace
+700,220,840,355,circle,arrow,1,2,pass success,Mata,Crystal Palace
+705,122,712,25,circle,arrow,1,34,pass success,Depay,Crystal Palace
+750,111,675,25,circle,arrow,1,71,pass success,Shaw,Crystal Palace
+932,300,999,172,circle,square,1,54,shot off target,,Crystal Palace
+860,150,960,205,circle,circle,1,35,shot on target,,Crystal Palace
+910,275,999,190,circle,square,1,31,shot off target,,Crystal Palace
+680,31,655,9,circle,arrow,1,19,pass success,Schneiderlin,Crystal Palace
+635,85,653,12,circle,arrow,1,7,pass success,Depay,Crystal Palace
+678,85,610,55,circle,arrow,1,30,pass success,Schweinsteiger,Crystal Palace
+545,160,615,76,circle,stub,1,68,pass incomplete,,Crystal Palace
+490,190,544,18,circle,arrow,1,86,pass success,Shaw,Crystal Palace
+675,38,535,27,circle,arrow,1,11,pass success,Blind,Crystal Palace
+540,240,515,258,circle,stub,1,32,pass incomplete,,Crystal Palace
+538,192,615,448,circle,arrow,1,45,pass success,Darmian,Crystal Palace
+680,390,656,355,circle,arrow,1,69,pass success,Mata,Crystal Palace
+465,210,442,80,circle,arrow,1,21,pass success,Schneiderlin,Crystal Palace
+590,302,540,310,circle,arrow,1,69,pass success,Herrera,Crystal Palace
+450,310,315,242,circle,arrow,1,31,pass success,Herrera,Crystal Palace
+425,145,365,455,circle,arrow,1,54,pass success,Mata,Crystal Palace
+650,377,525,290,circle,arrow,1,41,pass success,Schweinsteiger,Crystal Palace
+448,358,542,190,circle,arrow,1,84,pass success,Schweinsteiger,Crystal Palace
+502,252,455,248,circle,arrow,1,2,pass success,Schweinsteiger,Crystal Palace
+508,256,400,198,circle,arrow,1,62,pass success,Schweinsteiger,Crystal Palace
+506,211,445,196,circle,arrow,1,90,pass success,Schweinsteiger,Crystal Palace
+475,205,448,195,circle,arrow,1,85,pass success,Schweinsteiger,Crystal Palace
+508,239,305,258,circle,arrow,1,66,pass success,Schweinsteiger,Crystal Palace

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Touchmaps</title>
+    <meta charset="utf-8" />
+
+<script src="http://d3js.org/d3.v3.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+<h1>Example Soccer Touchmap</h1>
+<br>
+<h2>Wayne Rooney vs Crystal Palace</h2>
+
+
+<style>
+h1{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  font-style: bold;
+  
+}
+
+h2{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  font-style: bold;
+  
+}
+
+p{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;  
+}
+
+
+.dot circle {
+  stroke: #C00000;
+  fill: white;
+  stroke-width: 3px;
+}
+
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+</style>
+
+
+</head>
+
+
+<body>    
+  
+<script type="text/javascript">
+
+
+var holder = d3.select("body") // select the 'body' element
+      .append("svg")           // append an SVG element to the body
+      .attr("width", 1200)      
+      .attr("height", 600);   
+
+
+// draw a rectangle - pitch
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 0)          // position the top of the rectangle
+    .attr("height", 500)    // set the height
+    .attr("width", 1000)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+
+// draw a rectangle - halves
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 0)          // position the top of the rectangle
+    .attr("height", 500)    // set the height
+    .attr("width", 500)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+
+// draw a circle - center circle
+holder.append("circle")          // attach a circle
+    .attr("cx", 500)             // position the x-centre
+    .attr("cy", 250)             // position the y-centre
+    .attr("r", 50)               // set the radius
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")      // set the line colour
+    .style("fill", "none");      // set the fill colour
+
+
+// draw a rectangle - penalty area 1
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 105)          // position the top of the rectangle
+    .attr("height", 290)    // set the height
+    .attr("width", 170)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+
+// draw a rectangle - penalty area 2
+holder.append("rect")         // attach a rectangle
+    .attr("x", 830)         // position the left of the rectangle
+    .attr("y", 105)          // position the top of the rectangle
+    .attr("height", 290)    // set the height
+    .attr("width", 170)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+// draw a rectangle - six yard box 1
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 184)          // position the top of the rectangle
+    .attr("height", 132)    // set the height
+    .attr("width", 60)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+// draw a rectangle - six yard box 2
+holder.append("rect")        // attach a rectangle
+    .attr("x", 940)         // position the left of the rectangle
+    .attr("y", 184)          // position the top of the rectangle
+    .attr("height", 132)    // set the height
+    .attr("width", 60)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+
+// draw a circle - penalty spot 1
+holder.append("circle")        // attach a circle
+    .attr("cx", 120)           // position the x-centre
+    .attr("cy", 250)           // position the y-centre
+    .attr("r", 5)             // set the radius
+    .style("fill", "#001400");     // set the fill colour
+
+// draw a circle - penalty spot 2
+holder.append("circle")        // attach a circle
+    .attr("cx", 880)           // position the x-centre
+    .attr("cy", 250)           // position the y-centre
+    .attr("r", 5)             // set the radius
+    .style("fill", "#001400");     // set the fill colour
+
+// draw a circle - center spot
+holder.append("circle")        // attach a circle
+    .attr("cx", 500)           // position the x-centre
+    .attr("cy", 250)           // position the y-centre
+    .attr("r", 5)             // set the radius
+    .style("fill", "#001400");     // set the fill colour
+
+
+// penalty box semi-circle 1
+var vis = d3.select("body").append("svg")
+var pi = Math.PI;
+    
+var arc = d3.svg.arc()
+    .innerRadius(70)
+    .outerRadius(75)
+    .startAngle(0.75) //radians
+    .endAngle(2.4) //just radians
+    
+var arc2 = d3.svg.arc()
+    .innerRadius(70)
+    .outerRadius(75)
+    .startAngle(-0.75) //radians
+    .endAngle(-2.4) //just radians
+
+    holder.append("path")
+    .attr("d", arc)
+    .attr("fill", "#001400")
+    .attr("transform", "translate(120,250)");
+
+    holder.append("path")
+    .attr("d", arc2)
+    .attr("fill", "#001400")
+    .attr("transform", "translate(880,250)");
+
+
+// don't like the look of the goals just yet:
+// // add goal1
+// holder.append("rect")        // attach a rectangle
+//     .attr("x", 0)         // position the left of the rectangle
+//     .attr("y", 210)          // position the top of the rectangle
+//     .attr("height", 80)    // set the height
+//     .attr("width", 10)    // set the width
+//     .style("stroke-width", 2)    // set the stroke width
+//     .style("stroke", "gainsboro")    // set the line colour
+//     .style("fill", "white");    // set the fill colour 
+
+// // add goal2
+// holder.append("rect")        // attach a rectangle
+//     .attr("x", 990)         // position the left of the rectangle
+//     .attr("y", 210)          // position the top of the rectangle
+//     .attr("height", 80)    // set the height
+//     .attr("width", 10)    // set the width
+//     .style("stroke-width", 2)    // set the stroke width
+//     .style("stroke", "gainsboro")    // set the line colour
+//     .style("fill", "white");    // set the fill colour 
+
+
+
+
+// ADD IN EVENT DATA
+
+
+
+// TOOLTIP SETUP
+
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>Event:</strong> <span style='color:red'>" + d.player + "</span>" + "<br>" + 
+    "<strong>Recipient:</strong> <span style='color:lime'>" + d.recipient + "</span>" + "<br>" + 
+    "<strong>Time:</strong> <span style='color:orange'>" + d.timeevent + " mins" + "</span>" + "<br>" + 
+    "<strong>Opponent:</strong> <span style='color:cyan'>" + d.opp  + "</span>"
+    ;
+  })
+
+holder.call(tip);
+
+
+var color = d3.scale.ordinal()
+ .range(["burlywood", "#660033", "dodgerblue"]);
+
+
+// TOUCHES DATA
+d3.csv("data/rooney1.csv", dottype, function(error, dots) {
+  dot = holder.append("g")
+      .attr("class", "dot")
+      .selectAll("circle")
+      .data(dots)
+      .enter()
+      .append("circle")
+      .attr("r", 5)
+      .attr("cx", function(d) { return d.x; })
+      .attr("cy", function(d) { return d.y; })
+      .style("stroke", function(d) { return color(d.player); })
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
+       
+            ;
+});
+
+function dottype(d) {
+  d.x = +d.xcoord;
+  d.y = +d.ycoord;
+  d.player =  d.player;
+  d.recipient =  d.recipient;
+  d.timeevent =  +d.timeevent;
+  d.opp = d.opp;
+ return d;
+}
+
+
+
+
+// ADD IN LINE DATA
+
+d3.csv("data/rooney.csv", dottype1, function(error, lines) {
+ 
+
+  var data = [
+    { id: 0, name: 'circle', path: 'M 0, 0  m -5, 0  a 5,5 0 1,0 10,0  a 5,5 0 1,0 -10,0', viewbox: '-6 -6 12 12'}
+  , { id: 1, name: 'square', path: 'M 0,0 m -5,-5 L 5,-5 L 5,5 L -5,5 Z', viewbox: '-5 -5 10 10' }
+  , { id: 2, name: 'arrow', path: 'M 0,0 m -5,-5 L 5,0 L -5,5 Z', viewbox: '-5 -5 10 10' }
+  , { id: 3, name: 'stub', path: 'M 0,0 m -1,-5 L 1,-5 L 1,5 L -1,5 Z', viewbox: '-1 -5 2 10' }
+  , { id: 4, name: 'none', path: '', viewbox: '' }
+  
+    ]
+
+
+//var color = d3.scale.category10(5);
+var color = d3.scale.ordinal().range(["darkblue", "skyblue", "indianred", "red"]);
+
+
+// add lines
+holder.append("g")
+      .selectAll("line")
+      .data(lines)
+      .enter()
+      .append("line")
+      .attr("x1", function(d) { return d.x1; })
+      .attr("y1", function(d) { return d.y1; })
+      .attr("x2", function(d) { return d.x2; })
+      .attr("y2", function(d) { return d.y2; })
+      .attr("marker-end", function(d) { return 'url(#marker_' + d.name  + ')' })
+      .style("stroke", function(d) {return d.color = color(d.name); })           
+      .style("stroke-width", 3)          
+      .style("stroke-linecap", "butt") 
+  //    .on('mouseover', tip.show)
+  //    .on('mouseout', tip.hide)
+
+               ;
+
+// end markers
+holder.append("svg:defs")
+      .selectAll("line")
+      .data(data)
+      .enter()
+      .append("svg:marker") 
+      .attr('id', function(d){ return 'marker_' + d.name})
+      .attr('viewBox', function(d){ return d.viewbox })
+      .attr('refX', 0)
+      .attr('markerWidth', 4)
+      .attr('markerHeight', 4)
+     .style("stroke", function(d) {return d.color = color(d.name); })  
+      .style("fill", function(d) {return d.color = color(d.name); })  
+       .attr('orient', 'auto')
+      .append('svg:path')
+      .attr('d', function(d){ return d.path })
+                 ;
+
+// circles/dots as start markers
+holder.append("g")
+      .attr("class", "dot")
+      .selectAll("dot")
+      .data(lines)
+      .enter()
+      .append("circle")
+      .attr("r", 5)
+      .attr("cx", function(d) { return d.x1; })
+      .attr("cy", function(d) { return d.y1; })
+      .style("stroke", function(d) { return color(d.name); })
+      .style("opacity", function(d) { return d.op; })
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
+
+      ;
+
+});
+
+
+function dottype1(d) {
+  d.x1 = +d.x1x1;
+  d.y1 = +d.y1y1;
+  d.x2 = +d.x2x2;
+  d.y2 = +d.y2y2;
+  d.startname = d.starttype;
+  d.name = d.endtype;
+  d.op = +d.op;
+  d.player =  d.player;
+  d.recipient =  d.recipient;
+  d.timeevent =  +d.timeevent;
+ d.opp = d.opp;
+   return d;
+}
+
+
+// END
+
+  </script>
+
+<p>An example <a href="http://d3js.org/">d3.js</a> visualization of soccer player data. This shows the passes, shots, ball recoveries and take-ons of Wayne Rooney of Manchester United vs Crystal Palace on 30th August 2015.   I still think I need to improve the pitch dimensions slightly (make it shorter and make center circle bigger).  The potential for creating soccer event maps is there though.  It will be relatively trivial to add filters to the event data and to add other players in other matches.</p>
+
+<p> Code and data are  <a href="https://github.com/jalapic/jalapic.github.io">available here </a>. Please get in touch via twitter if you have any feedback - <a href="https://twitter.com/jalapic">@jalapic</a> </p>
+
+
+</body>
+</html>
