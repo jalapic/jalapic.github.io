@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Shot Heatmap</title>
+    
+    <style>
+      body, html { margin:0; padding:0; }
+      #heatmapContainerWrapper { width:500px; height:320px; margin:auto; background:rgba(0,0,0,.1); }
+      #heatmapContainer { width:100%; height:100%;}
+     svg { position:absolute; z-index:1; top:0; } 
+     #heatmapContainerWrapper { position:relative; } 
+     #heatmapContainer { z-index:100; }
+
+
+h1{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  font-style: bold;
+  
+}
+
+h2{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  font-style: bold;
+  
+}
+
+p{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;  
+}
+
+
+    </style>
+    
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <script src="js/heatmap.min.js"></script>
+  </head>
+  <body>
+
+
+    <h1>Manchester United 2015-16  - Shot Heatmap</h1>
+
+    <div id="heatmapContainerWrapper">  
+      <div id="heatmapContainer">
+
+     </div>
+    </div>
+ <script>
+
+
+
+
+var holder = d3.select("div")
+      .append("svg")           // append an SVG element to the div
+      .attr("width", 550)      
+      .attr("height", 350);   
+
+
+// draw a rectangle - pitch
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 0)          // position the top of the rectangle
+    .attr("height", 320)    // set the height
+    .attr("width", 500)    // set the width
+    .style("stroke-width", 0)    // set the stroke width
+    // .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+
+// draw penalty area 
+holder.append("rect")        // attach a rectangle
+    .attr("x", 30)         // position the left of the rectangle
+    .attr("y", 90)          // position the top of the rectangle
+    .attr("height", 120)    // set the height
+    .attr("width", 440)    // set the width
+    .style("stroke-width", 4)    // set the stroke width
+    .style("stroke", "white")    // set the line colour
+     .style("fill", "#80B280");    // set the fill colour 
+
+
+// // draw a six yard box
+ holder.append("rect")        // attach a rectangle
+    .attr("x", 145)         // position the left of the rectangle
+    .attr("y", 90)          // position the top of the rectangle
+    .attr("height", 40)    // set the height
+    .attr("width", 200)    // set the width
+    .style("stroke-width", 4)    // set the stroke width
+    .style("stroke", "white")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+
+// // draw a circle - penalty spot 1
+holder.append("circle")        // attach a circle
+    .attr("cx", 250)           // position the x-centre
+    .attr("cy", 170)           // position the y-centre
+    .attr("r", 3)             // set the radius
+    .style("fill", "white");     // set the fill colour
+
+
+
+// // penalty box semi-circle 1
+var vis = d3.select("body").append("svg")
+    
+var arc = d3.svg.arc()
+    .innerRadius(62)
+    .outerRadius(66)
+    .startAngle(2.25) //radians
+    .endAngle(4.05) //just radians
+    
+    holder.append("path")
+    .attr("d", arc)
+    // .attr("stroke", "white")
+    .attr("fill", "white")
+    .attr("transform", "translate(250,170)");
+
+
+
+// // add goal
+ holder.append("rect")        // attach a rectangle
+    .attr("x", 200)         // position the left of the rectangle
+    .attr("y", 57)          // position the top of the rectangle
+    .attr("height", 33)    // set the height
+    .attr("width", 85)    // set the width
+    .style("stroke-width", 4)    // set the stroke width
+    .style("stroke", "#EEEEEE")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+
+// draw goal line 
+holder.append("line")
+    .attr("x1", 0)
+    .attr("y1", 90)
+    .attr("x2", 500)
+    .attr("y2", 90)
+    .style("stroke-width", 4)    // set the stroke width
+    .style("stroke", "white")    // set the line colour
+
+
+
+// ADD HEATMAP DATA
+// documentation:  http://www.patrick-wied.at/static/heatmapjs/docs.html
+
+   var mydata = [
+
+       // v SCFC
+            { x: 100, y: 182, value: .9 }, 
+            { x: 120, y: 135, value: .9 }, 
+            { x: 144, y: 276, value: .9 }, 
+            { x: 196, y: 272, value: .9 }, 
+            { x: 280, y: 240, value: .9 }, 
+            { x: 200, y: 135, value: .9 }, 
+            { x: 292, y: 135, value: .9 }, 
+            { x: 296, y: 105, value: .9 }, 
+            { x: 320, y: 132, value: .9 }, 
+            { x: 340, y: 157, value: .9 },
+            
+          // v NUFC
+            { x: 80, y: 144, value: .8 }, 
+            { x: 227, y: 132, value: .8 }, 
+            { x: 195, y: 148, value: .8 }, 
+            { x: 94, y: 155, value: .8 }, 
+            { x: 365, y: 140, value: .8 }, 
+            { x: 325, y: 147, value: .8 },
+            { x: 110, y: 265, value: .8 }, 
+            { x: 135, y: 240, value: .8 }, 
+            { x: 122, y: 258, value: .8 }, 
+            { x: 124, y: 276, value: .8 }, 
+            { x: 215, y: 215, value: .8 }, 
+            { x: 225, y: 205, value: .8 }, 
+            { x: 140, y: 230, value: .8 }, 
+            { x: 89, y: 245, value: .8 }, 
+            { x: 300, y: 290, value: .8 }, 
+            { x: 368, y: 175, value: .8 },
+            { x: 245, y: 280, value: .8 }, 
+            { x: 252, y: 275, value: .8 }, 
+            { x: 185, y: 311, value: .8 },
+                                        
+
+ // v AVFC
+            { x: 25, y: 188, value: .8 }, 
+            { x: 84, y: 290, value: .8 }, 
+            { x: 92, y: 285, value: .8 }, 
+            { x: 127, y: 178, value: .8 }, 
+            { x: 139, y: 127, value: .8 }, 
+            { x: 165, y: 157, value: .8 },
+            { x: 170, y: 202, value: .8 }, 
+            { x: 222, y: 255, value: .8 }, 
+            { x: 348, y: 126, value: .8 },
+  
+  // v THFC
+            { x: 90, y: 222, value: .8 }, 
+            { x: 97, y: 281, value: .8 }, 
+            { x: 218, y: 292, value: .8 }, 
+            { x: 311, y: 238, value: .8 }, 
+            { x: 225, y: 198, value: .8 }, 
+            { x: 223, y: 167, value: .8 }, 
+            { x: 165, y: 164, value: .8 }, 
+            { x: 371, y: 202, value: .8 }, 
+            { x: 147, y: 191, value: .8 } 
+            
+            ]
+
+
+
+      window.onload = function() {
+        var heatmap = h337.create({
+          container: document.getElementById('heatmapContainer'),
+          radius: 33,                                               // change radius as required
+          blur: .95                                                // blur [0,1]
+        });
+        window.h = heatmap;
+        h.setData({ 
+            max: 1, 
+            data: mydata 
+        })
+
+      };
+
+
+
+
+    </script>
+  
+  
+<p>An example <a href="http://d3js.org/">d3.js</a> visualization of soccer team data. This shows the spatial distribution of shots by Manchester United over the first four games of the 2015-16 season.   The heatmap is made using the excellent <a href="http://www.patrick-wied.at/static/heatmapjs/">heatmap.js</a> library.  Many thanks to Patrick Wied for developing and providing support for heatmap.js .   This visualization suffers from not having sufficient data points, but a clear pattern does emerge.  Manchester United are shooting a lot from the left hand side and often from distance.   This seems to be a Depay effect.  On the right hand side there aren't as many shots particularly from the right-center.  Perhaps Juan Mata isn't providing enough support in this area.</p>
+
+<p> This is just a demonstration of the possibility of using d3 and heatmap together.  Much future tweaking and prettifying can be done.  Code and data are  <a href="https://github.com/jalapic/jalapic.github.io">available here </a>. Please get in touch via twitter if you have any feedback - <a href="https://twitter.com/jalapic">@jalapic</a> </p>
+
+
+  </body>
+</html>
