@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <style>
+  
+       * {
+            margin: 0;
+            padding: 0;
+        }
+
+      
+        #container {
+            width: 800px;
+            margin: 25px auto 25px auto;
+            padding: 50px 50px 50px 50px;
+            background-color: white;
+        }
+      
+      .chartContainer {
+            display: inline-block;
+            width: 99%;
+        }
+       
+      p {
+         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+         font-size: 16px;
+         font-style: bold;
+            }
+
+  body {
+         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+         font-size: 20px;
+         font-style: bold;
+            }
+
+      h1 {
+        margin-bottom: 25px;
+             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+         font-size: 28px;
+         font-style: bold;
+            }
+
+            svg {
+                background-color: white;
+            }
+            
+            .axis path,
+            .axis line {
+                fill: none;
+                stroke: black;
+                shape-rendering: crispEdges;
+            }
+            
+            .axis text {
+                font-family: sans-serif;
+                font-size: 11px;
+            }
+      
+  circle {
+      stroke-width: 4;
+      fill: white;
+      }
+  
+     circle.circles2b {
+      stroke: white;
+      stroke-width: 3;
+      fill: white;
+      }
+
+      circle.circles1b {
+      stroke: white;
+      stroke-width: 3;
+      fill: white;
+      }
+  
+      .axis path,
+        .axis line {
+            fill: none;
+            stroke: black;
+            stroke-width: 2;
+      shape-rendering: crispEdges;
+        }
+        
+        .axis text {
+         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+         font-size: 18px;
+         font-style: bold;
+        }
+      
+      
+    g.lines.highlight {
+            opacity: 0.95;
+    }  
+
+    g.lines.highlight circle {
+        fill: #ff0000;
+      stroke: #ff0000;
+        }  
+
+    g.lines.highlight line {
+        stroke: #ff0000;
+        }  
+    
+   /* Button styles  */
+
+button {
+        padding: 15px;
+    display: inline-block;
+    white-space: nowrap;
+    background-color: #ccc;
+    background-image: linear-gradient(top, #1c1c1c, #ccc);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+    border: 1px solid #777;
+    padding: 0 1.5em;
+    margin: 0.5em;
+    font: bold 1em/2em Arial, Helvetica;
+    text-decoration: none;
+    color: #333;
+    text-shadow: 0 1px 0 rgba(255,255,255,.8);
+    border-radius: .2em;
+    box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+}
+
+button:hover {
+    background-color: #ddd;        
+    background-image: linear-gradient(top, #fafafa, #ddd);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');        
+}
+ 
+      
+
+
+      
+    </style>
+  </head>
+
+  <body>
+    
+     <div id="container">
+
+        <h1>Comparing NHL Teams Across Seasons</h1>
+
+<p>A quick example of how slope graphs can show changes and consistency in patterns over two time points.  Click on each line to return the team name.  Switch between total points and shots per game using the buttons. Please get in touch via twitter - <a href="https://twitter.com/jalapic">@jalapic</a>. More visualizations and code available at my <a href="http://jalapic.github.io/">GitHub</a> repository.</p>
+
+<br>
+       
+<div id="buttonContainer">
+        <button id="sortfreq">Points</button>
+    <button id="sortpct">Shots/Game</button>
+  </div>
+       
+       
+  <div class="chartContainer" id="slopeChartContainer">
+    </div>
+    
+    </div> 
+    
+
+
+
+    <script>
+     
+      
+      
+      
+      //Width, height, padding
+    var w = 700;
+    var h = 700;
+    var padding = 40;
+        
+         //data
+  var dataset = [{"team":"Anaheim Ducks","first":116,"second":109,"firstpct":31.3,"secondpct":30,"delta":-7},{"team":"Arizona Coyotes","first":89,"second":56,"firstpct":30.5,"secondpct":29.2,"delta":-33},{"team":"Boston Bruins","first":117,"second":96,"firstpct":31.9,"secondpct":31,"delta":-21},{"team":"Buffalo Sabres","first":52,"second":54,"firstpct":26.3,"secondpct":24.2,"delta":2},{"team":"Calgary Flames","first":77,"second":97,"firstpct":26.8,"secondpct":27.5,"delta":20},{"team":"Carolina Hurricanes","first":83,"second":71,"firstpct":31.2,"secondpct":30.8,"delta":-12},{"team":"Chicago Blackhawks","first":107,"second":102,"firstpct":33.1,"secondpct":33.9,"delta":-5},{"team":"Colorado Avalanche","first":112,"second":90,"firstpct":29.5,"secondpct":27.9,"delta":-22},{"team":"Columbus Blue Jackets","first":93,"second":89,"firstpct":29.6,"secondpct":28.9,"delta":-4},{"team":"Dallas Stars","first":91,"second":92,"firstpct":31.7,"secondpct":31.2,"delta":1},{"team":"Detroit Red Wings","first":93,"second":100,"firstpct":30,"secondpct":29.6,"delta":7},{"team":"Edmonton Oilers","first":67,"second":62,"firstpct":26.9,"secondpct":28.4,"delta":-5},{"team":"Florida Panthers","first":66,"second":91,"firstpct":29.9,"secondpct":30.7,"delta":25},{"team":"Los Angeles Kings","first":100,"second":95,"firstpct":31.6,"secondpct":30.9,"delta":-5},{"team":"Minnesota Wild","first":98,"second":100,"firstpct":26.6,"secondpct":30.8,"delta":2},{"team":"Montréal Canadiens","first":100,"second":110,"firstpct":28.4,"secondpct":28.5,"delta":10},{"team":"Nashville Predators","first":88,"second":104,"firstpct":29,"secondpct":31.9,"delta":16},{"team":"New Jersey Devils","first":88,"second":78,"firstpct":26.8,"secondpct":24.5,"delta":-10},{"team":"New York Islanders","first":79,"second":101,"firstpct":30.9,"secondpct":33.8,"delta":22},{"team":"New York Rangers","first":96,"second":113,"firstpct":33.2,"secondpct":31.5,"delta":17},{"team":"Ottawa Senators","first":88,"second":99,"firstpct":32.8,"secondpct":31,"delta":11},{"team":"Philadelphia Flyers","first":94,"second":84,"firstpct":30.4,"secondpct":29.4,"delta":-10},{"team":"Pittsburgh Penguins","first":109,"second":98,"firstpct":29.9,"secondpct":31.6,"delta":-11},{"team":"San Jose Sharks","first":111,"second":89,"firstpct":34.8,"secondpct":31.6,"delta":-22},{"team":"St. Louis Blues","first":111,"second":109,"firstpct":29.3,"secondpct":30.9,"delta":-2},{"team":"Tampa Bay Lightning","first":101,"second":108,"firstpct":29.8,"secondpct":29.6,"delta":7},{"team":"Toronto Maple Leafs","first":84,"second":68,"firstpct":27.9,"secondpct":29.2,"delta":-16},{"team":"Vancouver Canucks","first":83,"second":101,"firstpct":30.8,"secondpct":29.9,"delta":18},{"team":"Washington Capitals","first":90,"second":101,"firstpct":29.4,"secondpct":29.5,"delta":11},{"team":"Winnipeg Jets","first":84,"second":99,"firstpct":30.7,"secondpct":29.7,"delta":15}]   ;
+
+      
+      
+      
+      
+ //Get values for plotting
+var mydataset = []; // store their names within a local array
+
+   for(var i = 0; i < dataset.length; i++){
+      mydataset.push(
+        [dataset[i].first, dataset[i].second, dataset[i].delta, dataset[i].team]
+       )        
+       }      
+  
+
+
+
+//Find max values & Create scale functions
+      var xMax = d3.max(mydataset, function(d) { return d[0]; })
+      var yMax = d3.max(mydataset, function(d) { return d[1]; })
+      var max = Math.max(yMax, xMax);  // highest value in dataset
+      
+      var xMin = d3.min(mydataset, function(d) { return d[0]; })
+      var yMin = d3.min(mydataset, function(d) { return d[1]; })
+      var min = Math.min(yMin, xMin);  // highest value in dataset
+   
+            var yScale = d3.scale.linear()
+                                 .domain([min, max])
+                                 .range([h - padding, padding])
+                 .nice() 
+                 ;
+   
+      var rad = 7 // radius of circle 
+      var radback = rad * 1.3
+  
+//Configure y axis 
+        var yAxis = d3.svg.axis()
+                        .scale(yScale)
+                        .orient("left")
+                        .ticks(6)
+            ; 
+      
+      
+//Create SVG element
+            var svg = d3.select("#slopeChartContainer")
+                        .append("svg")
+                        .attr("width", w)
+                        .attr("height", h);
+ 
+
+//Create groups
+        var groups = svg.selectAll("g")
+                        .data(mydataset)  // bind data to the group
+                        .enter()
+                        .append("g")
+                        .attr("class", "lines") 
+                        
+   
+    .on("mouseover", function(d) {
+      d3.select(this)
+        .classed("highlight", true)
+        .append("title")
+        .text(function(d) {
+                        return d[3];
+                    });
+    })
+
+    .on("mouseout", function() {d3.select(this).classed("highlight", false);});
+      
+      
+       
+ // join paths
+  groups.append("line")
+               .attr("x1", (w/4))
+         .attr("x2", (w/1.4))
+         .attr("y1", function(d) {return yScale(d[0])})
+         .attr("y2", function(d) {return yScale(d[1])})
+         .style("stroke-width", 3)        
+         .attr("stroke",  function(d) {
+               if (d[2] <= 0) {return "#000c60";}
+                else if (d[2] >=20) {return "#569ffe";} 
+                else  {return "#001bea";}
+                 })
+         .style("opacity", 1)
+          ;  
+
+      
+//Create first background circles
+            groups.append("circle")
+         .attr("class", "circles1b")
+         .attr("r", radback)
+         .attr("cx", (w/4))
+         .attr("cy", function(d) {return yScale(d[0])})
+          ;      
+      
+  //Create first circles
+    groups.append("circle")
+               .attr("class", "circle1")
+         .attr("r", rad)
+         .attr("cx", (w/4))
+         .attr("cy", function(d) {return yScale(d[0])})
+         .attr("stroke",  function(d) {
+               if (d[2] <= 0) {return "#000c60";}
+                else if (d[2] >=20) {return "#569ffe";} 
+                else  {return "#001bea";}
+                 })
+      .style("opacity", 1)      
+          ;
+  
+//Create second background circles
+            groups.append("circle")
+         .attr("class", "circles2b")
+        .attr("r", radback)
+         .attr("cx", (w/1.4))
+         .attr("cy", function(d) {return yScale(d[1])})
+          ;      
+      
+      
+    
+  //Create second circles
+   groups.append("circle")
+               .attr("class", "circle2")
+         .attr("r", rad) 
+         .attr("cx", (w/1.4))
+         .attr("cy", function(d) {return yScale(d[1])})
+         .attr("stroke",  function(d) {
+               if (d[2] <= 0) {return "#000c60";}
+                else if (d[2] >=20) {return "#569ffe";} 
+                else  {return "#001bea";}
+                 })
+      .style("opacity", 1) 
+          ;    
+      
+  // First text
+       svg.append("text")
+          .attr("x", (w/4))
+          .attr("y", h-(padding/2))
+          .style("text-anchor","middle") 
+          .text("2013/14");
+
+  // Second text
+       svg.append("text")
+          .attr("x", (w/1.4))
+          .attr("y", h-(padding/2))
+         .style("text-anchor","middle") 
+          .text("2014/15");
+  
+  
+  //Create y axis
+        svg.append("g")
+            .attr("class", "axis")
+            .attr("transform", "translate(" + (padding*1.5) + ",0)")
+            .call(yAxis);
+  
+    
+ // Add the text label for the Y axis
+    svg.append("text")
+        .attr("class", "ytext")
+        .attr("transform", "rotate(-90)")
+        .attr("y", (padding/100))
+        .attr("x",0 - (h / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Points");
+   
+      
+ 
+      
+
+      
+// Sort By Percentages
+      
+d3.select("#sortpct")
+            .on("click", function() {
+   
+      //update data
+var mydataset = [];       
+for(var i = 0; i < dataset.length; i++){
+      mydataset.push(
+        [dataset[i].firstpct, dataset[i].secondpct, dataset[i].delta, dataset[i].team]
+       )        
+       }  
+        
+      var xMax = d3.max(mydataset, function(d) { return d[0]; })
+      var yMax = d3.max(mydataset, function(d) { return d[1]; })
+      var max = Math.max(yMax, xMax);  // highest value in dataset
+   
+      var xMin = d3.min(mydataset, function(d) { return d[0]; })
+      var yMin = d3.min(mydataset, function(d) { return d[1]; })
+      var min = Math.min(yMin, xMin);  // highest value in dataset
+   
+
+        var yScale = d3.scale.linear()
+                                 .domain([min, max])
+                                 .range([h - padding, padding])
+                 .nice() 
+                 ;
+  
+    
+  
+ //Update Y axis   
+var yAxis = d3.svg.axis()
+                              .scale(yScale)
+                              .orient("left")
+                              .ticks(6); 
+    
+    svg.select("g.axis")
+                .transition()
+                    .duration(2000)
+      .attr("class", "axis")
+            .attr("transform", "translate(" + (padding*1.5) + ",0)")
+            .call(yAxis);           
+         
+    
+    svg.append("text")
+        .attr("class", "newytext2")
+        .transition()
+        .duration(2000)
+        .attr("transform", "rotate(-90)")
+        .attr("y", (padding/100))
+        .attr("x",0 - (h / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Shots/Game");
+
+ // Remove old Y axis     
+    svg.selectAll("text.ytext").remove();
+    svg.selectAll("text.newytext").remove();
+   
+   
+//Set-up Transition
+   
+ var groups = svg.selectAll("g")
+                            .data(mydataset)  // bind data to the group
+                            .transition()
+                .duration(2000);
+   
+ // update join paths
+  groups.select("line")
+               .attr("y1", function(d) {return yScale(d[0])})
+         .attr("y2", function(d) {return yScale(d[1])})
+          ;  
+  //update first background circles
+    groups.select(".circles1b")
+         .attr("cy", function(d) {return yScale(d[0])})
+          ;      
+ 
+  //update first circles
+    groups.select(".circle1")
+               .attr("cy", function(d) {return yScale(d[0])})
+          ; 
+
+  //update second background circles
+    groups.select(".circles2b")
+         .attr("cy", function(d) {return yScale(d[1])})
+          ;      
+       
+  //update second circles
+   groups.select(".circle2")
+         .attr("cy", function(d) {return yScale(d[1])})
+         ;  
+    
+   
+ });
+      
+
+      
+// Sort By Frequencies
+      
+d3.select("#sortfreq")
+            .on("click", function() {
+   
+  
+//update data
+var mydataset = [];       
+for(var i = 0; i < dataset.length; i++){
+      mydataset.push(
+        [dataset[i].first, dataset[i].second, dataset[i].delta, dataset[i].team]
+       )        
+       }  
+        
+      var xMax = d3.max(mydataset, function(d) { return d[0]; })
+      var yMax = d3.max(mydataset, function(d) { return d[1]; })
+      var max = Math.max(yMax, xMax);  // highest value in dataset
+  
+      var xMin = d3.min(mydataset, function(d) { return d[0]; })
+      var yMin = d3.min(mydataset, function(d) { return d[1]; })
+      var min = Math.min(yMin, xMin);  // highest value in dataset
+   
+
+        var yScale = d3.scale.linear()
+                                 .domain([min, max])
+                                 .range([h - padding, padding])
+                 .nice() 
+                 ;
+        
+        
+  //Update Y axis   
+var yAxis = d3.svg.axis()
+                              .scale(yScale)
+                              .orient("left")
+                              .ticks(6); 
+    
+    svg.select("g.axis")
+                        .transition()
+                        .duration(2000)
+      .attr("class", "axis")
+            .attr("transform", "translate(" + (padding*1.5) + ",0)")
+            .call(yAxis);           
+         
+  
+  
+    svg.append("text")
+    .attr("class", "newytext")
+        .transition()
+        .duration(2000)
+        .attr("transform", "rotate(-90)")
+        .attr("y", (padding/100))
+        .attr("x",0 - (h / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Points");
+
+    svg.selectAll("text.ytext").remove();   
+    svg.selectAll("text.newytext2").remove();
+   
+   
+//Set-up Transition
+   
+ var groups = svg.selectAll("g")
+                            .data(mydataset)  // bind data to the group
+                            .transition()
+                .duration(2000);
+   
+ // update join paths
+  groups.select("line")
+               .attr("y1", function(d) {return yScale(d[0])})
+         .attr("y2", function(d) {return yScale(d[1])})
+          ;  
+  //update first background circles
+    groups.select(".circles1b")
+         .attr("cy", function(d) {return yScale(d[0])})
+          ;      
+ 
+  //update first circles
+    groups.select(".circle1")
+               .attr("cy", function(d) {return yScale(d[0])})
+          ; 
+
+  //update second background circles
+    groups.select(".circles2b")
+         .attr("cy", function(d) {return yScale(d[1])})
+          ;      
+       
+  //update second circles
+   groups.select(".circle2")
+         .attr("cy", function(d) {return yScale(d[1])})
+         ;  
+    
+   
+ });
+      
+
+      
+    </script>
+
+
+  </body>
+  
+
+
+
+
+
+
