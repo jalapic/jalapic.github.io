@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<style>
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+  //  background-color: dimgrey; 
+    color: #696969;
+    padding: 3px;
+}
+
+mark {
+    background-color:  #E1E1D2;
+    color: black;
+}
+</style>
+
+
+<html>
+
+
+<body>
+
+<h1>Mapping Vikings through British Isles Placenames</h1>
+
+<br>
+
+<p>Recently Bob Rudis <a href="http://rud.is/b/2016/01/03/zellingenach-a-visual-exploration-of-the-spatial-patterns-in-the-endings-of-german-town-and-village-names-in-r/">did a great blog post</a> using R to spatially map the suffixes of German topographical placenames (towns and villages).  The results are fantastic and many names show distinct patterns. For instance, the <i>-berg</i> suffix is most commonly found in the areas of Germany that contain large hills and mountains (Berg is German for mountain).</p>
+
+<p>This post got me thinking about where I grew up in North-Eastern England. <a href="https://en.wikipedia.org/wiki/History_of_York">York</a> to be precise.  This is an amazing city to live in and it's impossible not to become enamoured with Roman and Viking history, as it is all around you.  One thing you cannot help but notice is that a lot of the village and town names share common suffixes. I am very familiar for instance with all maner of -thorpes, (Woodthorpe, Copmanthorpe, etc.) and -bys (Thormanby, Haxby, Selby, etc.). Other names such as -toft are familiar to me because York's third most popular nightclub is on a hill called Toft Green. It's well known to us Yorvik types that these names come down to us from 'Vikings' and after Bob's post I did a bit more digging and wondered what other suffixes may be from Viking origins.  In this post I shall show you how the language of the Vikings influenced our place names. At the end, I will show how I did it with code. </p>  
+
+<br>
+
+<h3> The Danelaw </h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Danelaw">The Danelaw</a> is commonly used to refer to the lands to the North and East of England that were colonized by various Scandinavian Viking groups from the 9th to the 11th centuries.  The term actually has very specific legal definitions as it defines which parts of the country came under Dane laws contrasted to Mercian or West Saxon law. However, for our purposes we can think of it as the area of England that was occupied and settled by these Scandinavians.</p>
+
+
+<img src="img/blankuk1.png" alt="Danelaw" >
+
+<br>
+
+<p> For this initial investigation I decided to choose six suffixes that have been argued to be of Scandinavian/Viking origin. From this site belonging to the <a href="http://jorvik-viking-centre.co.uk/who-were-the-vikings/named-after-the-norse-viking-place-names/">Yorvik Viking Centre</a> and this one  belonging to the  <a href="https://www.ordnancesurvey.co.uk/resources/historical-map-resources/scandinavian-placenames.html">Ordnance Survey</a> the names I came up with were:</p>
+
+<br>
+<ul>
+<li><strong><i>-by   &nbsp;&nbsp;</i></strong> farmstead, village, settlement. </li>
+<li><strong><i>-kirk  &nbsp;&nbsp;</i></strong> from "kirkja" meaning church. </li>
+<li><strong><i>-ness  &nbsp;&nbsp;</i></strong> from "nes" meaning promontory or headland. Some ness-es may be from Old English (Sheerness) or Gaelic (Inverness)</li>
+<li><strong><i>-thorp(e) &nbsp;&nbsp; </i></strong> from "&thorn;orp" meaning "second dwelling" (but may also have an English origin in the Midlands)</li>
+<li><strong><i>-thwaite &nbsp;&nbsp; </i></strong> from "thveit"  meaning woodland clearing" </li>
+<li><strong><i>-toft  &nbsp;&nbsp;</i></strong> site of a house or building (sometimes -taft). </li>
+</ul>
+<br>
+
+<p>The exact origins of these names are still <a href="https://en.wikipedia.org/wiki/Toponymy_of_England#Scandinavian_languages">highly debated</a>.</p>
+
+
+<br>
+<h3>Distribution of Names</h3>
+<p> Here are the plots showing the distribution of placenames (villages, towns, etc.) of each of the suffixes.</p>
+<br>
+<img src="img/all6_1200.png" alt="maps" >
+
+<br>
+<p>Looking at these distributions there seems to be very strong evidence that <strong><i>-by</i></strong> and <strong><i>-thorpe</i></strong> have very strong Danelaw distributions - although <strong><i>-by</i></strong> also appears to have a big Isle of Man presence. Also <strong><i>-kirk</i></strong> and <strong><i>-toft</i></strong> seem to be mainly in the Danelaw albeit less frequently. I find the <strong><i>-thwaite</i></strong> distribution really interesting. It is confined to the Cumbrian / Lake-District area with a bit of spread into North Yorkshire.  I am not convinced the <strong><i>-ness</i></strong> pattern is particularly Viking. It is possible that the Shetland and Orkney populations may be Viking but they could also be due to the Gaelic influence - I would have to do more reading to find out what's going on there.</p>
+
+<br>
+
+<h3>Data and Code</h3>
+<p> Here I shall quickly go through the data and code.  I got the data from <a href="http://ukgaz.ben-daglish.net/cgi-bin/ukgaz.cgi">The UK Open Gazetteer</a> that contains approx 34,000 placenames of the British Isles. I took the <mark>places.csv</mark> file and put it into my working directory. I shall run through how I got the <strong><i>-by</i></strong> data into a map.</p>
+
+<p> The first steps are to extract/filter the places from <mark>places.csv</mark> that end in -by and then paste the placename and district/county variable together. We use that to geocode, i.e. get the longitude/latitude of each selected location<p>
+
+<pre><<code>
+library(dplyr) #for data carpentry
+library(ggmap) #for getting geocodes
+
+places <- read.csv("places.csv")
+
+by <- places %>% filter(grepl("by$",name)) # by$ ensures we filter those members of places$name that end -by
+by.names <- paste(by$name, by$countyname)  #places.csv has a placename and district/county variable. Joining them together to help geocode.
+by.geocodes<-geocode(by.names, output="latlona")  #use ggmap package to get longitude and latitidue of each location.
+
+</pre><</code>
+
+<p>The <mark>ggmap</mark> package is great but it sometimes needs TLC and manually checking random samples of results can be helpful. Check out <a href="http://zevross.com/blog/2014/03/19/geocoding-with-rs-ggmap-package/">Zev Ross's awesome blog</a> for more details.  The output looks like this: </p>
+
+<img src="img/byby.png" alt="by" >
+
+
+<p>You will notice that one location doesn't end -by. That geolocation was provided by the geocode but it was based on an initial -by name.  We can now plot these longitudes and latitudes. I am using the very simple <mark>maps</mark> and <mark>mapdata</mark> packages.
+
+
+<pre><<code>
+library(maps)
+library(mapdata)
+
+png("byplot.png", height=3000, width=2000, pointsize = 80) #this is our output file
+map('worldHires', c('UK', 'Ireland', 'Isle of Man','Isle of Wight'), xlim=c(-11,3), ylim=c(49,60.9), fill=TRUE, col="gray21", mar=rep(1,4)) #our blank map
+points(by.geocodes$lon,by.geocodes$lat, col="cyan", pch=15, cex=.5)  #add points - using abbreviated variable names (bit lazy)
+title("-by", col.main="gray21") #add title
+dev.off(dev.cur()) #clear plot
+
+</pre><</code>
+
+<p> There we go - it was that simple! Just do that again for the other names we're interested in.</p>
+<p>For more information please contact me via <a href="http://twitter.com/jalapic">twitter</a>. Also, for more visualizations, please visit my  <a href="http://jalapic.github.io/">GitHub page</a></p>
+<br><br>
+
+</body>
+</html>
