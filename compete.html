@@ -1,9 +1,52 @@
 
-<!DOCTYPE html>
-<meta charset="utf-8">
-<html>
-  <head>
 
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="css/css3.css">
+	<title>Curley Lab | 2017</title>
+	<script type="text/javascript" src="js/modernizr.js"></script>
+
+<style>
+ul.columns {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 142px; /* .push must be the same height as .footer */
+}
+
+/*
+
+Sticky Footer by Ryan Fait
+http://ryanfait.com/
+
+*/
+</style>
+
+
+<head>
+
+<meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
@@ -125,6 +168,7 @@ $(document).ready(function () {
 <div class="fluid-row" id="header">
 
 
+<a href="index.html">Back to Curley Lab Website</a>
 
 <h1 class="title toc-ignore">Analyzing Social Hierarchy Data - a primer</h1>
 <h4 class="author"><em>James Curley</em></h4>
@@ -730,5 +774,59 @@ plot(c(1:19,21:22), unlist(ttri_N), &quot;l&quot;,
 </div>
 </div>
 
-  </body>
+<a href="index.html">Back to Curley Lab Website</a>
+
+<br><br><br><br><br>
+
+				
+
+<footer role="contentinfo1">
+			<div>
+				<nav id="menu">
+					<ul role="navigation" class="nav">
+						<li><a href="curleyindex.html" class="nav-home"><strong>Curley</strong>Lab </a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="personnel.html">Personnel</a></li>
+						<li><a href="pubs.html">Publications</a></li>
+						<li><a href="teaching.html">Teaching</a></li>
+						<li><a href="rpackages.html">R packages</a></li>
+						<li><a href="rstats.html">R instruction</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</footer>
+
+
+  
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
 </html>
