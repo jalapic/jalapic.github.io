@@ -1,0 +1,1736 @@
+
+
+<!DOCTYPE html>
+<head>
+  
+  <meta charset="utf-8">
+ <script src="https://d3js.org/d3.v3.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="css/css3.css">
+	<title>Curley Lab 2016</title>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  
+
+  <style>
+
+    * {
+    margin: 0;
+}
+html, body {
+    height: 100%; 
+     
+}
+   }
+.wrapper {
+    min-height: 100%;
+   height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 142px; /* .push must be the same height as .footer */
+     
+}
+
+.container {
+}    
+
+
+svg { 
+  width:100%; 
+  height: 100% 
+}
+
+
+h2 { 
+  text-align: left;
+  padding: 1px 0px 0px 104px;
+    }
+
+#h2a { 
+  text-align: left;
+  padding: 1px 0px 0px 50px;
+    }
+   
+#pa { 
+ padding-left: 1.5cm
+ }
+
+.axis line {
+  fill: none;
+  stroke: #e5e5e5;
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  display: none;
+}
+
+
+.line {
+  fill: none;
+  stroke-width: 1px;
+  opacity: 1;
+}
+ 
+
+.container#chartw text {
+    font-size: 16px;
+}
+
+.container#chartl text {
+    font-size: 16px;
+}
+
+.h2x {
+    font-size: 22px!important;
+}
+
+.x1 {
+  font-size: 14px;
+}
+
+.y1 {
+  font-size: 14px;
+}
+  
+
+
+  </style>
+
+
+</head>
+
+
+
+<body>
+
+    <div class='wrapper'>
+    <div role="main">
+		
+<br><br>
+  
+<div style="width: 1800px; padding-left: 0.75cm">
+<br>
+<br>
+<br><h2  id="h2a" style="font-size:40px">Social Hierarchy Dynamics</h2><br>
+<p id="pa" align="left"; style="font-size:20px;";>We have discovered that groups of twelve male mice living in a large environment form linear social hierarchies.
+Here are data from five different groups over a three-week period. These are a subset from a larger dataset that we present in our recent paper - <a href="/web/20160627152135/http://www.sciencedirect.com/science/article/pii/S0003347216000798">Williamson CM, Lee W & Curley JP, 2016, Animal Behaviour</a>.
+The first row of matrices below shows the wins and losses accrued by each individual. Rows represent winners and columns represents losers.
+Therefore in Cohort A, individual A beat individual B 100 times, but individual B beat individual A 0 times.
+These matrices can be transformed into binarized matrices - shown in the second row for each cohort. 
+A "1" represents individuals in rows that win more often than they lose against individuals in columns.</p>
+
+<div class="container" id="chart1" style="float: left; width: 350px; height: 350px;margin-top: 25px;"><h2>Cohort A</h2></div>
+<div class="container" id="chart2" style="float: left; width: 350px; height: 350px;margin-top: 25px;"><h2>Cohort B</h2></div>
+<div class="container" id="chart3" style="float: left; width: 350px; height: 350px;margin-top: 25px;"><h2>Cohort C</h2></div>
+<div class="container" id="chart7" style="float: left; width: 350px; height: 350px;margin-top: 25px;"><h2>Cohort D</h2></div>
+<div class="container" id="chart8" style="float: left; width: 350px; height: 350px;margin-top: 25px;"><h2>Cohort E</h2></div>
+ <br style="clear: left;" />
+</div>
+
+<div style="width: 1800px; padding-left: 0.75cm">
+<div class="container" id="chart4" style="float: left;  width: 350px; height: 350px;margin-top: 3px;"></div>
+<div class="container" id="chart5" style="float: left; width: 350px; height: 350px;margin-top: 3px;"></div>
+<div class="container" id="chart6" style="float: left; width: 350px; height: 350px;margin-top: 3px;"></div>
+<div class="container" id="chart9" style="float: left; width: 350px; height: 350px;margin-top: 3px;"></div>
+<div class="container" id="chart10" style="float: left; width: 350px; height: 350px;margin-top: 3px;"></div>
+ <br style="clear: left;" />
+
+<p id="pa" align="left"; style="font-size:20px;";>The matrices are ranked A-L (1-12) according to the <a href="/web/20160627152135/http://www.sciencedirect.com/science/article/pii/S0003347213004132">I&SI ranking algorithm</a>.
+This attempts to move all 1's above the diagonal of the matrix. If all 1's were in the upper triangle it would make a perfect hierarchy.
+The number of 1s underneath the diagonal reprsents the <b><em>number of inconsistencies (I)</em></b>. 
+The algorithm then attempts to move those 1s that are beneath the triangle as close as possible to the diagonal.
+The total distance of all 1s from the digaonal is called the <b><em>strength of inconsistencies (SI)</em></b>.
+These social hierarchies are highly linear with only occasional rank inconsistency.</p>
+</div>
+
+
+<br>
+<br>
+<br>
+
+<div style="width: 1800px; padding-left: 0.75cm">
+<div class="container" id="chartw" style="float: left; width: 500px; height: 500px;margin-top: 25px; margin-bottom: -25;padding-bottom: 24px;"><h2 class="h2x" style="padding-left: 147px;">Inequality in Wins</h2></div>
+<div class="container" id="chartl" style="float: left; width: 500px; height: 500px;margin-top: 25px; margin-bottom: -25;padding-bottom: 24px;"><h2 class="h2x" style="padding-left: 147px;">Inequality in Losses</h2></div>
+<div class="container" id="ginitext" style="float: left; width: 700px; height: 500px;margin-top: 100px;"><h2 class="h2x" style="padding-left: 44px;"></h2>
+
+<p id="pa" align="left"; style="font-size:20px;";>
+We have also discovered that alpha males vary in their degree of despotism. 
+Although all alpha males win >95% of their fights in stable hierarchies,
+there are some alpha males who monopolize almost all of the fights that occur.  
+In other hierarchies, the number of fights made by other sub-dominant and mid-ranking animals are proportionally much higher.
+</p>
+<p id="pa" align="left"; style="font-size:20px;";>
+The graphs on the left show the <b><em>Lorenz curves</em></b> for the cumulative proportion of wins and losses by individuals by cohort.
+By calculating the <b><em>Gini Coefficient</em></b> of each curve, we are able to determine those cohorts that have a high coefficient 
+indicating highly despotic hierarchy.  
+Much more detail regarding dynamic changes in the inequality of wins and losses is described <a href="">in the paper</a>.
+</p>
+</div>
+ <br style="clear: left;" />
+</div>
+  
+
+<div style="width: 1800px; padding-left: 0.75cm; padding-top: 50px;">
+<h2 style="width: 1800px; padding-left: 1.5cm;float: left; height: 50px;">Temporal changes in social dominance</h2>
+<p id="pa" align="left"; style="font-size:20px;";>Changes in the relative social status of individuals can be tracked over time using a 
+pairwise contest model - <b><em><a href="/web/20160627152135/http://glicko.net/glicko.html">the Glicko rating system</a></b></em>. All individuals start with the same 2200&plusmn;300 rating. 
+Individuals gain points for winning fights and lose points for losing fights. 
+The number of points won and lost are relative to the degree of difference between the two individuals in each contest.
+The charts below represent three weeks of data from each cohort. Hover over each line to identify its rank.</p>
+ <br style="clear: left;" />
+</div>
+
+
+<div style="width: 1800px; padding-left: 0.75cm">
+<div class="container" id="chart-a" style="float: left; width: 350px; height: 450px;margin-top: 25px;padding-right: 0px;padding-left: 0px;"><h2 class="h2x" style="text-align: center;padding-left: 70px;">Cohort A</h2></div>
+<div class="container" id="chart-b" style="float: left; width: 350px; height: 450px;margin-top: 25px;padding-right: 0px;padding-left: 0px;"><h2 class="h2x" style="text-align: center;padding-left: 70px;">Cohort B</h2></div>
+<div class="container" id="chart-c" style="float: left; width: 350px; height: 450px;margin-top: 25px;padding-right: 0px;padding-left: 0px;"><h2 class="h2x" style="text-align: center;padding-left: 70px;">Cohort C</h2></div>
+<div class="container" id="chart-d" style="float: left; width: 350px; height: 450px;margin-top: 25px;padding-right: 0px;padding-left: 0px;"><h2 class="h2x" style="text-align: center;padding-left: 70px;">Cohort D</h2></div>
+<div class="container" id="chart-e" style="float: left; width: 350px; height: 450px;margin-top: 25px;padding-right: 0px;padding-left: 0px;"><h2 class="h2x" style="text-align: center;padding-left: 70px;">Cohort E</h2></div>
+ 
+<p id="pa" align="left"; style="font-size:20px;";>We have found that stable individual differences in ranks emerge between 3-5 days after group formation (after about 25% of time above).
+ Alpha males typically emerge first with sub-dominant and middle ranking animals establishing their ranks afterwards. 
+ Interestingly, the initial alpha males to emerge are not necessarily those that eventually ascertain the top rank.
+ There are a number of other methods for quantitatively evaluating how hierarchies emerge and how stable they are over the long-term.
+ For instance, <a href="">in the paper</a> we discuss our findings using various social network measures of dynamic hierarchical organization over time.
+</p>
+<br style="clear: left;" />
+</div>
+
+
+<br>
+<p id="pa" align="left"; style="font-size:20px;";>Williamson C, Lee W & Curley JP, 2016, Temporal Dynamics of Social Hierarchy Formation and Maintenance in Male Mice, <a href="http://www.sciencedirect.com/science/article/pii/S0003347216000798">Animal Behaviour 115: 259-272</a>.
+</p>
+
+<p id="pa" align="left"; style="font-size:20px;";>We have also studied network structure dynamics in groups of 30 male mice.  <a href="socdom2.html">See here for more info.</a>
+</p>
+
+<br>
+
+<p id="pa" align="left"; style="font-size:20px;";>
+<strong><a href="socdom.html">Back to Social Dominance Research Page</a></strong>
+</p>
+<br>
+
+
+
+
+
+
+
+
+
+
+</div><!-- main -->
+				
+
+<footer role="contentinfo1">
+			<div>
+				<nav id="menu">
+					<ul role="navigation" class="nav">
+						<li><a href="curleyindex.html" class="nav-home"><strong>Curley</strong>Lab </a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="personnel.html">Personnel</a></li>
+						<li><a href="pubs.html">Publications</a></li>
+						<li><a href="teaching.html">Teaching</a></li>
+						<li><a href="rpackages.html">R packages</a></li>
+						<li><a href="rstats.html">R instruction</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</footer>
+
+
+
+</div><!-- wrapper -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script>
+
+var matrix = [{"source":"A","target":"A","weighta":"","weightb":"","weightc":"","weightd":"","weighte":"","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"A-A","y":0,"x":0},{"source":"B","target":"A","weighta":"0","weightb":"1","weightc":"17","weightd":"0","weighte":"2","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"B-A","y":1,"x":0},{"source":"C","target":"A","weighta":"0","weightb":"0","weightc":"1","weightd":"0","weighte":"23","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"C-A","y":2,"x":0},{"source":"D","target":"A","weighta":"1","weightb":"2","weightc":"6","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"D-A","y":3,"x":0},{"source":"E","target":"A","weighta":"0","weightb":"0","weightc":"4","weightd":"0","weighte":"2","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"E-A","y":4,"x":0},{"source":"F","target":"A","weighta":"0","weightb":"0","weightc":"4","weightd":"2","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"F-A","y":5,"x":0},{"source":"G","target":"A","weighta":"0","weightb":"0","weightc":"1","weightd":"0","weighte":"2","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"G-A","y":6,"x":0},{"source":"H","target":"A","weighta":"0","weightb":"7","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"H-A","y":7,"x":0},{"source":"I","target":"A","weighta":"0","weightb":"0","weightc":"1","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"I-A","y":8,"x":0},{"source":"J","target":"A","weighta":"0","weightb":"0","weightc":"0","weightd":"1","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"J-A","y":9,"x":0},{"source":"K","target":"A","weighta":"0","weightb":"0","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"K-A","y":10,"x":0},{"source":"L","target":"A","weighta":"2","weightb":"0","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"L-A","y":11,"x":0},{"source":"A","target":"B","weighta":"100","weightb":"92","weightc":"18","weightd":"50","weighte":"125","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"A-B","y":0,"x":1},{"source":"B","target":"B","weighta":"","weightb":"","weightc":"","weightd":"","weighte":"","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"B-B","y":1,"x":1},{"source":"C","target":"B","weighta":"3","weightb":"0","weightc":"7","weightd":"0","weighte":"6","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"C-B","y":2,"x":1},{"source":"D","target":"B","weighta":"1","weightb":"2","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"D-B","y":3,"x":1},{"source":"E","target":"B","weighta":"1","weightb":"1","weightc":"6","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"E-B","y":4,"x":1},{"source":"F","target":"B","weighta":"0","weightb":"0","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"F-B","y":5,"x":1},{"source":"G","target":"B","weighta":"1","weightb":"1","weightc":"2","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"G-B","y":6,"x":1},{"source":"H","target":"B","weighta":"0","weightb":"1","weightc":"0","weightd":"2","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"H-B","y":7,"x":1},{"source":"I","target":"B","weighta":"0","weightb":"0","weightc":"0","weightd":"1","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"I-B","y":8,"x":1},{"source":"J","target":"B","weighta":"0","weightb":"0","weightc":"2","weightd":"0","weighte":"3","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"J-B","y":9,"x":1},{"source":"K","target":"B","weighta":"1","weightb":"1","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"K-B","y":10,"x":1},{"source":"L","target":"B","weighta":"1","weightb":"0","weightc":"1","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"L-B","y":11,"x":1},{"source":"A","target":"C","weighta":"77","weightb":"27","weightc":"80","weightd":"55","weighte":"67","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"A-C","y":0,"x":2},{"source":"B","target":"C","weighta":"28","weightb":"62","weightc":"9","weightd":"12","weighte":"17","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"B-C","y":1,"x":2},{"source":"C","target":"C","weighta":"","weightb":"","weightc":"","weightd":"","weighte":"","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"C-C","y":2,"x":2},{"source":"D","target":"C","weighta":"6","weightb":"1","weightc":"3","weightd":"0","weighte":"1","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"D-C","y":3,"x":2},{"source":"E","target":"C","weighta":"0","weightb":"0","weightc":"1","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"E-C","y":4,"x":2},{"source":"F","target":"C","weighta":"3","weightb":"0","weightc":"48","weightd":"2","weighte":"0","weighta1":"","weightb1":"","weightc1":"1","weightd1":"1","weighte1":"","id":"F-C","y":5,"x":2},{"source":"G","target":"C","weighta":"1","weightb":"0","weightc":"0","weightd":"0","weighte":"1","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"G-C","y":6,"x":2},{"source":"H","target":"C","weighta":"1","weightb":"0","weightc":"0","weightd":"0","weighte":"1","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"H-C","y":7,"x":2},{"source":"I","target":"C","weighta":"0","weightb":"0","weightc":"3","weightd":"1","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"I-C","y":8,"x":2},{"source":"J","target":"C","weighta":"0","weightb":"2","weightc":"1","weightd":"1","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"J-C","y":9,"x":2},{"source":"K","target":"C","weighta":"0","weightb":"0","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"K-C","y":10,"x":2},{"source":"L","target":"C","weighta":"0","weightb":"0","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"L-C","y":11,"x":2},{"source":"A","target":"D","weighta":"95","weightb":"56","weightc":"44","weightd":"85","weighte":"72","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"A-D","y":0,"x":3},{"source":"B","target":"D","weighta":"13","weightb":"7","weightc":"28","weightd":"0","weighte":"35","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"","weighte1":"1","id":"B-D","y":1,"x":3},{"source":"C","target":"D","weighta":"8","weightb":"4","weightc":"8","weightd":"1","weighte":"4","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"C-D","y":2,"x":3},{"source":"D","target":"D","weighta":"","weightb":"","weightc":"","weightd":"","weighte":"","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"D-D","y":3,"x":3},{"source":"E","target":"D","weighta":"0","weightb":"0","weightc":"3","weightd":"2","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"E-D","y":4,"x":3},{"source":"F","target":"D","weighta":"1","weightb":"0","weightc":"2","weightd":"1","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"F-D","y":5,"x":3},{"source":"G","target":"D","weighta":"6","weightb":"0","weightc":"1","weightd":"0","weighte":"1","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"1","id":"G-D","y":6,"x":3},{"source":"H","target":"D","weighta":"0","weightb":"1","weightc":"0","weightd":"1","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"H-D","y":7,"x":3},{"source":"I","target":"D","weighta":"1","weightb":"0","weightc":"2","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"I-D","y":8,"x":3},{"source":"J","target":"D","weighta":"0","weightb":"0","weightc":"4","weightd":"0","weighte":"1","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"J-D","y":9,"x":3},{"source":"K","target":"D","weighta":"0","weightb":"0","weightc":"1","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"K-D","y":10,"x":3},{"source":"L","target":"D","weighta":"2","weightb":"0","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"L-D","y":11,"x":3},{"source":"A","target":"E","weighta":"18","weightb":"46","weightc":"35","weightd":"46","weighte":"37","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"A-E","y":0,"x":4},{"source":"B","target":"E","weighta":"22","weightb":"4","weightc":"10","weightd":"3","weighte":"31","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"B-E","y":1,"x":4},{"source":"C","target":"E","weighta":"5","weightb":"5","weightc":"10","weightd":"10","weighte":"16","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"C-E","y":2,"x":4},{"source":"D","target":"E","weighta":"18","weightb":"2","weightc":"9","weightd":"7","weighte":"1","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"D-E","y":3,"x":4},{"source":"E","target":"E","weighta":"","weightb":"","weightc":"","weightd":"","weighte":"","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"E-E","y":4,"x":4},{"source":"F","target":"E","weighta":"12","weightb":"0","weightc":"2","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"F-E","y":5,"x":4},{"source":"G","target":"E","weighta":"2","weightb":"0","weightc":"2","weightd":"0","weighte":"1","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"G-E","y":6,"x":4},{"source":"H","target":"E","weighta":"2","weightb":"0","weightc":"1","weightd":"32","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"1","weighte1":"","id":"H-E","y":7,"x":4},{"source":"I","target":"E","weighta":"0","weightb":"0","weightc":"1","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"I-E","y":8,"x":4},{"source":"J","target":"E","weighta":"1","weightb":"0","weightc":"1","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"J-E","y":9,"x":4},{"source":"K","target":"E","weighta":"0","weightb":"0","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"K-E","y":10,"x":4},{"source":"L","target":"E","weighta":"0","weightb":"0","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"L-E","y":11,"x":4},{"source":"A","target":"F","weighta":"35","weightb":"44","weightc":"49","weightd":"59","weighte":"61","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"A-F","y":0,"x":5},{"source":"B","target":"F","weighta":"7","weightb":"10","weightc":"6","weightd":"2","weighte":"8","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"B-F","y":1,"x":5},{"source":"C","target":"F","weighta":"12","weightb":"5","weightc":"4","weightd":"0","weighte":"10","weighta1":"1","weightb1":"1","weightc1":"","weightd1":"","weighte1":"1","id":"C-F","y":2,"x":5},{"source":"D","target":"F","weighta":"29","weightb":"2","weightc":"12","weightd":"2","weighte":"2","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"D-F","y":3,"x":5},{"source":"E","target":"F","weighta":"16","weightb":"1","weightc":"17","weightd":"2","weighte":"0","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"","id":"E-F","y":4,"x":5},{"source":"F","target":"F","weighta":"","weightb":"","weightc":"","weightd":"","weighte":"","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"F-F","y":5,"x":5},{"source":"G","target":"F","weighta":"3","weightb":"0","weightc":"0","weightd":"0","weighte":"1","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"G-F","y":6,"x":5},{"source":"H","target":"F","weighta":"1","weightb":"1","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"1","weightc1":"","weightd1":"","weighte1":"","id":"H-F","y":7,"x":5},{"source":"I","target":"F","weighta":"1","weightb":"0","weightc":"3","weightd":"1","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"I-F","y":8,"x":5},{"source":"J","target":"F","weighta":"1","weightb":"0","weightc":"1","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"J-F","y":9,"x":5},{"source":"K","target":"F","weighta":"2","weightb":"0","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"K-F","y":10,"x":5},{"source":"L","target":"F","weighta":"0","weightb":"0","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"L-F","y":11,"x":5},{"source":"A","target":"G","weighta":"21","weightb":"93","weightc":"29","weightd":"41","weighte":"31","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"A-G","y":0,"x":6},{"source":"B","target":"G","weighta":"3","weightb":"12","weightc":"4","weightd":"9","weighte":"17","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"B-G","y":1,"x":6},{"source":"C","target":"G","weighta":"5","weightb":"7","weightc":"14","weightd":"1","weighte":"1","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"","id":"C-G","y":2,"x":6},{"source":"D","target":"G","weighta":"18","weightb":"2","weightc":"5","weightd":"6","weighte":"0","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"","id":"D-G","y":3,"x":6},{"source":"E","target":"G","weighta":"2","weightb":"2","weightc":"33","weightd":"19","weighte":"1","weighta1":"","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"","id":"E-G","y":4,"x":6},{"source":"F","target":"G","weighta":"23","weightb":"1","weightc":"10","weightd":"1","weighte":"3","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"F-G","y":5,"x":6},{"source":"G","target":"G","weighta":"","weightb":"","weightc":"","weightd":"","weighte":"","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"G-G","y":6,"x":6},{"source":"H","target":"G","weighta":"0","weightb":"0","weightc":"1","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"H-G","y":7,"x":6},{"source":"I","target":"G","weighta":"2","weightb":"0","weightc":"6","weightd":"0","weighte":"1","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"I-G","y":8,"x":6},{"source":"J","target":"G","weighta":"16","weightb":"0","weightc":"7","weightd":"0","weighte":"0","weighta1":"1","weightb1":"","weightc1":"1","weightd1":"","weighte1":"","id":"J-G","y":9,"x":6},{"source":"K","target":"G","weighta":"0","weightb":"0","weightc":"1","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"K-G","y":10,"x":6},{"source":"L","target":"G","weighta":"1","weightb":"0","weightc":"1","weightd":"1","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"L-G","y":11,"x":6},{"source":"A","target":"H","weighta":"38","weightb":"58","weightc":"56","weightd":"29","weighte":"53","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"A-H","y":0,"x":7},{"source":"B","target":"H","weighta":"23","weightb":"7","weightc":"1","weightd":"2","weighte":"23","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"","weighte1":"1","id":"B-H","y":1,"x":7},{"source":"C","target":"H","weighta":"1","weightb":"3","weightc":"12","weightd":"21","weighte":"3","weighta1":"","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"C-H","y":2,"x":7},{"source":"D","target":"H","weighta":"47","weightb":"1","weightc":"8","weightd":"6","weighte":"1","weighta1":"1","weightb1":"","weightc1":"1","weightd1":"1","weighte1":"1","id":"D-H","y":3,"x":7},{"source":"E","target":"H","weighta":"2","weightb":"0","weightc":"9","weightd":"6","weighte":"2","weighta1":"","weightb1":"","weightc1":"1","weightd1":"","weighte1":"1","id":"E-H","y":4,"x":7},{"source":"F","target":"H","weighta":"11","weightb":"0","weightc":"41","weightd":"6","weighte":"0","weighta1":"1","weightb1":"","weightc1":"1","weightd1":"1","weighte1":"","id":"F-H","y":5,"x":7},{"source":"G","target":"H","weighta":"2","weightb":"2","weightc":"2","weightd":"2","weighte":"2","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"G-H","y":6,"x":7},{"source":"H","target":"H","weighta":"","weightb":"","weightc":"","weightd":"","weighte":"","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"H-H","y":7,"x":7},{"source":"I","target":"H","weighta":"0","weightb":"1","weightc":"1","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"I-H","y":8,"x":7},{"source":"J","target":"H","weighta":"2","weightb":"2","weightc":"0","weightd":"1","weighte":"1","weighta1":"","weightb1":"1","weightc1":"","weightd1":"1","weighte1":"","id":"J-H","y":9,"x":7},{"source":"K","target":"H","weighta":"0","weightb":"0","weightc":"0","weightd":"1","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"K-H","y":10,"x":7},{"source":"L","target":"H","weighta":"0","weightb":"0","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"L-H","y":11,"x":7},{"source":"A","target":"I","weighta":"17","weightb":"77","weightc":"68","weightd":"48","weighte":"43","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"A-I","y":0,"x":8},{"source":"B","target":"I","weighta":"12","weightb":"20","weightc":"12","weightd":"5","weighte":"25","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"B-I","y":1,"x":8},{"source":"C","target":"I","weighta":"5","weightb":"10","weightc":"30","weightd":"12","weighte":"20","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"C-I","y":2,"x":8},{"source":"D","target":"I","weighta":"5","weightb":"4","weightc":"17","weightd":"4","weighte":"1","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"D-I","y":3,"x":8},{"source":"E","target":"I","weighta":"0","weightb":"2","weightc":"24","weightd":"4","weighte":"0","weighta1":"","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"","id":"E-I","y":4,"x":8},{"source":"F","target":"I","weighta":"9","weightb":"1","weightc":"39","weightd":"12","weighte":"2","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"F-I","y":5,"x":8},{"source":"G","target":"I","weighta":"2","weightb":"1","weightc":"14","weightd":"3","weighte":"1","weighta1":"","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"","id":"G-I","y":6,"x":8},{"source":"H","target":"I","weighta":"2","weightb":"3","weightc":"20","weightd":"1","weighte":"1","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"H-I","y":7,"x":8},{"source":"I","target":"I","weighta":"","weightb":"","weightc":"","weightd":"","weighte":"","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"I-I","y":8,"x":8},{"source":"J","target":"I","weighta":"0","weightb":"1","weightc":"2","weightd":"1","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"J-I","y":9,"x":8},{"source":"K","target":"I","weighta":"0","weightb":"1","weightc":"0","weightd":"0","weighte":"1","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"1","id":"K-I","y":10,"x":8},{"source":"L","target":"I","weighta":"1","weightb":"3","weightc":"1","weightd":"1","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"L-I","y":11,"x":8},{"source":"A","target":"J","weighta":"40","weightb":"63","weightc":"51","weightd":"49","weighte":"34","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"A-J","y":0,"x":9},{"source":"B","target":"J","weighta":"19","weightb":"10","weightc":"5","weightd":"0","weighte":"4","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"","weighte1":"1","id":"B-J","y":1,"x":9},{"source":"C","target":"J","weighta":"14","weightb":"14","weightc":"12","weightd":"1","weighte":"10","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"","weighte1":"1","id":"C-J","y":2,"x":9},{"source":"D","target":"J","weighta":"11","weightb":"0","weightc":"5","weightd":"0","weighte":"1","weighta1":"1","weightb1":"","weightc1":"1","weightd1":"","weighte1":"","id":"D-J","y":3,"x":9},{"source":"E","target":"J","weighta":"14","weightb":"3","weightc":"9","weightd":"0","weighte":"5","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"","weighte1":"1","id":"E-J","y":4,"x":9},{"source":"F","target":"J","weighta":"11","weightb":"0","weightc":"12","weightd":"1","weighte":"6","weighta1":"1","weightb1":"","weightc1":"1","weightd1":"1","weighte1":"1","id":"F-J","y":5,"x":9},{"source":"G","target":"J","weighta":"7","weightb":"1","weightc":"2","weightd":"0","weighte":"0","weighta1":"","weightb1":"1","weightc1":"","weightd1":"","weighte1":"","id":"G-J","y":6,"x":9},{"source":"H","target":"J","weighta":"6","weightb":"0","weightc":"7","weightd":"0","weighte":"3","weighta1":"1","weightb1":"","weightc1":"1","weightd1":"","weighte1":"1","id":"H-J","y":7,"x":9},{"source":"I","target":"J","weighta":"7","weightb":"2","weightc":"13","weightd":"2","weighte":"2","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"I-J","y":8,"x":9},{"source":"J","target":"J","weighta":"","weightb":"","weightc":"","weightd":"","weighte":"","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"J-J","y":9,"x":9},{"source":"K","target":"J","weighta":"0","weightb":"3","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"K-J","y":10,"x":9},{"source":"L","target":"J","weighta":"1","weightb":"0","weightc":"1","weightd":"0","weighte":"0","weighta1":"1","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"L-J","y":11,"x":9},{"source":"A","target":"K","weighta":"25","weightb":"96","weightc":"55","weightd":"44","weighte":"38","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"A-K","y":0,"x":10},{"source":"B","target":"K","weighta":"12","weightb":"33","weightc":"8","weightd":"8","weighte":"8","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"B-K","y":1,"x":10},{"source":"C","target":"K","weighta":"9","weightb":"9","weightc":"7","weightd":"8","weighte":"3","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"C-K","y":2,"x":10},{"source":"D","target":"K","weighta":"4","weightb":"2","weightc":"15","weightd":"5","weighte":"1","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"D-K","y":3,"x":10},{"source":"E","target":"K","weighta":"3","weightb":"0","weightc":"10","weightd":"10","weighte":"0","weighta1":"1","weightb1":"","weightc1":"1","weightd1":"1","weighte1":"","id":"E-K","y":4,"x":10},{"source":"F","target":"K","weighta":"10","weightb":"0","weightc":"24","weightd":"5","weighte":"0","weighta1":"1","weightb1":"","weightc1":"1","weightd1":"1","weighte1":"","id":"F-K","y":5,"x":10},{"source":"G","target":"K","weighta":"1","weightb":"3","weightc":"6","weightd":"0","weighte":"2","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"","weighte1":"1","id":"G-K","y":6,"x":10},{"source":"H","target":"K","weighta":"4","weightb":"2","weightc":"5","weightd":"7","weighte":"0","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"","id":"H-K","y":7,"x":10},{"source":"I","target":"K","weighta":"0","weightb":"1","weightc":"7","weightd":"2","weighte":"0","weighta1":"","weightb1":"","weightc1":"1","weightd1":"1","weighte1":"","id":"I-K","y":8,"x":10},{"source":"J","target":"K","weighta":"1","weightb":"4","weightc":"5","weightd":"0","weighte":"5","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"","weighte1":"1","id":"J-K","y":9,"x":10},{"source":"K","target":"K","weighta":"","weightb":"","weightc":"","weightd":"","weighte":"","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"K-K","y":10,"x":10},{"source":"L","target":"K","weighta":"0","weightb":"1","weightc":"0","weightd":"0","weighte":"0","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"L-K","y":11,"x":10},{"source":"A","target":"L","weighta":"25","weightb":"60","weightc":"28","weightd":"43","weighte":"25","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"A-L","y":0,"x":11},{"source":"B","target":"L","weighta":"14","weightb":"12","weightc":"4","weightd":"10","weighte":"4","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"B-L","y":1,"x":11},{"source":"C","target":"L","weighta":"3","weightb":"6","weightc":"19","weightd":"11","weighte":"4","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"C-L","y":2,"x":11},{"source":"D","target":"L","weighta":"3","weightb":"4","weightc":"20","weightd":"4","weighte":"0","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"","id":"D-L","y":3,"x":11},{"source":"E","target":"L","weighta":"0","weightb":"0","weightc":"14","weightd":"10","weighte":"0","weighta1":"","weightb1":"","weightc1":"1","weightd1":"1","weighte1":"","id":"E-L","y":4,"x":11},{"source":"F","target":"L","weighta":"11","weightb":"1","weightc":"23","weightd":"4","weighte":"2","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"1","id":"F-L","y":5,"x":11},{"source":"G","target":"L","weighta":"2","weightb":"0","weightc":"2","weightd":"3","weighte":"4","weighta1":"1","weightb1":"","weightc1":"1","weightd1":"1","weighte1":"1","id":"G-L","y":6,"x":11},{"source":"H","target":"L","weighta":"4","weightb":"3","weightc":"14","weightd":"37","weighte":"0","weighta1":"1","weightb1":"1","weightc1":"1","weightd1":"1","weighte1":"","id":"H-L","y":7,"x":11},{"source":"I","target":"L","weighta":"2","weightb":"3","weightc":"1","weightd":"5","weighte":"3","weighta1":"1","weightb1":"","weightc1":"","weightd1":"1","weighte1":"1","id":"I-L","y":8,"x":11},{"source":"J","target":"L","weighta":"0","weightb":"1","weightc":"13","weightd":"0","weighte":"1","weighta1":"","weightb1":"1","weightc1":"1","weightd1":"","weighte1":"1","id":"J-L","y":9,"x":11},{"source":"K","target":"L","weighta":"2","weightb":"1","weightc":"2","weightd":"10","weighte":"0","weighta1":"1","weightb1":"","weightc1":"1","weightd1":"1","weighte1":"","id":"K-L","y":10,"x":11},{"source":"L","target":"L","weighta":"","weightb":"","weightc":"","weightd":"","weighte":"","weighta1":"","weightb1":"","weightc1":"","weightd1":"","weighte1":"","id":"L-L","y":11,"x":11}];    
+    
+// sizes etc.
+W = 20
+H = 20
+    
+    
+    
+// add scale    
+var weightScale = d3.scale.linear()
+        .domain(d3.extent(function(d){ return d.weight }))
+        .range([0,1])
+
+      
+  // fill matrix   
+     d3.select("div#chart1").append("svg")
+      .attr("width", W*6)
+      .attr("height", H*6)
+      .append("g")
+      .attr("id", "adjacencyA")
+      .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("rect")
+      .attr("width", W)
+      .attr("height", H)
+      .attr("x", function (d) {return d.x * W})
+      .attr("y", function (d) {return d.y * H})
+      .style("stroke", "black")
+      .style("stroke-width", "1px")
+      .style("fill", "#ff1414")
+      .style("fill-opacity", function (d) {return d.weighta*0.1; })
+      .on("mouseover", gridOver)
+;
+
+ // add values   
+      d3.select("svg")
+      .append("g")
+       .attr("id", "adjacencyA")
+       .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("text")
+     .attr("x", function (d) {return (d.x * W)+W/2})
+     .attr("y", function (d) {return (d.y * H)+H/2})
+       .attr("font-family", "sans-serif")
+      .attr("font-size", "10px")
+      .attr("fill", "black")
+     .attr("text-anchor","middle")
+     .attr("dy", ".35em")
+     .text(function(d){ return d.weighta;})
+       ;
+      
+   
+// add axis   
+   var nameScale = d3.scale.ordinal()
+           .domain(["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"])
+           .rangePoints([0,H*12],1);
+
+      xAxis = d3.svg.axis()
+        .scale(nameScale)
+        .orient("top")
+        .tickSize(3);
+
+      yAxis = d3.svg.axis()
+        .scale(nameScale)
+        .orient("left")
+        .tickSize(3);    
+      
+      d3.selectAll("#adjacencyA")
+        .append("g")
+        .call(xAxis)
+        .selectAll("text")
+        .style("text-anchor", "middle")
+
+      d3.selectAll("#adjacencyA")
+        .append("g")
+        .call(yAxis);
+
+
+
+// cell and it's transpose      
+      function gridOver(d,i) {
+        d3.selectAll("rect")
+         .style("stroke-width", function (p) {return (p.x == d.y && p.y == d.x) || (p.y == d.y && p.x == d.x) ? "3.5px" : "1px"})
+         .style("fill", function (p) {return (p.x == d.y && p.y == d.x) || (p.y == d.y && p.x == d.x) ? "#fff27f" : "#ff1414"})
+           
+      }
+
+
+
+    
+// Add second matrix        
+d3.select("div#chart2").append("svg")
+      .attr("width", W*6)
+      .attr("height", H*6)
+      .append("g")
+      .attr("id", "adjacencyB")
+      .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("rect")
+      .attr("width", W)
+      .attr("height", H)
+      .attr("x", function (d) {return d.x * W})
+      .attr("y", function (d) {return d.y * H})
+      .style("stroke", "black")
+      .style("stroke-width", "1px")
+      .style("fill", "#ff1414")
+      .style("fill-opacity", function (d) {return d.weightb*0.08429568; })
+      .on("mouseover", gridOver)
+;
+
+ // add values   
+    d3.select("div#chart2").select("svg")
+      .append("g")
+       .attr("id", "adjacencyB")
+       .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("text")
+     .attr("x", function (d) {return (d.x * W)+W/2})
+     .attr("y", function (d) {return (d.y * H)+H/2})
+       .attr("font-family", "sans-serif")
+      .attr("font-size", "10px")
+      .attr("fill", "black")
+     .attr("text-anchor","middle")
+     .attr("dy", ".35em")
+     .text(function(d){ return d.weightb;})
+       ;
+     
+  // add axes  
+      d3.selectAll("#adjacencyB")
+        .append("g")
+        .call(xAxis)
+        .selectAll("text")
+        .style("text-anchor", "middle")
+
+      d3.selectAll("#adjacencyB")
+        .append("g")
+        .call(yAxis);
+
+    
+    
+// Add third matrix        
+d3.select("div#chart3").append("svg")
+      .attr("width", W*6)
+      .attr("height", H*6)
+      .append("g")
+      .attr("id", "adjacencyC")
+      .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("rect")
+      .attr("width", W)
+      .attr("height", H)
+      .attr("x", function (d) {return d.x * W})
+      .attr("y", function (d) {return d.y * H})
+      .style("stroke", "black")
+      .style("stroke-width", "1px")
+      .style("fill", "#ff1414")
+      .style("fill-opacity", function (d) {return d.weightc*0.0751744; })
+      .on("mouseover", gridOver)
+;
+
+ // add values   
+    d3.select("div#chart3").select("svg")
+      .append("g")
+       .attr("id", "adjacencyC")
+       .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("text")
+     .attr("x", function (d) {return (d.x * W)+W/2})
+     .attr("y", function (d) {return (d.y * H)+H/2})
+       .attr("font-family", "sans-serif")
+      .attr("font-size", "10px")
+      .attr("fill", "black")
+     .attr("text-anchor","middle")
+     .attr("dy", ".35em")
+     .text(function(d){ return d.weightc;})
+       ;
+     
+  // add axes  
+      d3.selectAll("#adjacencyC")
+        .append("g")
+        .call(xAxis)
+        .selectAll("text")
+        .style("text-anchor", "middle")
+
+      d3.selectAll("#adjacencyC")
+        .append("g")
+        .call(yAxis);
+    
+
+// Add fourth matrix        
+d3.select("div#chart4").append("svg")
+      .attr("width", W*6)
+      .attr("height", H*6)
+      .append("g")
+      .attr("id", "adjacencyA1")
+      .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("rect")
+      .attr("width", W)
+      .attr("height", H)
+      .attr("x", function (d) {return d.x * W})
+      .attr("y", function (d) {return d.y * H})
+      .style("stroke", "black")
+      .style("stroke-width", "1px")
+      .style("fill", "#ff1414")
+      .style("fill-opacity", function (d) {return d.weighta1*0.55; })
+      .on("mouseover", gridOver)
+;
+
+ // add values   
+    d3.select("div#chart4").select("svg")
+      .append("g")
+       .attr("id", "adjacencyA1")
+       .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("text")
+     .attr("x", function (d) {return (d.x * W)+W/2})
+     .attr("y", function (d) {return (d.y * H)+H/2})
+       .attr("font-family", "sans-serif")
+      .attr("font-size", "10px")
+      .attr("fill", "black")
+     .attr("text-anchor","middle")
+     .attr("dy", ".35em")
+     .text(function(d){ return d.weighta1;})
+       ;
+     
+  // add axes  
+      d3.selectAll("#adjacencyA1")
+        .append("g")
+        .call(xAxis)
+        .selectAll("text")
+        .style("text-anchor", "middle")
+
+      d3.selectAll("#adjacencyA1")
+        .append("g")
+        .call(yAxis);
+    
+ // add text 
+d3.select("div#chart4.container")
+    .append("text")
+    .attr("id", "isitext")
+    .style("fill", "black")  
+    .attr("text-anchor", "middle")
+    .style("position", "relative")
+    .style("top","-20px") 
+    .style("font-size","22px")
+    .text("I=2, SI=5");        
+
+  
+
+// Add fifth matrix        
+d3.select("div#chart5").append("svg")
+      .attr("width", W*6)
+      .attr("height", H*6)
+      .append("g")
+      .attr("id", "adjacencyB1")
+      .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("rect")
+      .attr("width", W)
+      .attr("height", H)
+      .attr("x", function (d) {return d.x * W})
+      .attr("y", function (d) {return d.y * H})
+      .style("stroke", "black")
+      .style("stroke-width", "1px")
+      .style("fill", "#ff1414")
+      .style("fill-opacity", function (d) {return d.weightb1*0.55; })
+      .on("mouseover", gridOver)
+;
+
+ // add values   
+    d3.select("div#chart5").select("svg")
+      .append("g")
+       .attr("id", "adjacencyB1")
+       .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("text")
+     .attr("x", function (d) {return (d.x * W)+W/2})
+     .attr("y", function (d) {return (d.y * H)+H/2})
+       .attr("font-family", "sans-serif")
+      .attr("font-size", "10px")
+      .attr("fill", "black")
+     .attr("text-anchor","middle")
+     .attr("dy", ".35em")
+     .text(function(d){ return d.weightb1;})
+       ;
+     
+  // add axes  
+      d3.selectAll("#adjacencyB1")
+        .append("g")
+        .call(xAxis)
+        .selectAll("text")
+        .style("text-anchor", "middle")
+
+      d3.selectAll("#adjacencyB1")
+        .append("g")
+        .call(yAxis);
+
+ // add text 
+d3.select("div#chart5.container")
+    .append("text")
+    .attr("id", "isitext")
+    .style("fill", "black")  
+    .style("position", "relative")
+    .style("top","-20px") 
+    .attr("text-anchor", "middle") 
+    .style("font-size","22px")
+    .text("I=2, SI=4");        
+
+    
+    
+// Add sixth matrix        
+d3.select("div#chart6").append("svg")
+      .attr("width", W*6)
+      .attr("height", H*6)
+      .append("g")
+      .attr("id", "adjacencyC1")
+      .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("rect")
+      .attr("width", W)
+      .attr("height", H)
+      .attr("x", function (d) {return d.x * W})
+      .attr("y", function (d) {return d.y * H})
+      .style("stroke", "black")
+      .style("stroke-width", "1px")
+      .style("fill", "#ff1414")
+      .style("fill-opacity", function (d) {return d.weightc1*0.55; })
+      .on("mouseover", gridOver)
+;
+
+ // add values   
+    d3.select("div#chart6").select("svg")
+      .append("g")
+       .attr("id", "adjacencyC1")
+       .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("text")
+     .attr("x", function (d) {return (d.x * W)+W/2})
+     .attr("y", function (d) {return (d.y * H)+H/2})
+       .attr("font-family", "sans-serif")
+      .attr("font-size", "10px")
+      .attr("fill", "black")
+     .attr("text-anchor","middle")
+     .attr("dy", ".35em")
+     .text(function(d){ return d.weightc1;})
+       ;
+     
+  // add axes  
+      d3.selectAll("#adjacencyC1")
+        .append("g")
+        .call(xAxis)
+        .selectAll("text")
+        .style("text-anchor", "middle")
+
+      d3.selectAll("#adjacencyC1")
+        .append("g")
+        .call(yAxis);
+
+ // add text 
+d3.select("div#chart6.container")
+    .append("text")
+    .attr("id", "isitext")
+    .style("fill", "black")  
+    .style("position", "relative")
+    .style("top","-20px") 
+    .attr("text-anchor", "middle") 
+    .style("font-size","22px")
+    .text("I=2, SI=6");        
+
+    
+
+
+// Add seventh matrix        
+d3.select("div#chart7").append("svg")
+      .attr("width", W*6)
+      .attr("height", H*6)
+      .append("g")
+      .attr("id", "adjacencyD")
+      .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("rect")
+      .attr("width", W)
+      .attr("height", H)
+      .attr("x", function (d) {return d.x * W})
+      .attr("y", function (d) {return d.y * H})
+      .style("stroke", "black")
+      .style("stroke-width", "1px")
+      .style("fill", "#ff1414")
+      .style("fill-opacity", function (d) {return d.weightd*0.055; })
+      .on("mouseover", gridOver)
+;
+
+ // add values   
+    d3.select("div#chart7").select("svg")
+      .append("g")
+       .attr("id", "adjacencyD")
+       .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("text")
+     .attr("x", function (d) {return (d.x * W)+W/2})
+     .attr("y", function (d) {return (d.y * H)+H/2})
+       .attr("font-family", "sans-serif")
+      .attr("font-size", "10px")
+      .attr("fill", "black")
+     .attr("text-anchor","middle")
+     .attr("dy", ".35em")
+     .text(function(d){ return d.weightd;})
+       ;
+     
+  // add axes  
+      d3.selectAll("#adjacencyD")
+        .append("g")
+        .call(xAxis)
+        .selectAll("text")
+        .style("text-anchor", "middle")
+
+      d3.selectAll("#adjacencyD")
+        .append("g")
+        .call(yAxis);
+    
+
+  
+      
+// Add eighth matrix        
+d3.select("div#chart8").append("svg")
+      .attr("width", W*6)
+      .attr("height", H*6)
+      .append("g")
+      .attr("id", "adjacencyE")
+      .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("rect")
+      .attr("width", W)
+      .attr("height", H)
+      .attr("x", function (d) {return d.x * W})
+      .attr("y", function (d) {return d.y * H})
+      .style("stroke", "black")
+      .style("stroke-width", "1px")
+      .style("fill", "#ff1414")
+      .style("fill-opacity", function (d) {return d.weighte*0.055; })
+      .on("mouseover", gridOver)
+;
+
+ // add values   
+    d3.select("div#chart8").select("svg")
+      .append("g")
+       .attr("id", "adjacencyE")
+       .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("text")
+     .attr("x", function (d) {return (d.x * W)+W/2})
+     .attr("y", function (d) {return (d.y * H)+H/2})
+       .attr("font-family", "sans-serif")
+      .attr("font-size", "10px")
+      .attr("fill", "black")
+     .attr("text-anchor","middle")
+     .attr("dy", ".35em")
+     .text(function(d){ return d.weighte;})
+       ;
+     
+  // add axes  
+      d3.selectAll("#adjacencyE")
+        .append("g")
+        .call(xAxis)
+        .selectAll("text")
+        .style("text-anchor", "middle")
+
+      d3.selectAll("#adjacencyE")
+        .append("g")
+        .call(yAxis);
+
+    
+   // Add ninth matrix        
+d3.select("div#chart9").append("svg")
+      .attr("width", W*6)
+      .attr("height", H*6)
+      .append("g")
+      .attr("id", "adjacencyD1")
+      .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("rect")
+      .attr("width", W)
+      .attr("height", H)
+      .attr("x", function (d) {return d.x * W})
+      .attr("y", function (d) {return d.y * H})
+      .style("stroke", "black")
+      .style("stroke-width", "1px")
+      .style("fill", "#ff1414")
+      .style("fill-opacity", function (d) {return d.weightd1*0.55; })
+      .on("mouseover", gridOver)
+;
+
+ // add values   
+    d3.select("div#chart9").select("svg")
+      .append("g")
+       .attr("id", "adjacencyD1")
+       .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("text")
+     .attr("x", function (d) {return (d.x * W)+W/2})
+     .attr("y", function (d) {return (d.y * H)+H/2})
+       .attr("font-family", "sans-serif")
+      .attr("font-size", "10px")
+      .attr("fill", "black")
+     .attr("text-anchor","middle")
+     .attr("dy", ".35em")
+     .text(function(d){ return d.weightd1;})
+       ;
+     
+  // add axes  
+      d3.selectAll("#adjacencyD1")
+        .append("g")
+        .call(xAxis)
+        .selectAll("text")
+        .style("text-anchor", "middle")
+
+      d3.selectAll("#adjacencyD1")
+        .append("g")
+        .call(yAxis);
+
+  // add text 
+d3.select("div#chart9.container")
+    .append("text")
+    .attr("id", "isitext")
+    .style("fill", "black")  
+    .style("position", "relative")
+    .style("top","-20px") 
+    .attr("text-anchor", "middle") 
+    .style("font-size","22px")
+    .text("I=3, SI=8");        
+
+   
+    
+    // Add tenth matrix        
+d3.select("div#chart10").append("svg")
+      .attr("width", W*6)
+      .attr("height", H*6)
+      .append("g")
+      .attr("id", "adjacencyE1")
+      .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("rect")
+      .attr("width", W)
+      .attr("height", H)
+      .attr("x", function (d) {return d.x * W})
+      .attr("y", function (d) {return d.y * H})
+      .style("stroke", "black")
+      .style("stroke-width", "1px")
+      .style("fill", "#ff1414")
+      .style("fill-opacity", function (d) {return d.weighte1*0.55; })
+      .on("mouseover", gridOver)
+;
+
+ // add values   
+    d3.select("div#chart10").select("svg")
+      .append("g")
+       .attr("id", "adjacencyE1")
+       .attr("transform", "translate(50,20)")
+      .selectAll("rect")
+      .data(matrix)
+      .enter()
+      .append("text")
+     .attr("x", function (d) {return (d.x * W)+W/2})
+     .attr("y", function (d) {return (d.y * H)+H/2})
+       .attr("font-family", "sans-serif")
+      .attr("font-size", "10px")
+      .attr("fill", "black")
+     .attr("text-anchor","middle")
+     .attr("dy", ".35em")
+     .text(function(d){ return d.weighte1;})
+       ;
+     
+  // add axes  
+      d3.selectAll("#adjacencyE1")
+        .append("g")
+        .call(xAxis)
+        .selectAll("text")
+        .style("text-anchor", "middle")
+
+      d3.selectAll("#adjacencyE1")
+        .append("g")
+        .call(yAxis);
+   
+ // add text 
+d3.select("div#chart10.container")
+    .append("text")
+    .attr("id", "isitext")
+    .style("position", "relative")
+    .style("top","-20px") 
+    .style("fill", "black")  
+    .attr("text-anchor", "middle") 
+    .style("font-size","22px")
+    .text("I=2, SI=5");        
+
+ 
+
+  
+  </script>
+
+<script>
+
+var margin = {top: 60, right: 80, bottom: 60, left: 80},
+    width = 500 - margin.left - margin.right,
+    height = 460 - margin.top - margin.bottom;
+
+var x = d3.scale.linear()
+    .range([0, width])
+	  .domain([12,1]);
+
+var y = d3.scale.linear()
+    .range([height, 0])
+	.domain([0,1]);
+
+var color = d3.scale.ordinal()
+	.range(["#e4b31f", "#9d1422", "#f9db9e", "#f4a3a5", "#f1624f"])
+	.domain(["A","B","C","D","E"]);
+
+var giniw = [0.62,0.79,0.55,0.69,0.78];  
+var ginil = [0.22,0.22,0.25,0.21,0.20];  
+  
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom")
+	.tickFormat(d3.format("d"));
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+	.ticks(5)
+	.tickSize(-width, 0, 0);
+
+var line = d3.svg.line()
+    .interpolate("basis")
+    .x(function(d) { return x(d.rank); })
+    .y(function(d) { return y(d.cohort); });
+
+var svgw = d3.select("body").select("div#chartw").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var svgl = d3.select("body").select("div#chartl").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+ 
+  
+d3.csv("wins.txt", function(error, data) {
+  if (error) throw error;
+  
+  data.forEach(function (d,i) {
+	  d.rank = +d.rank;
+	  d.A = +d.A;
+	  d.B = +d.B;
+	  d.C = +d.C;
+    d.D = +d.D;
+    d.E = +d.E;
+  })
+
+  var keys = d3.keys(data[0]).filter(function(key) { return key !== "rank"; });
+  
+  var cohortLines = keys.map(function(name) {
+    return {
+      name: name,
+      values: data.map(function(d) {
+  	        return {
+  				rank: d.rank,
+  				cohort: d[name]};
+  		})
+    };
+  });
+
+  //Append axes
+  svgw.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+   //   .style('stroke', '#000')
+      .call(xAxis);
+
+  svgw.append("g")
+      .attr("class", "y axis")
+   //   .style('stroke', '#000')
+      .call(yAxis);
+
+  
+  	//Append the lines
+  	var lines = svgw.selectAll(".lines")
+      	.data(cohortLines)
+    	.enter().append("g")
+  
+ ;
+
+
+	//Actual full opacity thin line		
+	lines.append("path")
+	      	.attr("class", "line")
+          .classed("mainline", true)
+	      	.attr("d", function(d) { return line(d.values); })
+	      	.style("stroke", function(d) { return color(d.name); })
+			.style("stroke-width", 2);
+
+  // Fading and Selecting Lines
+  doHover();
+  
+  
+// X-axis label
+d3.select("body").select("div#chartw").select("svg").append("text")
+            .attr("text-anchor", "middle")  
+        .style("font-weight", "bold")
+            .attr("transform", "translate("
+                  +((width + margin.left + margin.right)/2) +","
+                  +(height + margin.top + margin.bottom/1.4)+")")  
+            .text("Rank");
+
+// Y-axis label
+d3.select("body").select("div#chartw").select("svg").append("text")
+            .attr("text-anchor", "middle")  
+        .style("font-weight", "bold")
+            .attr("transform", "translate("
+                  + (margin.left/3) +","
+                  +((height + margin.top + margin.bottom)/2)+")rotate(-90)")
+            .text("Cumulative Proportion of Wins");  
+  
+});
+
+  
+// losses
+  
+d3.csv("losses.txt", function(error, data) {
+  if (error) throw error;
+  
+  data.forEach(function (d,i) {
+	  d.rank = +d.rank;
+	  d.A = +d.A;
+	  d.B = +d.B;
+	  d.C = +d.C;
+    d.D = +d.D;
+    d.E = +d.E;
+  })
+
+  var keys = d3.keys(data[0]).filter(function(key) { return key !== "rank"; });
+  
+  var cohortLines = keys.map(function(name) {
+    return {
+      name: name,
+      values: data.map(function(d) {
+  	        return {
+  				rank: d.rank,
+  				cohort: d[name]};
+  		})
+    };
+  });
+
+  //Append axes
+  svgl.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+   //   .style('stroke', '#000')
+      .call(xAxis);
+
+  svgl.append("g")
+      .attr("class", "y axis")
+ //     .style('stroke', '#000')
+       .call(yAxis);
+
+  
+  	//Append the lines
+  	var lines = svgl.selectAll(".lines")
+      	.data(cohortLines)
+    	.enter().append("g")
+      	.attr("class", "lines")
+   
+
+	//Actual full opacity thin line		
+	lines.append("path")
+	      	.attr("class", "line")
+          .classed("mainline", true)
+	      	.attr("d", function(d) { return line(d.values); })
+	      	.style("stroke", function(d) { return color(d.name); })
+			.style("stroke-width", 2)
+  
+ ;
+
+// Fading and Selecting Lines
+ doHover()
+  
+ 
+// X-axis label
+d3.select("body").select("div#chartl").select("svg").append("text")
+            .attr("text-anchor", "middle")  
+        .style("font-weight", "bold")
+            .attr("transform", "translate("
+                  +((width + margin.left + margin.right)/2) +","
+                  +(height + margin.top + margin.bottom/1.4)+")")  
+            .text("Rank");
+
+// Y-axis label
+d3.select("body").select("div#chartl").select("svg").append("text")
+            .attr("text-anchor", "middle")  
+        .style("font-weight", "bold")
+            .attr("transform", "translate("
+                  + (margin.left/3) +","
+                  +((height + margin.top + margin.bottom)/2)+")rotate(-90)")
+            .text("Cumulative Proportion of Losses");  
+  
+    
+});  
+  
+    
+function doHover() {
+  d3.selectAll('path.line.mainline')//register this to all paths
+    .on("mouseover", function(d,i) {
+      //first make all lines vanish
+      d3.selectAll('path.line.mainline')
+        .style("opacity", 0.1)
+        .style("stroke-width", 2)
+      //only show lines which have same name.
+      d3.selectAll('path.line.mainline').filter(function(d1) {
+          return d.name == d1.name
+        })
+        .style("opacity", 1)
+        .style("stroke-width", 4);
+        
+      d3.select("div#chartw.container svg")
+        .append("text")
+        .attr("id", "cohorttext")
+        .html("Cohort " + d.name)
+        .attr("x", (width) / 1.2)
+        .attr("y", margin.top * 1.5)
+        .style("fill", color(d.name))
+        .style("font-weight", "bold")
+        .style("font-size", "18px");
+
+      d3.select("div#chartw.container svg")
+        .append("text")
+        .attr("id", "cohorttextx")
+        .html("Gini = " + giniw[i%giniw.length])//so that its always within the max length
+        .attr("x", (width) / 1.2)
+        .attr("y", 20 + margin.top * 1.5)
+        .style("fill", color(d.name))
+        .style("font-size", "14px");  
+        
+        
+        
+    d3.select("div#chartl.container svg")
+        .append("text")
+        .attr("id", "cohorttext")
+        .text("Cohort " + d.name)
+        .attr("x", (width) / 1.2)
+        .attr("y", margin.top * 1.5)
+        .style("fill", color(d.name))
+        .style("font-weight", "bold")
+        .style("font-size", "18px");
+
+
+   d3.select("div#chartl.container svg")
+        .append("text")
+        .attr("id", "cohorttextx")
+        .html("Gini = " + ginil[i%ginil.length])//so that its always within the max length
+        .attr("x", (width) / 1.2)
+        .attr("y", 20 + margin.top * 1.5)
+        .style("fill", color(d.name))
+        .style("font-size", "14px");    
+    })
+    .on("mouseout", function() {
+      d3.selectAll('path.line')
+        .style("opacity", 1)
+        .style("stroke-width", 2);
+      //selectALL because we are giving same id to both text in 2 svgs  
+      d3.selectAll("#cohorttext").remove()
+      d3.selectAll("#cohorttextx").remove()  
+
+    })
+}  
+  
+  
+  
+</script>
+
+  
+
+<script>
+
+var margin1 = {top: 60, right: 80, bottom: 60, left: 80},
+    width1 = 360,
+    height1 = 410 - margin1.top - margin1.bottom;
+   
+
+var y1 = d3.scale.linear()
+    .range([height1, 0])
+  .domain([1500,3000]);
+
+var color1 = d3.scale.ordinal()  .range(["#910727","#CF1D1D", "#D93B2A", "#E35938", "#ED7746", "#F4AA64", "#F1C075", "#EED585","#EBEB96", "#E6E7A9","#E1E3BC", "#DDE0D0"])
+  .domain(["A","B","C","D","E","F","G","H","I","J","K","L"]);
+
+  var idsnos = [1,2,3,4,5,6,7,8,9,10,11,12];
+  
+var x1 = d3.scale.linear()
+    .range([0, width1-margin1.right*1.35])
+    .domain([0, 100])
+    .nice();
+  
+
+var xAxis1 = d3.svg.axis()
+    .scale(x1)
+    .orient("bottom")
+  .ticks(2)
+  .tickFormat(function(d) { return parseInt(d, 10) + "%"; });
+
+var yAxis1 = d3.svg.axis()
+    .scale(y1)
+    .orient("left")
+  .ticks(5)
+  .tickSize(-width1, 0, 0);
+
+var yAxisnotext = d3.svg.axis()
+    .scale(y1)
+    .orient("left")
+  .ticks(5)
+  .tickSize(-width1, 0, 0)
+  .tickFormat("");  
+  
+var line1 = d3.svg.line()
+    .interpolate("basis")
+    .x(function(d) { return x(d.eventtime); })
+    .y(function(d) { return y(d.code); });
+
+var svga = d3.select("body").select("div#chart-a").append("svg")
+    .attr("width", width1)
+    .attr("height", height1 + margin1.top + margin1.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
+
+var svgb = d3.select("body").select("div#chart-b").append("svg")
+    .attr("width", width1)
+    .attr("height", height1 + margin1.top + margin1.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
+ 
+var svgc = d3.select("body").select("div#chart-c").append("svg")
+    .attr("width", width1)
+    .attr("height", height1 + margin1.top + margin1.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
+  
+var svgd = d3.select("body").select("div#chart-d").append("svg")
+    .attr("width", width1)
+    .attr("height", height1 + margin1.top + margin1.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
+  
+var svge = d3.select("body").select("div#chart-e").append("svg")
+    .attr("width", width1)
+    .attr("height", height1 + margin1.top + margin1.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
+  
+  
+  
+  
+
+// Cohort A
+  
+d3.csv("ratesA2.txt", function(error, data) {
+  if (error) throw error;
+  
+  data.forEach(function (d,i) {
+    d.eventtime = +d.eventtime;
+    d.A = +d.A;
+    d.B = +d.B;
+    d.C = +d.C;
+    d.D = +d.D;
+    d.E = +d.E;
+    d.F = +d.F;
+    d.G = +d.G;
+    d.H = +d.H;
+    d.I = +d.I;
+    d.J = +d.J;
+    d.K = +d.K;
+    d.L = +d.L;
+  })
+
+  var keys = d3.keys(data[0]).filter(function(key) { return key !== "eventtime"; });
+  
+  var cohortLines = keys.map(function(name) {
+    return {
+      name: name,
+      values: data.map(function(d) {
+            return {
+          eventtime: d.eventtime,
+          code: d[name]};
+      })
+    };
+  });
+
+  //Append axes
+  
+  svga.append("g")
+      .attr("class", "x1 axis")
+      .attr("transform", "translate(0," + height1 + ")")
+      .call(xAxis1);
+
+  svga.append("g")
+      .attr("class", "y1 axis")
+      .call(yAxis1);
+
+  var linethis = d3.svg.line()
+    .interpolate("basis")
+    .x(function(d) { return x1(d.eventtime); })
+    .y(function(d) { return y1(d.code); });
+
+    //Append the lines
+    var lines = svga.selectAll(".lines")
+        .data(cohortLines)
+      .enter().append("g")
+  
+ ;
+
+  //Actual full opacity thin line   
+  lines.append("path")
+          .attr("class", "line")
+          .classed("mainlinez", true)
+          .attr("d", function(d) { return linethis(d.values); })
+          .style("stroke", function(d) { return color1(d.name); })
+      .style("stroke-width", 1.5);
+
+  // Fading and Selecting Lines
+ doHover1();
+  
+  
+// Y-axis label
+d3.select("body").select("div#chart-a").select("svg").append("text")
+            .attr("text-anchor", "middle")  
+            .style("font-size", "18px")
+            .attr("transform", "translate("
+                  + (margin1.left/3) +","
+                  +((height1 + margin1.top + margin1.bottom)/2)+")rotate(-90)")
+            .text("Glicko Rating");  
+  
+});
+
+  
+  
+  
+  
+  
+  
+  
+// Cohort B
+ 
+  d3.csv("ratesB2.txt", function(error, data) {
+  if (error) throw error;
+  
+  data.forEach(function (d,i) {
+  d.eventtime = +d.eventtime;
+    d.A = +d.A;
+    d.B = +d.B;
+    d.C = +d.C;
+    d.D = +d.D;
+    d.E = +d.E;
+    d.F = +d.F;
+    d.G = +d.G;
+    d.H = +d.H;
+    d.I = +d.I;
+    d.J = +d.J;
+    d.K = +d.K;
+    d.L = +d.L;
+  })
+
+  var keys = d3.keys(data[0]).filter(function(key) { return key !== "eventtime"; });
+  
+  var cohortLines = keys.map(function(name) {
+    return {
+      name: name,
+      values: data.map(function(d) {
+            return {
+          eventtime: d.eventtime,
+          code: d[name]};
+      })
+    };
+  });
+
+
+  svgb.append("g")
+      .attr("class", "x1 axis")
+      .attr("transform", "translate(0," + height1 + ")")
+      .call(xAxis1);
+
+  svgb.append("g")
+      .attr("class", "y1 axis")
+      .call(yAxisnotext);
+
+  var linethis = d3.svg.line()
+    .interpolate("basis")
+    .x(function(d) { return x1(d.eventtime); })
+    .y(function(d) { return y1(d.code); });
+
+    //Append the lines
+    var lines = svgb.selectAll(".lines")
+        .data(cohortLines)
+      .enter().append("g")
+  
+ ;
+
+  //Actual full opacity thin line   
+  lines.append("path")
+          .attr("class", "line")
+          .classed("mainlinez", true)
+          .attr("d", function(d) { return linethis(d.values); })
+          .style("stroke", function(d) { return color1(d.name); })
+      .style("stroke-width", 1.5);
+
+  // Fading and Selecting Lines
+ doHover1();
+  
+ 
+    
+});  
+    
+
+  
+// Cohort C
+ 
+  d3.csv("ratesC2.txt", function(error, data) {
+  if (error) throw error;
+  
+  data.forEach(function (d,i) {
+  d.eventtime = +d.eventtime;
+    d.A = +d.A;
+    d.B = +d.B;
+    d.C = +d.C;
+    d.D = +d.D;
+    d.E = +d.E;
+    d.F = +d.F;
+    d.G = +d.G;
+    d.H = +d.H;
+    d.I = +d.I;
+    d.J = +d.J;
+    d.K = +d.K;
+    d.L = +d.L;
+  })
+
+  var keys = d3.keys(data[0]).filter(function(key) { return key !== "eventtime"; });
+  
+  var cohortLines = keys.map(function(name) {
+    return {
+      name: name,
+      values: data.map(function(d) {
+            return {
+          eventtime: d.eventtime,
+          code: d[name]};
+      })
+    };
+  });
+
+  //Append axes
+
+  svgc.append("g")
+      .attr("class", "x1 axis")
+      .attr("transform", "translate(0," + height1 + ")")
+      .call(xAxis1);
+
+  svgc.append("g")
+      .attr("class", "y1 axis")
+      .call(yAxisnotext);
+
+  var linethis = d3.svg.line()
+    .interpolate("basis")
+    .x(function(d) { return x1(d.eventtime); })
+    .y(function(d) { return y1(d.code); });
+
+    //Append the lines
+    var lines = svgc.selectAll(".lines")
+        .data(cohortLines)
+      .enter().append("g")
+  
+ ;
+
+  //Actual full opacity thin line   
+  lines.append("path")
+          .attr("class", "line")
+          .classed("mainlinez", true)
+          .attr("d", function(d) { return linethis(d.values); })
+          .style("stroke", function(d) { return color1(d.name); })
+      .style("stroke-width", 1.5);
+
+  // Fading and Selecting Lines
+ doHover1();
+  
+});  
+    
+
+  
+// Cohort D
+ 
+  d3.csv("ratesD2.txt", function(error, data) {
+  if (error) throw error;
+  
+  data.forEach(function (d,i) {
+  d.eventtime = +d.eventtime;
+    d.A = +d.A;
+    d.B = +d.B;
+    d.C = +d.C;
+    d.D = +d.D;
+    d.E = +d.E;
+    d.F = +d.F;
+    d.G = +d.G;
+    d.H = +d.H;
+    d.I = +d.I;
+    d.J = +d.J;
+    d.K = +d.K;
+    d.L = +d.L;
+  })
+
+  var keys = d3.keys(data[0]).filter(function(key) { return key !== "eventtime"; });
+  
+  var cohortLines = keys.map(function(name) {
+    return {
+      name: name,
+      values: data.map(function(d) {
+            return {
+          eventtime: d.eventtime,
+          code: d[name]};
+      })
+    };
+  });
+
+  //Append axes
+  svgd.append("g")
+      .attr("class", "x1 axis")
+      .attr("transform", "translate(0," + height1 + ")")
+      .call(xAxis1);
+
+  svgd.append("g")
+      .attr("class", "y1 axis")
+      .call(yAxisnotext);
+
+  var linethis = d3.svg.line()
+    .interpolate("basis")
+    .x(function(d) { return x1(d.eventtime); })
+    .y(function(d) { return y1(d.code); });
+
+    //Append the lines
+    var lines = svgd.selectAll(".lines")
+        .data(cohortLines)
+      .enter().append("g")
+  
+ ;
+
+  //Actual full opacity thin line   
+  lines.append("path")
+          .attr("class", "line")
+          .classed("mainlinez", true)
+          .attr("d", function(d) { return linethis(d.values); })
+          .style("stroke", function(d) { return color1(d.name); })
+      .style("stroke-width", 1.5);
+
+  // Fading and Selecting Lines
+ doHover1();
+  
+ 
+    
+});  
+  
+  
+  
+  
+
+// Cohort E
+ 
+  d3.csv("ratesE2.txt", function(error, data) {
+  if (error) throw error;
+  
+  data.forEach(function (d,i) {
+  d.eventtime = +d.eventtime;
+    d.A = +d.A;
+    d.B = +d.B;
+    d.C = +d.C;
+    d.D = +d.D;
+    d.E = +d.E;
+    d.F = +d.F;
+    d.G = +d.G;
+    d.H = +d.H;
+    d.I = +d.I;
+    d.J = +d.J;
+    d.K = +d.K;
+    d.L = +d.L;
+  })
+
+  var keys = d3.keys(data[0]).filter(function(key) { return key !== "eventtime"; });
+  
+  var cohortLines = keys.map(function(name) {
+    return {
+      name: name,
+      values: data.map(function(d) {
+            return {
+          eventtime: d.eventtime,
+          code: d[name]};
+      })
+    };
+  });
+
+   //Append axes
+  svge.append("g")
+      .attr("class", "x1 axis")
+      .attr("transform", "translate(0," + height1 + ")")
+      .call(xAxis1);
+
+  svge.append("g")
+      .attr("class", "y1 axis")
+      .call(yAxisnotext);
+
+  var linethis = d3.svg.line()
+    .interpolate("basis")
+    .x(function(d) { return x1(d.eventtime); })
+    .y(function(d) { return y1(d.code); });
+
+    //Append the lines
+    var lines = svge.selectAll(".lines")
+        .data(cohortLines)
+      .enter().append("g")
+  
+ ;
+
+  //Actual full opacity thin line   
+  lines.append("path")
+          .attr("class", "line")
+          .classed("mainlinez", true)
+          .attr("d", function(d) { return linethis(d.values); })
+          .style("stroke", function(d) { return color1(d.name); })
+      .style("stroke-width", 1.5);
+
+  // Fading and Selecting Lines
+ doHover1();
+ 
+    
+});  
+    
+  
+  
+  
+// Function  
+  
+function doHover1() {
+  d3.selectAll('path.line.mainlinez')//register this to all paths
+    .on("mouseover", function(d,i) {
+      //first make all lines vanish
+      d3.selectAll('path.line.mainlinez')
+        .style("opacity", 0.2)
+        .style("stroke-width", 1)
+      //only show lines which have same name.
+      d3.selectAll('path.line.mainlinez').filter(function(d1) {
+          return d.name == d1.name
+        })
+        .style("opacity", 1)
+        .style("stroke-width", 2.5);
+       
+    
+      d3.select("div#chart-a.container svg")
+        .append("text")
+        .attr("id", "cohorttextz")
+        .text("" + d.name +"-" + idsnos[i%idsnos.length])
+        .attr("x", (width1-margin1.right))
+        .attr("y", margin1.top/2)
+        .style("fill", color1(d.name))
+        .style("font-weight", "bold")
+        .style("font-size", "18px");
+        
+    d3.select("div#chart-b.container svg")
+        .append("text")
+        .attr("id", "cohorttextz")
+           .text("" + d.name +"-" + idsnos[i%idsnos.length])
+        .attr("x", (width1-margin1.right))
+        .attr("y", margin1.top/2)
+       .style("fill", color1(d.name))
+        .style("font-weight", "bold")
+        .style("font-size", "18px");
+
+  d3.select("div#chart-c.container svg")
+        .append("text")
+        .attr("id", "cohorttextz")
+            .text("" + d.name +"-" + idsnos[i%idsnos.length])
+        .attr("x", (width1-margin1.right))
+        .attr("y", margin1.top/2)
+      .style("fill", color1(d.name))
+        .style("font-weight", "bold")
+        .style("font-size", "18px");
+  
+  d3.select("div#chart-d.container svg")
+        .append("text")
+        .attr("id", "cohorttextz")
+     .text("" + d.name +"-" + idsnos[i%idsnos.length])
+         .attr("x", (width1-margin1.right))
+       .attr("y", margin1.top/2)
+     .style("fill", color1(d.name))
+        .style("font-weight", "bold")
+        .style("font-size", "18px");
+
+      d3.select("div#chart-e.container svg")
+        .append("text")
+        .attr("id", "cohorttextz")
+     .text("" + d.name +"-" + idsnos[i%idsnos.length])
+        .attr("x", (width1-margin1.right))
+        .attr("y", margin1.top/2)
+      .style("fill", color1(d.name))
+        .style("font-weight", "bold")
+        .style("font-size", "18px");
+
+  
+  })
+
+
+  
+    .on("mouseout", function() {
+      d3.selectAll('path.line.mainlinez')
+        .style("opacity", 1)
+        .style("stroke-width", 1.5);
+      d3.selectAll("#cohorttextz").remove()
+    })
+}  
+  
+  
+  
+</script>
+
+  
+  
+</body>
+
+</html>
+
